@@ -1,0 +1,12 @@
+Single Lemma 7 split: I restricted to Lemma 6 and the split U = qrs, V = p, at theta = 0.1129.
+  total with all splits      0.999003254
+  total with U = qrs, V = p  0.999003254
+  regions that differ: none
+
+HL's cut g <= a + b - 2 theta in phi3 and phi9: losses with and without it.
+  HL       theta = 0.119   phi3: with cut 0.000091838325  without 0.000091838325  difference +0.0e+00
+  HL       theta = 0.119   phi9: with cut 0.001075194593  without 0.001075194593  difference +0.0e+00
+  R*       theta = 0.1129  phi3: with cut 0.000019920464  without 0.000019920464  difference +0.0e+00
+  R*       theta = 0.1129  phi9: with cut 0.002337641444  without 0.002337641444  difference +0.0e+00
+  R*+G4+L  theta = 0.1129  phi3: with cut 0.000009827405  without 0.000009827405  difference +0.0e+00
+  R*+G4+L  theta = 0.1129  phi9: with cut 0.000272712344  without 0.000272712344  difference +0.0e+00

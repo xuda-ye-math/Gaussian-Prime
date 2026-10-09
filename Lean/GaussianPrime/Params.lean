@@ -1,0 +1,98 @@
+import Mathlib
+
+/-!
+# Parameters (Section 2) and the inequalities of Appendix D
+
+`σ, τ, ρ, ζ, ν` are the parameters of display (2.1) of the paper, and `χ` is the exponent of
+Section 7. `appD_relations` proves the second column of Table `tab: inequalities` for
+`1/9 < θ < 1/8`; `appD_quantities` proves that each first-column quantity is a positive multiple
+of the corresponding difference; `appD_values` checks the third column at `θ = 0.1129`.
+-/
+
+noncomputable section
+
+namespace GaussianPrime
+
+/-- The exponent of Theorem 1, `θ = 0.1129`. -/
+def θ₀ : ℝ := 1129 / 10000
+
+def σ (θ : ℝ) : ℝ := 1 / 2 - θ
+def τ (θ : ℝ) : ℝ := 1 / 2 + θ
+def ρ (θ : ℝ) : ℝ := (1 + 22 * θ) / 12
+def ζ (θ : ℝ) : ℝ := (1 + 4 * θ) / 3
+def ν (θ : ℝ) : ℝ := (7 + 10 * θ) / 12
+def χ (θ : ℝ) : ℝ := (ν θ + 2 * θ) / 2
+
+theorem χ_eq (θ : ℝ) : χ θ = (34 * θ + 7) / 24 := by
+  simp only [χ, ν]; ring
+
+/-- The second column of Table `tab: inequalities`, row by row. -/
+theorem appD_relations (θ : ℝ) (h1 : 1 / 9 < θ) (h2 : θ < 1 / 8) :
+    3 * σ θ / 2 < τ θ ∧ θ < 1 / 8 ∧ ν θ + ρ θ < 1 ∧ θ < 1 / 6 ∧ σ θ - θ < 1 / 3 ∧
+    σ θ < (1 / 3 + τ θ) / 2 ∧ 2 * ζ θ - 1 / 3 < ν θ ∧ ζ θ - 1 / 3 < ρ θ ∧ ζ θ < τ θ ∧
+    σ θ < ζ θ ∧ ζ θ - σ θ < ρ θ / 2 ∧ σ θ + ρ θ / 2 < τ θ ∧ σ θ - θ < ρ θ ∧ σ θ < χ θ ∧
+    χ θ < ζ θ ∧ ν θ / 3 < σ θ - θ ∧ (ν θ + σ θ - θ) / 2 < ζ θ ∧ σ θ < 2 * τ θ / 3 ∧
+    σ θ - θ < τ θ / 2 ∧ σ θ - 2 * θ < 2 * τ θ / 5 ∧ σ θ - 3 * θ < τ θ / 5 := by
+  simp only [σ, τ, ρ, ζ, ν, χ]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
+    linarith
+
+/-- Each first-column quantity is a positive multiple of the difference of the two sides of its
+relation; with `appD_quantities_pos` this is the table's claim that the quantities are positive. -/
+theorem appD_quantities (θ : ℝ) :
+    τ θ - 3 * σ θ / 2 = 5 / 2 * (θ - 1 / 10) ∧
+    1 - (ν θ + ρ θ) = (1 - 8 * θ) / 3 ∧
+    1 / 3 - (σ θ - θ) = 2 * θ - 1 / 6 ∧
+    (1 / 3 + τ θ) / 2 - σ θ = 3 * θ / 2 - 1 / 12 ∧
+    ν θ - (2 * ζ θ - 1 / 3) = (3 - 22 * θ) / 12 ∧
+    ρ θ - (ζ θ - 1 / 3) = (1 + 6 * θ) / 12 ∧
+    τ θ - ζ θ = (1 - 2 * θ) / 6 ∧
+    ζ θ - σ θ = (14 * θ - 1) / 6 ∧
+    ρ θ / 2 - (ζ θ - σ θ) = (5 - 34 * θ) / 24 ∧
+    τ θ - (σ θ + ρ θ / 2) = (26 * θ - 1) / 24 ∧
+    ρ θ - (σ θ - θ) = (46 * θ - 5) / 12 ∧
+    χ θ - σ θ = (58 * θ - 5) / 24 ∧
+    ζ θ - χ θ = (1 - 2 * θ) / 24 ∧
+    (σ θ - θ) - ν θ / 3 = (11 - 82 * θ) / 36 ∧
+    ζ θ - (ν θ + σ θ - θ) / 2 = (46 * θ - 5) / 24 ∧
+    2 * τ θ / 3 - σ θ = 5 * θ / 3 - 1 / 6 ∧
+    τ θ / 2 - (σ θ - θ) = 5 * θ / 2 - 1 / 4 ∧
+    2 * τ θ / 5 - (σ θ - 2 * θ) = 17 * θ / 5 - 3 / 10 ∧
+    τ θ / 5 - (σ θ - 3 * θ) = 21 * θ / 5 - 2 / 5 := by
+  simp only [σ, τ, ρ, ζ, ν, χ]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> ring
+
+/-- The first-column quantities are positive for `1/9 < θ < 1/8`. -/
+theorem appD_quantities_pos (θ : ℝ) (h1 : 1 / 9 < θ) (h2 : θ < 1 / 8) :
+    0 < θ - 1 / 10 ∧ 0 < 1 / 8 - θ ∧ 0 < (1 - 8 * θ) / 3 ∧ 0 < 1 / 6 - θ ∧
+    0 < 2 * θ - 1 / 6 ∧ 0 < 3 * θ / 2 - 1 / 12 ∧ 0 < (3 - 22 * θ) / 12 ∧ 0 < (1 + 6 * θ) / 12 ∧
+    0 < (1 - 2 * θ) / 6 ∧ 0 < (14 * θ - 1) / 6 ∧ 0 < (5 - 34 * θ) / 24 ∧
+    0 < (26 * θ - 1) / 24 ∧ 0 < (46 * θ - 5) / 12 ∧ 0 < (58 * θ - 5) / 24 ∧
+    0 < (1 - 2 * θ) / 24 ∧ 0 < (11 - 82 * θ) / 36 ∧ 0 < (46 * θ - 5) / 24 ∧
+    0 < 5 * θ / 3 - 1 / 6 ∧ 0 < 5 * θ / 2 - 1 / 4 ∧ 0 < 17 * θ / 5 - 3 / 10 ∧
+    0 < 21 * θ / 5 - 2 / 5 := by
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
+    linarith
+
+/-- The third column of Table `tab: inequalities`: each value is the quantity at `θ = 0.1129`,
+rounded to `7` decimal places. -/
+theorem appD_values :
+    |(θ₀ - 1 / 10) - 0.0129000| ≤ 5e-8 ∧ |(1 / 8 - θ₀) - 0.0121000| ≤ 5e-8 ∧
+    |(1 - 8 * θ₀) / 3 - 0.0322667| ≤ 5e-8 ∧ |(1 / 6 - θ₀) - 0.0537667| ≤ 5e-8 ∧
+    |(2 * θ₀ - 1 / 6) - 0.0591333| ≤ 5e-8 ∧ |(3 * θ₀ / 2 - 1 / 12) - 0.0860167| ≤ 5e-8 ∧
+    |(3 - 22 * θ₀) / 12 - 0.0430167| ≤ 5e-8 ∧ |(1 + 6 * θ₀) / 12 - 0.1397833| ≤ 5e-8 ∧
+    |(1 - 2 * θ₀) / 6 - 0.1290333| ≤ 5e-8 ∧ |(14 * θ₀ - 1) / 6 - 0.0967667| ≤ 5e-8 ∧
+    |(5 - 34 * θ₀) / 24 - 0.0483917| ≤ 5e-8 ∧ |(26 * θ₀ - 1) / 24 - 0.0806417| ≤ 5e-8 ∧
+    |(46 * θ₀ - 5) / 12 - 0.0161167| ≤ 5e-8 ∧ |(58 * θ₀ - 5) / 24 - 0.0645083| ≤ 5e-8 ∧
+    |(1 - 2 * θ₀) / 24 - 0.0322583| ≤ 5e-8 ∧ |(11 - 82 * θ₀) / 36 - 0.0483944| ≤ 5e-8 ∧
+    |(46 * θ₀ - 5) / 24 - 0.0080583| ≤ 5e-8 ∧ |(5 * θ₀ / 3 - 1 / 6) - 0.0215000| ≤ 5e-8 ∧
+    |(5 * θ₀ / 2 - 1 / 4) - 0.0322500| ≤ 5e-8 ∧ |(17 * θ₀ / 5 - 3 / 10) - 0.0838600| ≤ 5e-8 ∧
+    |(21 * θ₀ / 5 - 2 / 5) - 0.0741800| ≤ 5e-8 := by
+  simp only [θ₀]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
+    rw [abs_le] <;> constructor <;> norm_num
+
+theorem θ₀_mem : 1 / 9 < θ₀ ∧ θ₀ < 1 / 8 := by
+  simp only [θ₀]; constructor <;> norm_num
+
+end GaussianPrime

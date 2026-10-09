@@ -1,0 +1,76 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ankeny(1952)]{ankeny1952representations}
+N.~C. Ankeny.
+\newblock Representations of primes by quadratic forms.
+\newblock \emph{American Journal of Mathematics}, 74:\penalty0 913--919, 1952.
+
+\bibitem[Baker(1986)]{baker1986diophantine}
+R.~C. Baker.
+\newblock \emph{Diophantine Inequalities}, volume~1 of \emph{London
+  Mathematical Society Monographs (New Series)}.
+\newblock Clarendon Press, Oxford, 1986.
+
+\bibitem[Balog(1985)]{balog1985distribution}
+A.~Balog.
+\newblock On the distribution of $p^{\theta}$ mod 1.
+\newblock \emph{Acta Mathematica Hungarica}, 45:\penalty0 179--199, 1985.
+
+\bibitem[Coleman(1990)]{coleman1990zero}
+M.~D. Coleman.
+\newblock A zero-free region for the {Hecke} {$L$}-functions.
+\newblock \emph{Mathematika}, 37:\penalty0 287--304, 1990.
+
+\bibitem[Coleman(1993)]{coleman1993rosser}
+M.~D. Coleman.
+\newblock The {Rosser--Iwaniec} sieve in number fields.
+\newblock \emph{Acta Arithmetica}, 65:\penalty0 53--83, 1993.
+
+\bibitem[Harman(1983)]{harman1983distribution}
+G.~Harman.
+\newblock On the distribution of $\sqrt{p}$ modulo one.
+\newblock \emph{Mathematika}, 30:\penalty0 104--116, 1983.
+
+\bibitem[Harman and Lewis(2001)]{harman2001gaussian}
+Glyn Harman and Philip Lewis.
+\newblock Gaussian primes in narrow sectors.
+\newblock \emph{Mathematika}, 48\penalty0 (1--2):\penalty0 119--135, 2001.
+\newblock \doi{10.1112/S0025579300014388}.
+
+\bibitem[Kubilius(1955)]{kubilius1955problem}
+J.~P. Kubilius.
+\newblock On a problem in the $n$-dimensional analytic theory of numbers.
+\newblock \emph{Vilniaus Valst. Univ. Mokslo Darbai Fiz. Chem. Moksl. Ser.},
+  4:\penalty0 5--43, 1955.
+
+\bibitem[Matou{\v{s}}ek(1998)]{matousek1998l2}
+J.~Matou{\v{s}}ek.
+\newblock On the {$L_2$}-discrepancy for anchored boxes.
+\newblock \emph{Journal of Complexity}, 14:\penalty0 527--556, 1998.
+
+\bibitem[Piessens et~al.(1983)Piessens, de~Doncker-Kapenga, {\"U}berhuber, and
+  Kahaner]{piessens1983quadpack}
+Robert Piessens, Elise de~Doncker-Kapenga, Christoph~W. {\"U}berhuber, and
+  David~K. Kahaner.
+\newblock \emph{{QUADPACK}: A Subroutine Package for Automatic Integration}.
+\newblock Springer-Verlag, Berlin, 1983.
+\newblock ISBN 978-3-540-12553-2.
+
+\bibitem[Sobol'(1967)]{sobol1967distribution}
+I.~M. Sobol'.
+\newblock The distribution of points in a cube and the accurate evaluation of
+  integrals.
+\newblock \emph{Zh. Vychisl. Mat. i Mat. Fiz.}, 7:\penalty0 784--802, 1967.
+
+\bibitem[Thorner and Zaman(2024)]{thorner2024refinements}
+J.~Thorner and A.~Zaman.
+\newblock Refinements to the prime number theorem for arithmetic progressions.
+\newblock \emph{Mathematische Zeitschrift}, 306:\penalty0 Paper No. 54, 2024.
+\newblock arXiv:2108.10878.
+
+\end{thebibliography}

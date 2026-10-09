@@ -1,0 +1,9 @@
+max |omega - 1/u| on [1,2]                     1.721e-14
+max |Omega - log u| on [1,2]                   1.020e-15
+max |omega - (1+log(u-1))/u| on [2,3]          9.770e-15
+max |Omega - closed form| on [2,3]             2.776e-15
+max |u omega(u) - 1 - Omega(u-1)| on [2,40)    3.588e-13
+omega(10) - e^-gamma                           -5.407e-14
+omega(39.9) - e^-gamma                         2.220e-16
+omega(2.5)                                     0.562186043243266
+omega(3)                                       0.564382393519972

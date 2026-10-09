@@ -1,0 +1,11 @@
+theta_min (total loss = 1; brentq, xtol 1e-10; primary integrator at k = 10, panels = 16). alpha = 1/2 - 2 theta_min.
+
+decomposition             theta_min      alpha  gain in alpha  reference      diff
+HL, exact D2              0.1167825  0.2664351                 0.1167824  +6.1e-08
+HL, printed phi2          0.1172286  0.2655429                 0.1172286  -3.6e-08
++ R*                      0.1141073  0.2717854      0.0053503  0.1141073  -1.1e-08
++ R* + G4                 0.1139312  0.2721376      0.0057026  0.1139313  -1.2e-07
++ R* + G4 + P             0.1132049  0.2735902      0.0071552  0.1132050  -1.2e-07
++ R* + G4 + L             0.1128554  0.2742892      0.0078541  0.1128555  -8.6e-08
+
+gain in alpha: against HL with the exact D2.  Structural checks (checks.py) at each root: all hold.

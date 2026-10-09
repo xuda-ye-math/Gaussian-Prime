@@ -1,0 +1,6 @@
+# Working routes
+/routes/
+
+# Dot files and dot directories (keep this file)
+.*
+!.gitignore

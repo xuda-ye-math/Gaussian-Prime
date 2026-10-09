@@ -1,0 +1,114 @@
+[22:42:40] step buchstab
+[22:42:40]   wrote results/buchstab.log
+[22:42:40] step checks
+[22:42:40]   wrote results/checks.log
+[22:42:40]   wrote results/table_structural.txt
+[22:42:40]   59 checks, failures: 0
+[22:42:40] step classification (10^6 random points per region and theta)
+[22:42:50]   wrote results/classification.log
+[22:42:50]   total mismatches: 0
+[22:42:50] step hl_0119
+[22:42:52]   wrote results/table_hl_0119.txt
+[22:42:52]   total HL at 0.119: 0.9425585  reference 0.9425580  diff +4.9e-07  agrees
+[22:42:52] step roots
+[22:42:53]     HL         theta = 0.1160000000  total = 1.020738151  (0.7s)
+[22:42:54]     HL         theta = 0.1190000000  total = 0.942558492  (0.7s)
+[22:42:54]     HL         theta = 0.1167957882  total = 0.999648993  (0.7s)
+[22:42:55]     HL         theta = 0.1167825432  total = 0.999997842  (0.7s)
+[22:42:56]     HL         theta = 0.1167824612  total = 1.000000000  (0.7s)
+[22:42:56]     HL         theta = 0.1167824612  total = 1.000000001  (0.7s)
+[22:42:56]   theta_min HL: 0.1167825  (4s)
+[22:42:56]   structural checks at the root: all hold
+[22:42:57]     HL printed theta = 0.1160000000  total = 1.036791579  (0.7s)
+[22:42:58]     HL printed theta = 0.1190000000  total = 0.949326546  (0.7s)
+[22:42:59]     HL printed theta = 0.1172619299  total = 0.999020194  (0.7s)
+[22:42:59]     HL printed theta = 0.1172291949  total = 0.999981459  (0.7s)
+[22:43:00]     HL printed theta = 0.1172285638  total = 1.000000000  (0.7s)
+[22:43:01]     HL printed theta = 0.1172285638  total = 0.999999999  (0.7s)
+[22:43:01]   theta_min HL printed: 0.1172286  (4s)
+[22:43:01]   structural checks at the root: all hold
+[22:43:01]     R*         theta = 0.1115000000  total = 1.065645556  (0.8s)
+[22:43:02]     R*         theta = 0.1175000000  total = 0.920147050  (0.8s)
+[22:43:03]     R*         theta = 0.1142070610  total = 0.997566310  (0.8s)
+[22:43:04]     R*         theta = 0.1141102893  total = 0.999926739  (0.8s)
+[22:43:04]     R*         theta = 0.1141072892  total = 1.000000001  (0.8s)
+[22:43:05]     R*         theta = 0.1141072892  total = 1.000000000  (0.8s)
+[22:43:05]   theta_min R*: 0.1141073  (5s)
+[22:43:05]   structural checks at the root: all hold
+[22:43:19]     R*+G4      theta = 0.1115000000  total = 1.060505945  (13.3s)
+[22:43:25]   ... theta_min R*+G4: running, 20s
+[22:43:32]     R*+G4      theta = 0.1175000000  total = 0.916767096  (13.3s)
+[22:43:45]     R*+G4      theta = 0.1140256614  total = 0.997714425  (13.3s)
+[22:43:45]   ... theta_min R*+G4: running, 40s
+[22:43:58]     R*+G4      theta = 0.1139337288  total = 0.999938312  (13.3s)
+[22:44:05]   ... theta_min R*+G4: running, 60s
+[22:44:12]     R*+G4      theta = 0.1139311813  total = 1.000000001  (13.3s)
+[22:44:25]     R*+G4      theta = 0.1139311814  total = 1.000000000  (13.2s)
+[22:44:25]   theta_min R*+G4: 0.1139312  (80s)
+[22:44:25]   structural checks at the root: all hold
+[22:44:40]     R*+G4+P    theta = 0.1115000000  total = 1.039622534  (15.3s)
+[22:44:45]   ... theta_min R*+G4+P: running, 20s
+[22:44:56]     R*+G4+P    theta = 0.1175000000  total = 0.905185758  (15.4s)
+[22:45:05]   ... theta_min R*+G4+P: running, 40s
+[22:45:11]     R*+G4+P    theta = 0.1132683792  total = 0.998547187  (15.4s)
+[22:45:25]   ... theta_min R*+G4+P: running, 60s
+[22:45:26]     R*+G4+P    theta = 0.1132058326  total = 0.999978231  (15.4s)
+[22:45:42]     R*+G4+P    theta = 0.1132048817  total = 1.000000000  (15.6s)
+[22:45:45]   ... theta_min R*+G4+P: running, 80s
+[22:45:57]     R*+G4+P    theta = 0.1132048817  total = 0.999999999  (15.5s)
+[22:45:57]   theta_min R*+G4+P: 0.1132049  (93s)
+[22:45:57]   structural checks at the root: all hold
+[22:46:17]   ... theta_min R*+G4+L: running, 20s
+[22:46:27]     R*+G4+L    theta = 0.1115000000  total = 1.030650087  (29.7s)
+[22:46:37]   ... theta_min R*+G4+L: running, 40s
+[22:46:57]     R*+G4+L    theta = 0.1175000000  total = 0.899838294  (29.7s)
+[22:46:57]   ... theta_min R*+G4+L: running, 60s
+[22:47:17]   ... theta_min R*+G4+L: running, 80s
+[22:47:26]     R*+G4+L    theta = 0.1129058405  total = 0.998872739  (29.4s)
+[22:47:37]   ... theta_min R*+G4+L: running, 100s
+[22:47:56]     R*+G4+L    theta = 0.1128559701  total = 0.999987560  (29.6s)
+[22:47:57]   ... theta_min R*+G4+L: running, 120s
+[22:48:17]   ... theta_min R*+G4+L: running, 140s
+[22:48:25]     R*+G4+L    theta = 0.1128554139  total = 1.000000000  (29.5s)
+[22:48:37]   ... theta_min R*+G4+L: running, 160s
+[22:48:55]     R*+G4+L    theta = 0.1128554139  total = 0.999999999  (29.2s)
+[22:48:55]   theta_min R*+G4+L: 0.1128554  (177s)
+[22:48:55]   structural checks at the root: all hold
+[22:48:55]   wrote results/roots.log
+[22:48:55]   theta_min HL: 0.1167825  reference 0.1167824  diff +6.1e-08  agrees
+[22:48:55]   theta_min HL printed: 0.1172286  reference 0.1172286  diff -3.6e-08  agrees
+[22:48:55]   theta_min R*: 0.1141073  reference 0.1141073  diff -1.1e-08  agrees
+[22:48:55]   theta_min R*+G4: 0.1139312  reference 0.1139313  diff -1.2e-07  agrees
+[22:48:55]   theta_min R*+G4+P: 0.1132049  reference 0.1132050  diff -1.2e-07  agrees
+[22:48:55]   theta_min R*+G4+L: 0.1128554  reference 0.1128555  diff -8.6e-08  agrees
+[22:48:55]   wrote results/table_thetamin.txt
+[22:48:55] step losses
+[22:49:15]   ... losses R*+G4+L at 0.1129: running, 20s
+[22:49:35]   ... losses R*+G4+L at 0.1129: running, 40s
+[22:49:48]   wrote results/table_losses_0.1129_G4L.txt
+[22:49:48]   total R*+G4+L at 0.1129: 0.9990033  reference 0.9990032  diff +5.4e-08  agrees
+[22:49:48]   1 - total R*+G4+L at 0.1129: 0.0009967  reference 0.0009968  diff -5.4e-08  agrees
+[22:50:05]   wrote results/table_losses_0.1133_G4P.txt
+[22:50:05]   total R*+G4+P at 0.1133: 0.9978243  reference 0.9978243  diff +1.1e-08  agrees
+[22:50:05]   1 - total R*+G4+P at 0.1133: 0.0021757  reference 0.0021757  diff -1.1e-08  agrees
+[22:50:07]   wrote results/table_losses_0.1142_Rstar.txt
+[22:50:07]   total R* at 0.1142: 0.9977384  reference 0.9977385  diff -1.3e-07  agrees
+[22:50:07] step variants
+[22:50:27]   ... variants: running, 20s
+[22:50:47]   ... variants: running, 40s
+[22:51:07]   ... variants: running, 60s
+[22:51:27]   ... variants: running, 80s
+[22:51:38]   total R*+G4+L[qrs|p] at 0.1129: 0.9990033  reference 0.9990035  diff -2.5e-07  agrees
+[22:51:38]   wrote results/variants.log
+[22:51:38] step convergence
+[22:51:38]   k = 6, panels = 2: total 0.9990119904 (0s)
+[22:51:38]   k = 6, panels = 4: total 0.9990029830 (0s)
+[22:51:38]   k = 8, panels = 4: total 0.9990033659 (0s)
+[22:51:39]   k = 8, panels = 8: total 0.9990032684 (1s)
+[22:51:43]   k = 10, panels = 8: total 0.9990032453 (3s)
+[22:51:57]   k = 8, panels = 16: total 0.9990032529 (14s)
+[22:51:58]   ... convergence: running, 20s
+[22:52:18]   ... convergence: running, 40s
+[22:52:26]   k = 10, panels = 16: total 0.9990032541 (29s)
+[22:52:38]   ... convergence: running, 60s
+[22:52:58]   ... convergence: running, 80s
