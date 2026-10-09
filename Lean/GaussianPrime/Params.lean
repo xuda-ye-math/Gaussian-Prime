@@ -3,10 +3,10 @@ import Mathlib
 /-!
 # Parameters (Section 2) and the inequalities of Appendix D
 
-`σ, τ, ρ, ζ, ν` are the parameters of display (2.1) of the paper, and `χ` is the exponent of
-Section 7. `appD_relations` proves the second column of Table `tab: inequalities` for
-`1/9 < θ < 1/8`; `appD_quantities` proves that each first-column quantity is a positive multiple
-of the corresponding difference; `appD_values` checks the third column at `θ = 0.1129`.
+`σ, τ, ρ, ζ, ν` are the parameters of display (3) of the paper, and `χ` is the exponent of
+Section 7. `appD_relations` proves the second column of Table 4 for `1/9 < θ < 1/8`;
+`appD_quantities` proves that each first-column quantity is a positive multiple of the
+corresponding difference; `appD_values` checks the third column at `θ = 0.1129`.
 -/
 
 noncomputable section
@@ -26,7 +26,7 @@ def χ (θ : ℝ) : ℝ := (ν θ + 2 * θ) / 2
 theorem χ_eq (θ : ℝ) : χ θ = (34 * θ + 7) / 24 := by
   simp only [χ, ν]; ring
 
-/-- The second column of Table `tab: inequalities`, row by row. -/
+/-- The second column of Table 4, row by row. -/
 theorem appD_relations (θ : ℝ) (h1 : 1 / 9 < θ) (h2 : θ < 1 / 8) :
     3 * σ θ / 2 < τ θ ∧ θ < 1 / 8 ∧ ν θ + ρ θ < 1 ∧ θ < 1 / 6 ∧ σ θ - θ < 1 / 3 ∧
     σ θ < (1 / 3 + τ θ) / 2 ∧ 2 * ζ θ - 1 / 3 < ν θ ∧ ζ θ - 1 / 3 < ρ θ ∧ ζ θ < τ θ ∧
@@ -38,7 +38,8 @@ theorem appD_relations (θ : ℝ) (h1 : 1 / 9 < θ) (h2 : θ < 1 / 8) :
     linarith
 
 /-- Each first-column quantity is a positive multiple of the difference of the two sides of its
-relation; with `appD_quantities_pos` this is the table's claim that the quantities are positive. -/
+relation; with `appD_quantities_pos` this is the table's claim that the quantities are positive.
+The rows `1/8 - θ` and `1/6 - θ` are omitted: there the quantity is the difference itself. -/
 theorem appD_quantities (θ : ℝ) :
     τ θ - 3 * σ θ / 2 = 5 / 2 * (θ - 1 / 10) ∧
     1 - (ν θ + ρ θ) = (1 - 8 * θ) / 3 ∧
@@ -74,7 +75,7 @@ theorem appD_quantities_pos (θ : ℝ) (h1 : 1 / 9 < θ) (h2 : θ < 1 / 8) :
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
     linarith
 
-/-- The third column of Table `tab: inequalities`: each value is the quantity at `θ = 0.1129`,
+/-- The third column of Table 4: each value is the quantity at `θ = 0.1129`,
 rounded to `7` decimal places. -/
 theorem appD_values :
     |(θ₀ - 1 / 10) - 0.0129000| ≤ 5e-8 ∧ |(1 / 8 - θ₀) - 0.0121000| ≤ 5e-8 ∧

@@ -1,0 +1,11 @@
+Table 3: the theta at which the total loss is 1 (Brent's method, xtol 1e-10; first method, k = 10, panels = 16),
+and the exponent 1/2 - 2 theta.
+
+decomposition                 theta  1/2 - 2 theta
+Harman and Lewis          0.1167825      0.2664351
+with R                    0.1141073      0.2717854
+with R and G              0.1139312      0.2721376
+with R, G and P           0.1132049      0.2735902
+with R, G and L           0.1128554      0.2742892
+
+The quantities of Table 4 at each of these theta: all positive.

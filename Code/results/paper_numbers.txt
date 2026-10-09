@@ -1,0 +1,53 @@
+Every number of Section 10 of the paper, as printed and as computed by this run (rounded to the printed digits).
+
+location       printed   computed           number
+--------------------------------------------------
+Section 10      10^-14   5.88e-15  agrees   omega and Omega against their closed forms on [1, 3]
+Table 2      0.3201605  0.3201605  agrees   D1 at 0.1129, first method
+Table 2      0.3201605  0.3201605  agrees   D1 at 0.1129, second method
+Table 2      0.3437028  0.3437028  agrees   D2 at 0.1129, first method
+Table 2      0.3437028  0.3437028  agrees   D2 at 0.1129, second method
+Table 2      0.2132922  0.2132922  agrees   D4 at 0.1129, first method
+Table 2      0.2132922  0.2132922  agrees   D4 at 0.1129, second method
+Table 2      0.0480512  0.0480512  agrees   D6 at 0.1129, first method
+Table 2      0.0480512  0.0480512  agrees   D6 at 0.1129, second method
+Table 2      0.0684437  0.0684437  agrees   D8 at 0.1129, first method
+Table 2      0.0684437  0.0684437  agrees   D8 at 0.1129, second method
+Table 2      0.0000098  0.0000098  agrees   E3 at 0.1129, first method
+Table 2      0.0000098  0.0000098  agrees   E3 at 0.1129, second method
+Table 2      0.0010206  0.0010206  agrees   ER at 0.1129, first method
+Table 2      0.0010207  0.0010207  agrees   ER at 0.1129, second method
+Table 2      0.0006199  0.0006199  agrees   E5 at 0.1129, first method
+Table 2      0.0006199  0.0006199  agrees   E5 at 0.1129, second method
+Table 2      0.0004451  0.0004451  agrees   E7 at 0.1129, first method
+Table 2      0.0004451  0.0004451  agrees   E7 at 0.1129, second method
+Table 2      0.0002727  0.0002727  agrees   E9 at 0.1129, first method
+Table 2      0.0002726  0.0002726  agrees   E9 at 0.1129, second method
+Table 2      0.0028858  0.0028858  agrees   E10 at 0.1129, first method
+Table 2      0.0028870  0.0028870  agrees   E10 at 0.1129, second method
+Table 2      0.0000988  0.0000988  agrees   E11 at 0.1129, first method
+Table 2      0.0000988  0.0000988  agrees   E11 at 0.1129, second method
+Table 2      0.9990033  0.9990033  agrees   Phi(0.1129), first method
+Table 2      0.9990044  0.9990044  agrees   Phi(0.1129), second method
+Section 10   0.9425585  0.9425585  agrees   total of HL at 0.119, first method
+Table 3      0.1167825  0.1167825  agrees   Harman and Lewis: theta
+Table 3      0.2664351  0.2664351  agrees   Harman and Lewis: 1/2 - 2 theta
+Table 3      0.1141073  0.1141073  agrees   with R: theta
+Table 3      0.2717854  0.2717854  agrees   with R: 1/2 - 2 theta
+Table 3      0.1139312  0.1139312  agrees   with R and G: theta
+Table 3      0.2721376  0.2721376  agrees   with R and G: 1/2 - 2 theta
+Table 3      0.1132049  0.1132049  agrees   with R, G and P: theta
+Table 3      0.2735902  0.2735902  agrees   with R, G and P: 1/2 - 2 theta
+Table 3      0.1128554  0.1128554  agrees   with R, G and L: theta
+Table 3      0.2742892  0.2742892  agrees   with R, G and L: 1/2 - 2 theta
+Section 10     2.6e-10    2.6e-10  agrees   change of Phi(0.1129) from the rule of Table 2 to the finest rule
+Section 10      1.0e-6     1.0e-6  agrees   error estimate of the second method over the E_k at 0.1129
+Section 10      1.2e-6     1.2e-6  agrees   difference of the two methods in Phi(0.1129)
+Section 10         1.1        1.1  agrees   difference of the two methods over the error estimate
+Section 10     9.97e-4    9.97e-4  agrees   1 - Phi(0.1129)
+Section 10        >800        855  agrees   1 - Phi(0.1129) over the largest of the three quantities above
+Section 10   0.9978243  0.9978243  agrees   Phi_P(0.1133), first method
+Section 10   0.9978250  0.9978250  agrees   Phi_P(0.1133), second method
+Section 10      0.2734     0.2734  agrees   1/2 - 2 * 0.1133
+
+47 numbers; differ: none

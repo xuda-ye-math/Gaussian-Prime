@@ -9,19 +9,19 @@ Harman and Lewis proved that infinitely many primes $p = m^2 + n^2$ have $n < p^
 | Folder | Contents |
 |---|---|
 | [`Paper/`](Paper) | the manuscript `main.tex`, the bibliography `references.bib` and the build `main.pdf` |
-| [`Code/`](Code) | Python evaluation of the sieve losses: Buchstab's function, the loss regions, the loss integrals and $\theta_{\min}$, and the structural inequalities in exact rational arithmetic; outputs in `Code/results/` |
+| [`Code/`](Code) | Julia computation of every number of Section 10 and Appendix D of the paper: the losses by both methods of Section 10, Tables 2–4, and a comparison of each number with the paper; outputs in `Code/results/` |
 | [`Lean/`](Lean) | Lean 4 formalization: the deduction of Theorem 2 from Theorem 1 and the parameter table of Appendix D are proved; the plan for the remaining parts is in `Lean/README.md` |
 
 `Code/README.md` and `Lean/README.md` give the details of each part.
 
 ## Reproduce
 
-Code, with Python 3, `numpy` and `scipy` (about 19 min on 32 cores):
+Code, with Julia 1.13 (37 s with 32 threads):
 
 ```
 cd Code
-pip install numpy scipy
-python -u run_all.py
+julia --project=. -e 'using Pkg; Pkg.instantiate()'
+julia --project=. -t 32,1 run_all.jl
 ```
 
 Lean, with Lean 4 v4.33.1 and Mathlib v4.33.1:

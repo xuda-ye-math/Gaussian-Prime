@@ -1,1897 +1,922 @@
 {
- "generated": "2026-10-08 22:23:30",
- "python": "3.14.7",
- "numpy": "2.5.3",
- "scipy": "1.18.1",
- "resolution": {
-  "k": 10,
-  "panels": 16
- },
- "qmc": {
-  "m": 20,
-  "reps": 8
- },
- "tolerance": 1e-06,
- "references": [
-  {
-   "name": "total HL at 0.119",
-   "value": 0.942558492464785,
-   "reference": 0.942558,
-   "source": "routes/R1/final_0119.log; rstar_claim.md Section 4",
-   "diff": 4.924647849513519e-07,
-   "tolerance": 1e-06,
-   "agrees": true
+  "generated": "2026-10-09 11:56:33",
+  "julia": "1.13.0",
+  "threads": 32,
+  "resolution": {
+    "k": 10,
+    "panels": 16
   },
-  {
-   "name": "theta_min HL",
-   "value": 0.11678246122598722,
-   "reference": 0.1167824,
-   "source": "routes/R1/thetamin.log; rstar_claim.md Section 8",
-   "diff": 6.122598722457795e-08,
-   "tolerance": 1e-06,
-   "agrees": true
+  "qmc": {
+    "m": 20,
+    "reps": 8
   },
-  {
-   "name": "theta_min HL printed",
-   "value": 0.11722856379909101,
-   "reference": 0.1172286,
-   "source": "routes/R1/thetamin.log",
-   "diff": -3.6200908992700676e-08,
-   "tolerance": 1e-06,
-   "agrees": true
+  "runtimes": {
+    "buchstab": 0.03126406669616699,
+    "inequalities": 0.307175874710083,
+    "hl_0119": 25.24838399887085,
+    "roots": 6.870553016662598,
+    "losses": 0.5297601222991943,
+    "convergence": 3.874314785003662,
+    "total": 36.8617639541626
   },
-  {
-   "name": "theta_min R*",
-   "value": 0.11410728920255506,
-   "reference": 0.1141073,
-   "source": "rstar_claim.md Section 8",
-   "diff": -1.0797444938148715e-08,
-   "tolerance": 1e-06,
-   "agrees": true
+  "buchstab": {
+    "max |omega - 1/u| on [1,2]": 5.88418203051333e-15,
+    "max |Omega - log u| on [1,2]": 3.3306690738754696e-16,
+    "max |omega - (1+log(u-1))/u| on [2,3]": 3.6637359812630166e-15,
+    "max |Omega - closed form| on [2,3]": 1.887379141862766e-15,
+    "max |u omega(u) - 1 - Omega(u-1)| on [2,40)": 1.4921397450962104e-13,
+    "omega(10) - e^-gamma": -4.574118861455645e-14,
+    "omega(39.9) - e^-gamma": 8.881784197001252e-16,
+    "omega(2.5)": 0.5621860432432648,
+    "omega(3)": 0.5643823935199803
   },
-  {
-   "name": "theta_min R*+G4",
-   "value": 0.11393118136587854,
-   "reference": 0.1139313,
-   "source": "rstar2_claim.md Section 0",
-   "diff": -1.1863412145707297e-07,
-   "tolerance": 1e-06,
-   "agrees": true
+  "inequalities": {
+    "failures": [],
+    "rows": [
+      {
+        "quantity": "theta - 1/10",
+        "inequality": "3 sigma/2 < tau; Lemma 12",
+        "value_0_1129": "129/10000",
+        "value_0_1133": "133/10000",
+        "multiple": "5/2",
+        "printed": "0.0129000",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "1/8 - theta",
+        "inequality": "range of theta",
+        "value_0_1129": "121/10000",
+        "value_0_1133": "117/10000",
+        "multiple": "1",
+        "printed": "0.0121000",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(1 - 8 theta)/3",
+        "inequality": "nu + rho < 1; Lemma 9",
+        "value_0_1129": "121/3750",
+        "value_0_1133": "39/1250",
+        "multiple": "1",
+        "printed": "0.0322667",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "1/6 - theta",
+        "inequality": "Lemma 2",
+        "value_0_1129": "1613/30000",
+        "value_0_1133": "1601/30000",
+        "multiple": "1",
+        "printed": "0.0537667",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "2 theta - 1/6",
+        "inequality": "sigma - theta < 1/3; j = 0 in Range 2",
+        "value_0_1129": "887/15000",
+        "value_0_1133": "899/15000",
+        "multiple": "1",
+        "printed": "0.0591333",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "3 theta/2 - 1/12",
+        "inequality": "sigma < (1/3 + tau)/2; PQ >= W in Range 2 and on R",
+        "value_0_1129": "5161/60000",
+        "value_0_1133": "5197/60000",
+        "multiple": "1",
+        "printed": "0.0860167",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(3 - 22 theta)/12",
+        "inequality": "2 zeta - 1/3 < nu; PQ^2 <= X^nu in Range 2",
+        "value_0_1129": "2581/60000",
+        "value_0_1133": "2537/60000",
+        "multiple": "1",
+        "printed": "0.0430167",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(1 + 6 theta)/12",
+        "inequality": "zeta - 1/3 < rho; Q <= X^rho in Range 2",
+        "value_0_1129": "8387/60000",
+        "value_0_1133": "8399/60000",
+        "multiple": "1",
+        "printed": "0.1397833",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(1 - 2 theta)/6",
+        "inequality": "zeta < tau; PQ <= X^(tau - eps) where alpha + beta <= zeta",
+        "value_0_1129": "3871/30000",
+        "value_0_1133": "1289/10000",
+        "multiple": "1",
+        "printed": "0.1290333",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(14 theta - 1)/6",
+        "inequality": "sigma < zeta; P <= X^zeta on R",
+        "value_0_1129": "2903/30000",
+        "value_0_1133": "977/10000",
+        "multiple": "1",
+        "printed": "0.0967667",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(5 - 34 theta)/24",
+        "inequality": "zeta - sigma < rho/2; R non-empty",
+        "value_0_1129": "5807/120000",
+        "value_0_1133": "1913/40000",
+        "multiple": "1",
+        "printed": "0.0483917",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(26 theta - 1)/24",
+        "inequality": "sigma + rho/2 < tau; PQ <= X^(tau - eps) on R",
+        "value_0_1129": "9677/120000",
+        "value_0_1133": "3243/40000",
+        "multiple": "1",
+        "printed": "0.0806417",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(46 theta - 5)/12",
+        "inequality": "sigma - theta < rho; j = 0 in Range 3, Q <= X^rho in Range 5",
+        "value_0_1129": "967/60000",
+        "value_0_1133": "353/20000",
+        "multiple": "1",
+        "printed": "0.0161167",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(58 theta - 5)/24",
+        "inequality": "sigma < chi; PQ >= W in Range 3",
+        "value_0_1129": "7741/120000",
+        "value_0_1133": "2619/40000",
+        "multiple": "1",
+        "printed": "0.0645083",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(1 - 2 theta)/24",
+        "inequality": "chi < zeta; Lemma 9 in Range 1",
+        "value_0_1129": "3871/120000",
+        "value_0_1133": "1289/40000",
+        "multiple": "1",
+        "printed": "0.0322583",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(11 - 82 theta)/36",
+        "inequality": "nu/3 < sigma - theta; D8 non-empty",
+        "value_0_1129": "8711/180000",
+        "value_0_1133": "2849/60000",
+        "multiple": "1",
+        "printed": "0.0483944",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(46 theta - 5)/24",
+        "inequality": "(nu + sigma - theta)/2 < zeta; PQ <= X^zeta in Range 5",
+        "value_0_1129": "967/120000",
+        "value_0_1133": "353/40000",
+        "multiple": "1",
+        "printed": "0.0080583",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "5 theta/3 - 1/6",
+        "inequality": "sigma < 2 tau/3; PQ >= W on E9",
+        "value_0_1129": "43/2000",
+        "value_0_1133": "133/6000",
+        "multiple": "1",
+        "printed": "0.0215000",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "5 theta/2 - 1/4",
+        "inequality": "sigma - theta < tau/2; E10 lies in Range 5",
+        "value_0_1129": "129/4000",
+        "value_0_1133": "133/4000",
+        "multiple": "1",
+        "printed": "0.0322500",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "17 theta/5 - 3/10",
+        "inequality": "sigma - 2 theta < 2 tau/5; |pq|^2 >= W X^(-2 theta) in Range 6",
+        "value_0_1129": "4193/50000",
+        "value_0_1133": "4261/50000",
+        "multiple": "1",
+        "printed": "0.0838600",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "21 theta/5 - 2/5",
+        "inequality": "sigma - 3 theta < tau/5; j(X^alpha) <= 2 in Range 6",
+        "value_0_1129": "3709/50000",
+        "value_0_1133": "3793/50000",
+        "multiple": "1",
+        "printed": "0.0741800",
+        "agrees": true,
+        "ok": true
+      }
+    ]
   },
-  {
-   "name": "theta_min R*+G4+P",
-   "value": 0.11320488168821036,
-   "reference": 0.113205,
-   "source": "rstar2_claim.md Section 0",
-   "diff": -1.1831178964305522e-07,
-   "tolerance": 1e-06,
-   "agrees": true
+  "hl_0119": {
+    "first": {
+      "D1": 0.274783805321575,
+      "D2+R": 0.3456457768665668,
+      "D4": 0.15545607199993922,
+      "D6": 0.11162548776700557,
+      "D8": 0.035639376739889074,
+      "E3": 9.183832531241042e-5,
+      "E5": 0.0011858505530353476,
+      "E7": 0.0008846665049972055,
+      "E9": 0.0010751945929886961,
+      "E10": 0.016141952585797287,
+      "E11": 2.847120767881958e-5
+    },
+    "second": {
+      "D1": [
+        0.274783805321391,
+        5.045928960085416e-13
+      ],
+      "D2+R": [
+        0.34564577686656717,
+        5.551115123125783e-17
+      ],
+      "D4": [
+        0.15545607199990935,
+        1.4241385848379196e-13
+      ],
+      "D6": [
+        0.11162548776700532,
+        1.3877787807814457e-17
+      ],
+      "D8": [
+        0.035639376739845866,
+        2.906304754149436e-13
+      ],
+      "E3": [
+        9.183831933658835e-5,
+        5.59192191897895e-12
+      ],
+      "E5": [
+        0.0011858504965241057,
+        3.110698311647606e-10
+      ],
+      "E7": [
+        0.0008846663223321084,
+        3.3326339050334855e-10
+      ],
+      "E9": [
+        0.0010751945579750427,
+        1.8470872468167493e-10
+      ],
+      "E10": [
+        0.016141923805691044,
+        4.0839241356475894e-8
+      ],
+      "E11": [
+        2.8471206046728608e-5,
+        8.990554789219036e-13
+      ]
+    }
   },
-  {
-   "name": "theta_min R*+G4+L",
-   "value": 0.1128554138864277,
-   "reference": 0.1128555,
-   "source": "rstar2_claim.md Section 0",
-   "diff": -8.61135723007056e-08,
-   "tolerance": 1e-06,
-   "agrees": true
+  "roots": {
+    "values": {
+      "HL": 0.1167824612259678,
+      "HL+R": 0.1141072891918103,
+      "HL+R+G": 0.11393118136149397,
+      "HL+R+G+P": 0.11320488169259288,
+      "HL+R+G+L": 0.11285541388780537
+    },
+    "failing_quantities": {
+      "HL": [],
+      "HL+R": [],
+      "HL+R+G": [],
+      "HL+R+G+P": [],
+      "HL+R+G+L": []
+    }
   },
-  {
-   "name": "total R*+G4+L at 0.1129",
-   "value": 0.9990032541331525,
-   "reference": 0.9990032,
-   "source": "routes/R1-review2/rv2_totals.log",
-   "diff": 5.413315251612261e-08,
-   "tolerance": 1e-06,
-   "agrees": true
+  "losses": {
+    "HL+R+G+L at 0.1129": {
+      "first": {
+        "D1": 0.32016047039799256,
+        "D2": 0.3437028250470892,
+        "D4": 0.2132921726891702,
+        "D6": 0.04805124113788654,
+        "D8": 0.06844373761221809,
+        "E3": 9.827405227548556e-6,
+        "ER": 0.0010206367353205743,
+        "E5": 0.0006199391203727699,
+        "E7": 0.00044509736264584747,
+        "E9": 0.00027271234392817217,
+        "E10": 0.002885779620989029,
+        "E11": 9.881466031221664e-5
+      },
+      "second": {
+        "D1": [
+          0.3201604703979906,
+          2.9268081030783863e-13
+        ],
+        "D2": [
+          0.34370282504709004,
+          4.85722573273506e-17
+        ],
+        "D4": [
+          0.21329217268917028,
+          1.3877787807814457e-17
+        ],
+        "D6": [
+          0.04805124113788647,
+          1.3877787807814457e-17
+        ],
+        "D8": [
+          0.06844373761221789,
+          2.0816681711721685e-17
+        ],
+        "E3": [
+          9.827436924118772e-6,
+          8.804681940019467e-10
+        ],
+        "ER": [
+          0.0010206887285001457,
+          6.807594013919032e-8
+        ],
+        "E5": [
+          0.0006199203414688072,
+          4.352308640642631e-8
+        ],
+        "E7": [
+          0.0004450893415420926,
+          8.493267398693316e-9
+        ],
+        "E9": [
+          0.0002726030524303675,
+          5.603870015505681e-8
+        ],
+        "E10": [
+          0.0028870226598686098,
+          1.011557445085092e-6
+        ],
+        "E11": [
+          9.88219216685324e-5,
+          1.0769633501457999e-8
+        ]
+      },
+      "first_total": 0.9990032541331529,
+      "second_total": 0.999004420366758
+    },
+    "HL+R+G+P at 0.1133": {
+      "first": {
+        "D1": 0.3171641106772166,
+        "D2": 0.3398802668955749,
+        "D4": 0.20942631756037916,
+        "D6": 0.05244270782898296,
+        "D8": 0.06597578627373046,
+        "E3": 1.1084019865216567e-5,
+        "ER": 0.0010049863279647632,
+        "E5": 0.0006171949889951579,
+        "E7": 0.0004750860250020292,
+        "E9": 0.00024077774585160494,
+        "E10": 0.010499797171510105,
+        "E11": 8.619566365248522e-5
+      },
+      "second": {
+        "D1": [
+          0.31716411067685024,
+          1.160124080238862e-12
+        ],
+        "D2": [
+          0.3398802668955747,
+          9.020562075079397e-17
+        ],
+        "D4": [
+          0.20942631756041352,
+          3.2671088057156794e-13
+        ],
+        "D6": [
+          0.05244270782898293,
+          0.0
+        ],
+        "D8": [
+          0.06597578627371974,
+          1.4919619359399228e-13
+        ],
+        "E3": [
+          1.1084007588899264e-5,
+          9.714441738677308e-10
+        ],
+        "ER": [
+          0.0010050381053757374,
+          6.721149611637431e-8
+        ],
+        "E5": [
+          0.0006171655523431467,
+          3.7169422028545985e-8
+        ],
+        "E7": [
+          0.0004750729952140658,
+          1.3777551667654716e-8
+        ],
+        "E9": [
+          0.0002406933329099596,
+          9.259451120845465e-8
+        ],
+        "E10": [
+          0.010500510551580177,
+          5.17945674635772e-7
+        ],
+        "E11": [
+          8.620204121816218e-5,
+          9.411300049124052e-9
+        ]
+      },
+      "first_total": 0.9978243111787255,
+      "second_total": 0.9978249558217713
+    }
   },
-  {
-   "name": "1 - total R*+G4+L at 0.1129",
-   "value": 0.0009967458668475038,
-   "reference": 0.0009968,
-   "source": "routes/R1-review2/rv2_totals.log",
-   "diff": -5.413315249617329e-08,
-   "tolerance": 1e-06,
-   "agrees": true
+  "convergence": {
+    "k=6,panels=2": {
+      "D1": 0.32016047039806644,
+      "D2": 0.3437028250470902,
+      "D4": 0.21329217268917033,
+      "D6": 0.04805124113788646,
+      "D8": 0.06844373761221786,
+      "E3": 9.827405227548876e-6,
+      "ER": 0.0010206353196516582,
+      "E5": 0.0006199585460624747,
+      "E7": 0.00044505431131385833,
+      "E9": 0.0002728319194241083,
+      "E10": 0.0028949079003189595,
+      "E11": 9.832808748221135e-5
+    },
+    "k=6,panels=4": {
+      "D1": 0.3201604703979979,
+      "D2": 0.3437028250470901,
+      "D4": 0.2132921726891704,
+      "D6": 0.0480512411378865,
+      "D8": 0.06844373761221786,
+      "E3": 9.827405227548542e-6,
+      "ER": 0.0010206366620342056,
+      "E5": 0.0006199380950683743,
+      "E7": 0.0004450839268987128,
+      "E9": 0.0002726667824653462,
+      "E10": 0.0028856488337624608,
+      "E11": 9.87343960199013e-5
+    },
+    "k=8,panels=4": {
+      "D1": 0.3201604703979896,
+      "D2": 0.3437028250470903,
+      "D4": 0.21329217268917075,
+      "D6": 0.048051241137886544,
+      "D8": 0.06844373761221796,
+      "E3": 9.827405227548573e-6,
+      "ER": 0.0010206368030759878,
+      "E5": 0.0006199386085440084,
+      "E7": 0.00044510346800675566,
+      "E9": 0.0002726831163654491,
+      "E10": 0.002885994405878521,
+      "E11": 9.87351791719682e-5
+    },
+    "k=8,panels=8": {
+      "D1": 0.32016047039799184,
+      "D2": 0.3437028250470908,
+      "D4": 0.21329217268917056,
+      "D6": 0.04805124113788648,
+      "D8": 0.06844373761221796,
+      "E3": 9.827405227548566e-6,
+      "ER": 0.001020636735898556,
+      "E5": 0.0006199391334730509,
+      "E7": 0.0004450987198614304,
+      "E9": 0.0002727117754495497,
+      "E10": 0.0028858109099838035,
+      "E11": 9.879681291680239e-5
+    },
+    "k=10,panels=8": {
+      "D1": 0.3201604703979916,
+      "D2": 0.34370282504709043,
+      "D4": 0.21329217268917075,
+      "D6": 0.04805124113788648,
+      "D8": 0.06844373761221803,
+      "E3": 9.82740522754855e-6,
+      "ER": 0.0010206367353682699,
+      "E5": 0.000619939085715535,
+      "E7": 0.00044509757075033744,
+      "E9": 0.00027271170916053,
+      "E10": 0.002885783985063905,
+      "E11": 9.880188200794474e-5
+    },
+    "k=8,panels=16": {
+      "D1": 0.3201604703979916,
+      "D2": 0.34370282504708977,
+      "D4": 0.21329217268917067,
+      "D6": 0.04805124113788647,
+      "D8": 0.06844373761221789,
+      "E3": 9.827405227548565e-6,
+      "ER": 0.001020636735360297,
+      "E5": 0.000619939110061307,
+      "E7": 0.0004450976068418838,
+      "E9": 0.000272712809809254,
+      "E10": 0.0028857799211792234,
+      "E11": 9.881245119100376e-5
+    },
+    "k=10,panels=16": {
+      "D1": 0.32016047039799256,
+      "D2": 0.3437028250470892,
+      "D4": 0.2132921726891702,
+      "D6": 0.04805124113788654,
+      "D8": 0.06844373761221809,
+      "E3": 9.827405227548556e-6,
+      "ER": 0.0010206367353205743,
+      "E5": 0.0006199391203727699,
+      "E7": 0.00044509736264584747,
+      "E9": 0.00027271234392817217,
+      "E10": 0.002885779620989029,
+      "E11": 9.881466031221664e-5
+    },
+    "k=12,panels=16": {
+      "D1": 0.3201604703979918,
+      "D2": 0.34370282504709004,
+      "D4": 0.21329217268917056,
+      "D6": 0.04805124113788649,
+      "D8": 0.06844373761221956,
+      "E3": 9.827405227548539e-6,
+      "ER": 0.0010206367353028556,
+      "E5": 0.000619939117869655,
+      "E7": 0.0004450971146982273,
+      "E9": 0.00027271265724600506,
+      "E10": 0.0028857765509871106,
+      "E11": 9.881799981068793e-5
+    },
+    "k=12,panels=32": {
+      "D1": 0.3201604703979914,
+      "D2": 0.3437028250470897,
+      "D4": 0.2132921726891701,
+      "D6": 0.04805124113788652,
+      "D8": 0.06844373761222057,
+      "E3": 9.827405227548537e-6,
+      "ER": 0.0010206367353039834,
+      "E5": 0.0006199391175091871,
+      "E7": 0.000445097246015041,
+      "E9": 0.00027271246426845873,
+      "E10": 0.0028857774124082664,
+      "E11": 9.881713272595975e-5
+    }
   },
-  {
-   "name": "total R*+G4+P at 0.1133",
-   "value": 0.9978243111787247,
-   "reference": 0.9978243,
-   "source": "routes/R1-review2/rv2_totals.log",
-   "diff": 1.1178724723670541e-08,
-   "tolerance": 1e-06,
-   "agrees": true
-  },
-  {
-   "name": "1 - total R*+G4+P at 0.1133",
-   "value": 0.002175688821275279,
-   "reference": 0.0021757,
-   "source": "routes/R1-review2/rv2_totals.log",
-   "diff": -1.1178724721068456e-08,
-   "tolerance": 1e-06,
-   "agrees": true
-  },
-  {
-   "name": "total R* at 0.1142",
-   "value": 0.9977383667227145,
-   "reference": 0.9977385,
-   "source": "routes/R1-review/rv_01142_p80.log",
-   "diff": -1.332772854301112e-07,
-   "tolerance": 1e-06,
-   "agrees": true
-  },
-  {
-   "name": "total R*+G4+L[qrs|p] at 0.1129",
-   "value": 0.9990032541331525,
-   "reference": 0.9990035,
-   "source": "routes/R1-review2/rv2_sens2.log (resolution 16)",
-   "diff": -2.4586684754801524e-07,
-   "tolerance": 1e-06,
-   "agrees": true
-  }
- ],
- "runtimes": {
-  "buchstab": 0.01898336410522461,
-  "checks": 0.015348672866821289,
-  "classification": 10.35761046409607,
-  "hl_0119": 2.5496408939361572,
-  "roots": 371.798574924469,
-  "losses": 72.97737288475037,
-  "variants": 90.67942357063293,
-  "convergence": 576.8796689510345,
-  "total": 1125.3052835464478
- },
- "buchstab": {
-  "max |omega - 1/u| on [1,2]": 1.7208456881689926e-14,
-  "max |Omega - log u| on [1,2]": 1.0200174038743626e-15,
-  "max |omega - (1+log(u-1))/u| on [2,3]": 9.769962616701378e-15,
-  "max |Omega - closed form| on [2,3]": 2.7755575615628914e-15,
-  "max |u omega(u) - 1 - Omega(u-1)| on [2,40)": 3.588240815588506e-13,
-  "omega(10) - e^-gamma": -5.4067861299245124e-14,
-  "omega(39.9) - e^-gamma": 2.220446049250313e-16,
-  "omega(2.5)": 0.562186043243266,
-  "omega(3)": 0.564382393519972
- },
- "checks": {
-  "count": 59,
-  "failures": [],
-  "rows": [
-   {
-    "source": "gaps 3.3",
-    "name": "theta > 1/10 (Lemma 14'; tau > 3 sigma/2)",
-    "kind": ">",
-    "linear_form": [
-     "1",
-     "-1/10"
-    ],
-    "values": {
-     "1129/10000": 0.0129,
-     "1133/10000": 0.0133,
-     "571/5000": 0.0142,
-     "119/1000": 0.019
+  "paper": [
+    {
+      "location": "Section 10",
+      "name": "omega and Omega against their closed forms on [1, 3]",
+      "printed": "10^-14",
+      "computed": 5.88418203051333e-15,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D1 at 0.1129, first method",
+      "printed": "0.3201605",
+      "computed": 0.32016047039799256,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D1 at 0.1129, second method",
+      "printed": "0.3201605",
+      "computed": 0.3201604703979906,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D2 at 0.1129, first method",
+      "printed": "0.3437028",
+      "computed": 0.3437028250470892,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D2 at 0.1129, second method",
+      "printed": "0.3437028",
+      "computed": 0.34370282504709004,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D4 at 0.1129, first method",
+      "printed": "0.2132922",
+      "computed": 0.2132921726891702,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D4 at 0.1129, second method",
+      "printed": "0.2132922",
+      "computed": 0.21329217268917028,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D6 at 0.1129, first method",
+      "printed": "0.0480512",
+      "computed": 0.04805124113788654,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D6 at 0.1129, second method",
+      "printed": "0.0480512",
+      "computed": 0.04805124113788647,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D8 at 0.1129, first method",
+      "printed": "0.0684437",
+      "computed": 0.06844373761221809,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D8 at 0.1129, second method",
+      "printed": "0.0684437",
+      "computed": 0.06844373761221789,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E3 at 0.1129, first method",
+      "printed": "0.0000098",
+      "computed": 9.827405227548556e-6,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E3 at 0.1129, second method",
+      "printed": "0.0000098",
+      "computed": 9.827436924118772e-6,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "ER at 0.1129, first method",
+      "printed": "0.0010206",
+      "computed": 0.0010206367353205743,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "ER at 0.1129, second method",
+      "printed": "0.0010207",
+      "computed": 0.0010206887285001457,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E5 at 0.1129, first method",
+      "printed": "0.0006199",
+      "computed": 0.0006199391203727699,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E5 at 0.1129, second method",
+      "printed": "0.0006199",
+      "computed": 0.0006199203414688072,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E7 at 0.1129, first method",
+      "printed": "0.0004451",
+      "computed": 0.00044509736264584747,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E7 at 0.1129, second method",
+      "printed": "0.0004451",
+      "computed": 0.0004450893415420926,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E9 at 0.1129, first method",
+      "printed": "0.0002727",
+      "computed": 0.00027271234392817217,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E9 at 0.1129, second method",
+      "printed": "0.0002726",
+      "computed": 0.0002726030524303675,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E10 at 0.1129, first method",
+      "printed": "0.0028858",
+      "computed": 0.002885779620989029,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E10 at 0.1129, second method",
+      "printed": "0.0028870",
+      "computed": 0.0028870226598686098,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E11 at 0.1129, first method",
+      "printed": "0.0000988",
+      "computed": 9.881466031221664e-5,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E11 at 0.1129, second method",
+      "printed": "0.0000988",
+      "computed": 9.88219216685324e-5,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "Phi(0.1129), first method",
+      "printed": "0.9990033",
+      "computed": 0.9990032541331529,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "Phi(0.1129), second method",
+      "printed": "0.9990044",
+      "computed": 0.999004420366758,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "total of HL at 0.119, first method",
+      "printed": "0.9425585",
+      "computed": 0.9425584924647853,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "Harman and Lewis: theta",
+      "printed": "0.1167825",
+      "computed": 0.1167824612259678,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "Harman and Lewis: 1/2 - 2 theta",
+      "printed": "0.2664351",
+      "computed": 0.2664350775480644,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "with R: theta",
+      "printed": "0.1141073",
+      "computed": 0.1141072891918103,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "with R: 1/2 - 2 theta",
+      "printed": "0.2717854",
+      "computed": 0.2717854216163794,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "with R and G: theta",
+      "printed": "0.1139312",
+      "computed": 0.11393118136149397,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "with R and G: 1/2 - 2 theta",
+      "printed": "0.2721376",
+      "computed": 0.27213763727701207,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "with R, G and P: theta",
+      "printed": "0.1132049",
+      "computed": 0.11320488169259288,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "with R, G and P: 1/2 - 2 theta",
+      "printed": "0.2735902",
+      "computed": 0.27359023661481424,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "with R, G and L: theta",
+      "printed": "0.1128554",
+      "computed": 0.11285541388780537,
+      "agrees": true
+    },
+    {
+      "location": "Table 3",
+      "name": "with R, G and L: 1/2 - 2 theta",
+      "printed": "0.2742892",
+      "computed": 0.27428917222438925,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "change of Phi(0.1129) from the rule of Table 2 to the finest rule",
+      "printed": "2.6e-10",
+      "computed": 2.6466373537203935e-10,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "error estimate of the second method over the E_k at 0.1129",
+      "printed": "1.0e-6",
+      "computed": 1.0164183632340696e-6,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "difference of the two methods in Phi(0.1129)",
+      "printed": "1.2e-6",
+      "computed": 1.1662336050211053e-6,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "difference of the two methods over the error estimate",
+      "printed": "1.1",
+      "computed": 1.1473952529845577,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "1 - Phi(0.1129)",
+      "printed": "9.97e-4",
+      "computed": 0.0009967458668470597,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "1 - Phi(0.1129) over the largest of the three quantities above",
+      "printed": ">800",
+      "computed": 854.6708502959161,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "Phi_P(0.1133), first method",
+      "printed": "0.9978243",
+      "computed": 0.9978243111787255,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "Phi_P(0.1133), second method",
+      "printed": "0.9978250",
+      "computed": 0.9978249558217713,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "1/2 - 2 * 0.1133",
+      "printed": "0.2734",
+      "computed": 0.2734,
+      "agrees": true
     }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "theta < 1/8 (Lemma 11'; nu + rho < 1)",
-    "kind": ">",
-    "linear_form": [
-     "-1",
-     "1/8"
-    ],
-    "values": {
-     "1129/10000": 0.0121,
-     "1133/10000": 0.0117,
-     "571/5000": 0.0108,
-     "119/1000": 0.006
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "theta < 1/6 (Lemma A3)",
-    "kind": ">",
-    "linear_form": [
-     "-1",
-     "1/6"
-    ],
-    "values": {
-     "1129/10000": 0.053766666666666664,
-     "1133/10000": 0.053366666666666666,
-     "571/5000": 0.05246666666666667,
-     "119/1000": 0.04766666666666667
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "theta > 1/14 (Lemma 7)",
-    "kind": ">",
-    "linear_form": [
-     "1",
-     "-1/14"
-    ],
-    "values": {
-     "1129/10000": 0.04147142857142857,
-     "1133/10000": 0.04187142857142857,
-     "571/5000": 0.04277142857142857,
-     "119/1000": 0.04757142857142857
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "theta > 1/9",
-    "kind": ">",
-    "linear_form": [
-     "1",
-     "-1/9"
-    ],
-    "values": {
-     "1129/10000": 0.001788888888888889,
-     "1133/10000": 0.002188888888888889,
-     "571/5000": 0.003088888888888889,
-     "119/1000": 0.00788888888888889
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "theta >= 3/26 (HL's own range; replaced below it by the strip argument, R* 6)",
-    "kind": "info",
-    "linear_form": [
-     "1",
-     "-3/26"
-    ],
-    "values": {
-     "1129/10000": -0.0024846153846153846,
-     "1133/10000": -0.0020846153846153844,
-     "571/5000": -0.0011846153846153847,
-     "119/1000": 0.0036153846153846154
-    }
-   },
-   {
-    "source": "gaps 2.6",
-    "name": "R*: PQ >= W, (1/3 + tau)/2 - sigma = 3 theta/2 - 1/12",
-    "kind": ">",
-    "linear_form": [
-     "3/2",
-     "-1/12"
-    ],
-    "values": {
-     "1129/10000": 0.08601666666666667,
-     "1133/10000": 0.08661666666666666,
-     "571/5000": 0.08796666666666667,
-     "119/1000": 0.09516666666666666
-    }
-   },
-   {
-    "source": "gaps 2.6",
-    "name": "R*: PQ <= X^{tau-eps}, w >= X^eps: tau - sigma - rho/2 = (26 theta - 1)/24",
-    "kind": ">",
-    "linear_form": [
-     "13/12",
-     "-1/24"
-    ],
-    "values": {
-     "1129/10000": 0.08064166666666667,
-     "1133/10000": 0.081075,
-     "571/5000": 0.08205,
-     "119/1000": 0.08725
-    }
-   },
-   {
-    "source": "gaps 2.6",
-    "name": "R*: P <= X^{zeta-eps}, zeta - sigma = (14 theta - 1)/6",
-    "kind": ">",
-    "linear_form": [
-     "7/3",
-     "-1/6"
-    ],
-    "values": {
-     "1129/10000": 0.09676666666666667,
-     "1133/10000": 0.0977,
-     "571/5000": 0.0998,
-     "119/1000": 0.111
-    }
-   },
-   {
-    "source": "gaps 2.6",
-    "name": "R* non-empty: rho/2 - (zeta - sigma)",
-    "kind": ">",
-    "linear_form": [
-     "-17/12",
-     "5/24"
-    ],
-    "values": {
-     "1129/10000": 0.048391666666666666,
-     "1133/10000": 0.047825,
-     "571/5000": 0.04655,
-     "119/1000": 0.03975
-    }
-   },
-   {
-    "source": "gaps 2.6",
-    "name": "R*: PQ^2 <= X^{nu-eps} from 2b <= rho: sigma + rho - nu",
-    "kind": "=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "gaps 2.6",
-    "name": "R*: Q >= X^eps, (tau - sigma)/2 - theta",
-    "kind": "=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "gaps 2.6",
-    "name": "R*: Q <= 2P, b <= rho/2 < 1/3 <= a: 1/3 - rho/2",
-    "kind": ">",
-    "linear_form": [
-     "-11/12",
-     "7/24"
-    ],
-    "values": {
-     "1129/10000": 0.188175,
-     "1133/10000": 0.18780833333333333,
-     "571/5000": 0.18698333333333333,
-     "119/1000": 0.18258333333333332
-    }
-   },
-   {
-    "source": "gaps 2.6",
-    "name": "Lemma 13: Q <= X^{rho-eps}, rho - zeta/2 = (14 theta - 1)/12",
-    "kind": ">",
-    "linear_form": [
-     "7/6",
-     "-1/12"
-    ],
-    "values": {
-     "1129/10000": 0.048383333333333334,
-     "1133/10000": 0.04885,
-     "571/5000": 0.0499,
-     "119/1000": 0.0555
-    }
-   },
-   {
-    "source": "gaps 2.6",
-    "name": "Lemma 13: PQ <= X^{tau-eps}, tau - zeta = (1 - 2 theta)/6",
-    "kind": ">",
-    "linear_form": [
-     "-1/3",
-     "1/6"
-    ],
-    "values": {
-     "1129/10000": 0.12903333333333333,
-     "1133/10000": 0.1289,
-     "571/5000": 0.1286,
-     "119/1000": 0.127
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "j = 0: products of (i) below X^tau, tau - 3 sigma/2 = 5 theta/2 - 1/4",
-    "kind": ">",
-    "linear_form": [
-     "5/2",
-     "-1/4"
-    ],
-    "values": {
-     "1129/10000": 0.03225,
-     "1133/10000": 0.03325,
-     "571/5000": 0.0355,
-     "119/1000": 0.0475
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "j = 0: |pqr|^2 >= W (ii), (sigma - theta + tau)/2 - sigma = theta/2",
-    "kind": ">",
-    "linear_form": [
-     "1/2",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.05645,
-     "1133/10000": 0.05665,
-     "571/5000": 0.0571,
-     "119/1000": 0.0595
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "j = 1: products of (i) below X^tau, tau - 3(sigma - theta)/2 = 4 theta - 1/4",
-    "kind": ">",
-    "linear_form": [
-     "4",
-     "-1/4"
-    ],
-    "values": {
-     "1129/10000": 0.2016,
-     "1133/10000": 0.2032,
-     "571/5000": 0.2068,
-     "119/1000": 0.226
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "j = 1: |pqr|^2 >= W X^-theta (ii), (2(sigma - 2 theta) + tau)/3 - (sigma - theta) = theta/3",
-    "kind": ">",
-    "linear_form": [
-     "1/3",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.03763333333333333,
-     "1133/10000": 0.037766666666666664,
-     "571/5000": 0.038066666666666665,
-     "119/1000": 0.03966666666666667
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "(U2): |pq|^2 >= W X^-2theta on Section 6, 2 tau/5 - (sigma - 2 theta)",
-    "kind": ">",
-    "linear_form": [
-     "17/5",
-     "-3/10"
-    ],
-    "values": {
-     "1129/10000": 0.08386,
-     "1133/10000": 0.08522,
-     "571/5000": 0.08828,
-     "119/1000": 0.1046
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "(U2): the same as min over Section 6 of a + b - (sigma - 2 theta) (LP)",
-    "kind": ">",
-    "linear_form": [
-     "17/5",
-     "-3/10"
-    ],
-    "values": {
-     "1129/10000": 0.08386,
-     "1133/10000": 0.08522,
-     "571/5000": 0.08828,
-     "119/1000": 0.1046
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "(U2): j(p) = 2 on Section 6, tau/5 - (sigma - 3 theta)",
-    "kind": ">",
-    "linear_form": [
-     "21/5",
-     "-2/5"
-    ],
-    "values": {
-     "1129/10000": 0.07418,
-     "1133/10000": 0.07586,
-     "571/5000": 0.07964,
-     "119/1000": 0.0998
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "(U1): min over phi10 of a + b - (sigma - theta) (LP) = 5 theta/2 - 1/4",
-    "kind": ">",
-    "linear_form": [
-     "5/2",
-     "-1/4"
-    ],
-    "values": {
-     "1129/10000": 0.03225,
-     "1133/10000": 0.03325,
-     "571/5000": 0.0355,
-     "119/1000": 0.0475
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "(U1): Q >= X^eps, min over phi10 of b - theta (LP)",
-    "kind": ">=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "(U2): Q >= X^eps, min over Section 6 of b - theta (LP)",
-    "kind": ">=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "(U1): Q <= 2P, min over phi10 of a - b (LP)",
-    "kind": ">=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "gaps 3.3",
-    "name": "(U2): Q <= 2P, min over Section 6 of a - b (LP)",
-    "kind": ">=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Lemma 7: zeta - (1 - 4 sigma/3)",
-    "kind": "=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Lemma 7: rho - (1 - 11 sigma/6)",
-    "kind": "=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Lemma 7: nu - (1 - 5 sigma/6)",
-    "kind": "=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "R* 3",
-    "name": "Lemma 7, max form = HL form: rho - sigma/2",
-    "kind": ">=",
-    "linear_form": [
-     "7/3",
-     "-1/6"
-    ],
-    "values": {
-     "1129/10000": 0.09676666666666667,
-     "1133/10000": 0.0977,
-     "571/5000": 0.0998,
-     "119/1000": 0.111
-    }
-   },
-   {
-    "source": "R* 3",
-    "name": "Lemma 7, max form = HL form: nu - 3 sigma/2",
-    "kind": ">=",
-    "linear_form": [
-     "7/3",
-     "-1/6"
-    ],
-    "values": {
-     "1129/10000": 0.09676666666666667,
-     "1133/10000": 0.0977,
-     "571/5000": 0.0998,
-     "119/1000": 0.111
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Lemma 11: chi - (nu + 2 theta)/2",
-    "kind": "=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Lemma 11: chi - sigma",
-    "kind": ">=",
-    "linear_form": [
-     "29/12",
-     "-5/24"
-    ],
-    "values": {
-     "1129/10000": 0.06450833333333333,
-     "1133/10000": 0.065475,
-     "571/5000": 0.06765,
-     "119/1000": 0.07925
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Lemma 11: zeta - chi",
-    "kind": ">",
-    "linear_form": [
-     "-1/12",
-     "1/24"
-    ],
-    "values": {
-     "1129/10000": 0.03225833333333333,
-     "1133/10000": 0.032225,
-     "571/5000": 0.03215,
-     "119/1000": 0.03175
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Lemma 11: 1/2 - chi",
-    "kind": ">",
-    "linear_form": [
-     "-17/12",
-     "5/24"
-    ],
-    "values": {
-     "1129/10000": 0.048391666666666666,
-     "1133/10000": 0.047825,
-     "571/5000": 0.04655,
-     "119/1000": 0.03975
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Lemma 11: (1 - sigma)/2 - (nu - sigma)",
-    "kind": ">=",
-    "linear_form": [
-     "-4/3",
-     "1/6"
-    ],
-    "values": {
-     "1129/10000": 0.016133333333333333,
-     "1133/10000": 0.0156,
-     "571/5000": 0.0144,
-     "119/1000": 0.008
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "phi1 piece 2: 1/4 + 3 theta/2 - sigma",
-    "kind": ">=",
-    "linear_form": [
-     "5/2",
-     "-1/4"
-    ],
-    "values": {
-     "1129/10000": 0.03225,
-     "1133/10000": 0.03325,
-     "571/5000": 0.0355,
-     "119/1000": 0.0475
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "phi1 piece 2: chi - (1/4 + 3 theta/2)",
-    "kind": ">=",
-    "linear_form": [
-     "-1/12",
-     "1/24"
-    ],
-    "values": {
-     "1129/10000": 0.03225833333333333,
-     "1133/10000": 0.032225,
-     "571/5000": 0.03215,
-     "119/1000": 0.03175
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Section 2, j = 0: 1/3 - (sigma - theta)",
-    "kind": ">=",
-    "linear_form": [
-     "2",
-     "-1/6"
-    ],
-    "values": {
-     "1129/10000": 0.059133333333333336,
-     "1133/10000": 0.05993333333333333,
-     "571/5000": 0.061733333333333335,
-     "119/1000": 0.07133333333333333
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Section 2, Lemma 13: nu - (2 zeta - 1/3)",
-    "kind": ">=",
-    "linear_form": [
-     "-11/6",
-     "1/4"
-    ],
-    "values": {
-     "1129/10000": 0.04301666666666667,
-     "1133/10000": 0.04228333333333333,
-     "571/5000": 0.040633333333333334,
-     "119/1000": 0.03183333333333333
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "D2: (1 + 10 theta)/6 - 1/3 (also phi4's lower limit >= z)",
-    "kind": ">=",
-    "linear_form": [
-     "5/3",
-     "-1/6"
-    ],
-    "values": {
-     "1129/10000": 0.0215,
-     "1133/10000": 0.022166666666666668,
-     "571/5000": 0.023666666666666666,
-     "119/1000": 0.03166666666666667
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "D2: sigma - (1 + 10 theta)/6",
-    "kind": ">=",
-    "linear_form": [
-     "-8/3",
-     "1/3"
-    ],
-    "values": {
-     "1129/10000": 0.032266666666666666,
-     "1133/10000": 0.0312,
-     "571/5000": 0.0288,
-     "119/1000": 0.016
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "1/2 - zeta",
-    "kind": ">",
-    "linear_form": [
-     "-4/3",
-     "1/6"
-    ],
-    "values": {
-     "1129/10000": 0.016133333333333333,
-     "1133/10000": 0.0156,
-     "571/5000": 0.0144,
-     "119/1000": 0.008
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Section 3, j = 0: rho - (sigma - theta)",
-    "kind": ">=",
-    "linear_form": [
-     "23/6",
-     "-5/12"
-    ],
-    "values": {
-     "1129/10000": 0.016116666666666668,
-     "1133/10000": 0.01765,
-     "571/5000": 0.0211,
-     "119/1000": 0.0395
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Section 3: 1/3 - rho",
-    "kind": ">",
-    "linear_form": [
-     "-11/6",
-     "1/4"
-    ],
-    "values": {
-     "1129/10000": 0.04301666666666667,
-     "1133/10000": 0.04228333333333333,
-     "571/5000": 0.040633333333333334,
-     "119/1000": 0.03183333333333333
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "(rho + tau)/2 - chi",
-    "kind": "=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "2 zeta - nu - rho",
-    "kind": "=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Section 4: (sigma - theta) - (1/2 - 3 theta)",
-    "kind": ">=",
-    "linear_form": [
-     "1",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.1129,
-     "1133/10000": 0.1133,
-     "571/5000": 0.1142,
-     "119/1000": 0.119
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Section 4: (sigma - theta) - nu/3",
-    "kind": ">",
-    "linear_form": [
-     "-41/18",
-     "11/36"
-    ],
-    "values": {
-     "1129/10000": 0.04839444444444444,
-     "1133/10000": 0.047483333333333336,
-     "571/5000": 0.04543333333333333,
-     "119/1000": 0.0345
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "phi8: nu/3 - (2 sigma - nu)",
-    "kind": ">=",
-    "linear_form": [
-     "28/9",
-     "-2/9"
-    ],
-    "values": {
-     "1129/10000": 0.12902222222222223,
-     "1133/10000": 0.13026666666666667,
-     "571/5000": 0.13306666666666667,
-     "119/1000": 0.148
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "phi9: tau/3 - (1/2 - 3 theta)",
-    "kind": ">=",
-    "linear_form": [
-     "10/3",
-     "-1/3"
-    ],
-    "values": {
-     "1129/10000": 0.043,
-     "1133/10000": 0.044333333333333336,
-     "571/5000": 0.04733333333333333,
-     "119/1000": 0.06333333333333334
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "Lemma 14 at the top of phi10: (tau - (sigma - theta))/3 - theta",
-    "kind": "=",
-    "linear_form": [
-     "0",
-     "0"
-    ],
-    "values": {
-     "1129/10000": 0.0,
-     "1133/10000": 0.0,
-     "571/5000": 0.0,
-     "119/1000": 0.0
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "phi10 case: tau/4 - (1 - 7 theta)/2",
-    "kind": ">=",
-    "linear_form": [
-     "15/4",
-     "-3/8"
-    ],
-    "values": {
-     "1129/10000": 0.048375,
-     "1133/10000": 0.049875,
-     "571/5000": 0.05325,
-     "119/1000": 0.07125
-    }
-   },
-   {
-    "source": "R* 6",
-    "name": "Section 6: j(pqr) = 0, 3 tau/5 - (sigma - theta)",
-    "kind": ">=",
-    "linear_form": [
-     "13/5",
-     "-1/5"
-    ],
-    "values": {
-     "1129/10000": 0.09354,
-     "1133/10000": 0.09458,
-     "571/5000": 0.09692,
-     "119/1000": 0.1094
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "strip: sigma/2 - (sigma - 2 theta)",
-    "kind": ">=",
-    "linear_form": [
-     "5/2",
-     "-1/4"
-    ],
-    "values": {
-     "1129/10000": 0.03225,
-     "1133/10000": 0.03325,
-     "571/5000": 0.0355,
-     "119/1000": 0.0475
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "strip: nu/3 - (sigma - 2 theta)",
-    "kind": ">=",
-    "linear_form": [
-     "59/18",
-     "-11/36"
-    ],
-    "values": {
-     "1129/10000": 0.06450555555555555,
-     "1133/10000": 0.06581666666666666,
-     "571/5000": 0.06876666666666667,
-     "119/1000": 0.0845
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "strip: tau/3 - (sigma - 2 theta)",
-    "kind": ">=",
-    "linear_form": [
-     "10/3",
-     "-1/3"
-    ],
-    "values": {
-     "1129/10000": 0.043,
-     "1133/10000": 0.044333333333333336,
-     "571/5000": 0.04733333333333333,
-     "119/1000": 0.06333333333333334
-    }
-   },
-   {
-    "source": "R* 7",
-    "name": "R*: (1 - sigma)/2 - rho/2",
-    "kind": ">=",
-    "linear_form": [
-     "-5/12",
-     "5/24"
-    ],
-    "values": {
-     "1129/10000": 0.16129166666666667,
-     "1133/10000": 0.161125,
-     "571/5000": 0.16075,
-     "119/1000": 0.15875
-    }
-   }
   ]
- },
- "classification": {
-  "results": {
-   "0.1129": {
-    "phi3": {
-     "G4": [
-      419421,
-      0
-     ],
-     "I": [
-      419421,
-      0
-     ],
-     "L": [
-      419421,
-      0
-     ],
-     "G4+P": [
-      419421,
-      0
-     ],
-     "G4+L": [
-      419421,
-      0
-     ],
-     "intervals": [
-      2097105,
-      0
-     ]
-    },
-    "phi5": {
-     "G4": [
-      1048576,
-      0
-     ],
-     "I": [
-      1048576,
-      0
-     ],
-     "L": [
-      1048576,
-      0
-     ],
-     "G4+P": [
-      1048576,
-      0
-     ],
-     "G4+L": [
-      1048576,
-      0
-     ],
-     "intervals": [
-      5242880,
-      0
-     ]
-    },
-    "phi7": {
-     "G4": [
-      524884,
-      0
-     ],
-     "I": [
-      524884,
-      0
-     ],
-     "L": [
-      524884,
-      0
-     ],
-     "G4+P": [
-      524884,
-      0
-     ],
-     "G4+L": [
-      524884,
-      0
-     ],
-     "intervals": [
-      2624420,
-      0
-     ]
-    },
-    "phi9": {
-     "G4": [
-      899527,
-      0
-     ],
-     "I": [
-      899527,
-      0
-     ],
-     "L": [
-      899527,
-      0
-     ],
-     "G4+P": [
-      899527,
-      0
-     ],
-     "G4+L": [
-      899527,
-      0
-     ],
-     "intervals": [
-      4497635,
-      0
-     ]
-    },
-    "phi10": {
-     "G4": [
-      1048576,
-      0
-     ],
-     "I": [
-      1048576,
-      0
-     ],
-     "L": [
-      1048576,
-      0
-     ],
-     "G4+P": [
-      1048576,
-      0
-     ],
-     "G4+L": [
-      1048576,
-      0
-     ],
-     "intervals": [
-      5242880,
-      0
-     ]
-    },
-    "phi11": {
-     "G4": [
-      1048576,
-      0
-     ],
-     "I": [
-      1048576,
-      0
-     ],
-     "L": [
-      1048576,
-      0
-     ],
-     "G4+P": [
-      1048576,
-      0
-     ],
-     "G4+L": [
-      1048576,
-      0
-     ],
-     "intervals": [
-      5242880,
-      0
-     ]
-    },
-    "T3": {
-     "G4": [
-      943610,
-      0
-     ],
-     "I": [
-      943610,
-      0
-     ],
-     "L": [
-      943610,
-      0
-     ],
-     "G4+P": [
-      943610,
-      0
-     ],
-     "G4+L": [
-      943610,
-      0
-     ],
-     "intervals": [
-      4718050,
-      0
-     ]
-    }
-   },
-   "0.1133": {
-    "phi3": {
-     "G4": [
-      435646,
-      0
-     ],
-     "I": [
-      435646,
-      0
-     ],
-     "L": [
-      435646,
-      0
-     ],
-     "G4+P": [
-      435646,
-      0
-     ],
-     "G4+L": [
-      435646,
-      0
-     ],
-     "intervals": [
-      2178230,
-      0
-     ]
-    },
-    "phi5": {
-     "G4": [
-      1048576,
-      0
-     ],
-     "I": [
-      1048576,
-      0
-     ],
-     "L": [
-      1048576,
-      0
-     ],
-     "G4+P": [
-      1048576,
-      0
-     ],
-     "G4+L": [
-      1048576,
-      0
-     ],
-     "intervals": [
-      5242880,
-      0
-     ]
-    },
-    "phi7": {
-     "G4": [
-      524884,
-      0
-     ],
-     "I": [
-      524884,
-      0
-     ],
-     "L": [
-      524884,
-      0
-     ],
-     "G4+P": [
-      524884,
-      0
-     ],
-     "G4+L": [
-      524884,
-      0
-     ],
-     "intervals": [
-      2624420,
-      0
-     ]
-    },
-    "phi9": {
-     "G4": [
-      892838,
-      0
-     ],
-     "I": [
-      892838,
-      0
-     ],
-     "L": [
-      892838,
-      0
-     ],
-     "G4+P": [
-      892838,
-      0
-     ],
-     "G4+L": [
-      892838,
-      0
-     ],
-     "intervals": [
-      4464190,
-      0
-     ]
-    },
-    "phi10": {
-     "G4": [
-      1048576,
-      0
-     ],
-     "I": [
-      1048576,
-      0
-     ],
-     "L": [
-      1048576,
-      0
-     ],
-     "G4+P": [
-      1048576,
-      0
-     ],
-     "G4+L": [
-      1048576,
-      0
-     ],
-     "intervals": [
-      5242880,
-      0
-     ]
-    },
-    "phi11": {
-     "G4": [
-      1048576,
-      0
-     ],
-     "I": [
-      1048576,
-      0
-     ],
-     "L": [
-      1048576,
-      0
-     ],
-     "G4+P": [
-      1048576,
-      0
-     ],
-     "G4+L": [
-      1048576,
-      0
-     ],
-     "intervals": [
-      5242880,
-      0
-     ]
-    },
-    "T3": {
-     "G4": [
-      939592,
-      0
-     ],
-     "I": [
-      939592,
-      0
-     ],
-     "L": [
-      939592,
-      0
-     ],
-     "G4+P": [
-      939592,
-      0
-     ],
-     "G4+L": [
-      939592,
-      0
-     ],
-     "intervals": [
-      4697960,
-      0
-     ]
-    }
-   }
-  },
-  "total_mismatches": 0
- },
- "hl_0119": {
-  "D2": {
-   "phi1": 0.27478380532157465,
-   "phi2": 0.3456457768665671,
-   "phi4": 0.15545607199993916,
-   "phi6": 0.11162548776700523,
-   "phi8": 0.03563937673988905,
-   "phi3": 9.183832531241019e-05,
-   "phi5": 0.001185850553035347,
-   "phi7": 0.0008846665049972053,
-   "phi9": 0.001075194592988697,
-   "phi10": 0.016141952585797262,
-   "phi11": 2.8471207678819528e-05
-  },
-  "printed": {
-   "phi1": 0.27478380532157465,
-   "phi2": 0.35241383081464744,
-   "phi4": 0.15545607199993916,
-   "phi6": 0.11162548776700523,
-   "phi8": 0.03563937673988905,
-   "phi3": 9.183832531241019e-05,
-   "phi5": 0.001185850553035347,
-   "phi7": 0.0008846665049972053,
-   "phi9": 0.001075194592988697,
-   "phi10": 0.016141952585797262,
-   "phi11": 2.8471207678819528e-05
-  },
-  "check": {
-   "phi1": [
-    0.2747838053213908,
-    0.0
-   ],
-   "phi2": [
-    0.34564577686656706,
-    0.0
-   ],
-   "phi4": [
-    0.15545607199990938,
-    0.0
-   ],
-   "phi6": [
-    0.11162548776700533,
-    0.0
-   ],
-   "phi8": [
-    0.03563937673984589,
-    0.0
-   ],
-   "phi3": [
-    9.18383253278183e-05,
-    2.477566096545389e-13
-   ],
-   "phi5": [
-    0.0011858508523186532,
-    2.1785373325269937e-10
-   ],
-   "phi7": [
-    0.0008846657607750436,
-    2.2349667083797675e-10
-   ],
-   "phi9": [
-    0.0010751945556985967,
-    2.5356418271204684e-10
-   ],
-   "phi10": [
-    0.01614197193646172,
-    3.214290480660452e-08
-   ],
-   "phi11": [
-    2.8471206389322813e-05,
-    1.1347987694255922e-12
-   ]
-  }
- },
- "roots": {
-  "values": {
-   "HL": 0.11678246122598722,
-   "HL printed": 0.11722856379909101,
-   "R*": 0.11410728920255506,
-   "R*+G4": 0.11393118136587854,
-   "R*+G4+P": 0.11320488168821036,
-   "R*+G4+L": 0.1128554138864277
-  },
-  "structural_failures": {
-   "HL": [],
-   "HL printed": [],
-   "R*": [],
-   "R*+G4": [],
-   "R*+G4+P": [],
-   "R*+G4+L": []
-  }
- },
- "losses": {
-  "R*+G4+L at 0.1129": {
-   "primary": {
-    "phi1": 0.3201604703979916,
-    "D2-R*": 0.34370282504709004,
-    "phi4": 0.21329217268917022,
-    "phi6": 0.04805124113788645,
-    "phi8": 0.06844373761221807,
-    "phi3": 9.827405227548537e-06,
-    "phi5": 0.0006199391203727691,
-    "phi7": 0.00044509736264584715,
-    "phi9": 0.0002727123439281723,
-    "phi10": 0.0028857796209890234,
-    "phi11": 9.881466031221644e-05,
-    "T3": 0.0010206367353205723
-   },
-   "check": {
-    "phi1": [
-     0.3201604703979341,
-     0.0
-    ],
-    "D2-R*": [
-     0.34370282504708993,
-     0.0
-    ],
-    "phi4": [
-     0.2132921726891703,
-     0.0
-    ],
-    "phi6": [
-     0.04805124113788648,
-     0.0
-    ],
-    "phi8": [
-     0.06844373761221792,
-     0.0
-    ],
-    "phi3": [
-     9.825940706167543e-06,
-     5.888815277141066e-10
-    ],
-    "phi5": [
-     0.0006199461996308397,
-     3.0003559817858906e-08
-    ],
-    "phi7": [
-     0.00044511363628199684,
-     1.4916975005107118e-08
-    ],
-    "phi9": [
-     0.0002727289152780243,
-     9.409048247685789e-08
-    ],
-    "phi10": [
-     0.002885131806625393,
-     9.029968297901891e-07
-    ],
-    "phi11": [
-     9.880630089127639e-05,
-     7.401062679494723e-09
-    ],
-    "T3": [
-     0.0010205886930115726,
-     4.797866828211511e-08
-    ]
-   },
-   "total": 0.9990032541331525,
-   "check_total": 0.9990025883767241
-  },
-  "R*+G4+P at 0.1133": {
-   "primary": {
-    "phi1": 0.31716411067721617,
-    "D2-R*": 0.33988026689557466,
-    "phi4": 0.20942631756037922,
-    "phi6": 0.0524427078289829,
-    "phi8": 0.06597578627373041,
-    "phi3": 1.1084019865216542e-05,
-    "phi5": 0.0006171949889951569,
-    "phi7": 0.00047508602500202844,
-    "phi9": 0.00024077774585160489,
-    "phi10": 0.010499797171510096,
-    "phi11": 8.619566365248516e-05,
-    "T3": 0.0010049863279647613
-   },
-   "check": {
-    "phi1": [
-     0.3171641106768502,
-     0.0
-    ],
-    "D2-R*": [
-     0.33988026689557477,
-     0.0
-    ],
-    "phi4": [
-     0.2094263175603034,
-     0.0
-    ],
-    "phi6": [
-     0.05244270782898291,
-     0.0
-    ],
-    "phi8": [
-     0.06597578627371978,
-     0.0
-    ],
-    "phi3": [
-     1.1082411661310336e-05,
-     6.359856035030778e-10
-    ],
-    "phi5": [
-     0.0006172027034957965,
-     3.212391194700835e-08
-    ],
-    "phi7": [
-     0.0004751161213092841,
-     1.897961037125053e-08
-    ],
-    "phi9": [
-     0.00024079171741010655,
-     6.425298652247253e-08
-    ],
-    "phi10": [
-     0.010499591900002743,
-     4.053032644358478e-07
-    ],
-    "phi11": [
-     8.618833526614228e-05,
-     6.47996308465978e-09
-    ],
-    "T3": [
-     0.0010049386619184082,
-     4.75094550196243e-08
-    ]
-   },
-   "total": 0.9978243111787247,
-   "check_total": 0.9978241010864948
-  },
-  "R* at 0.1142": {
-   "primary": {
-    "phi1": 0.3104345780563349,
-    "D2-R*": 0.3313614842212866,
-    "phi4": 0.2007683635904417,
-    "phi6": 0.062209245032372316,
-    "phi8": 0.06058557220903918,
-    "phi3": 2.9108572307706563e-05,
-    "phi5": 0.0012846456586709182,
-    "phi7": 0.0005922589266557429,
-    "phi9": 0.0020365772510580033,
-    "phi10": 0.025780216357281536,
-    "phi11": 0.00029966552715437415,
-    "T3": 0.002356651320111531
-   },
-   "check": {
-    "phi1": [
-     0.3104345780561262,
-     0.0
-    ],
-    "D2-R*": [
-     0.33136148422128664,
-     0.0
-    ],
-    "phi4": [
-     0.20076836359071892,
-     0.0
-    ],
-    "phi6": [
-     0.06220924503237236,
-     0.0
-    ],
-    "phi8": [
-     0.060585572208817356,
-     0.0
-    ],
-    "phi3": [
-     2.9108572430758698e-05,
-     1.449382863618496e-13
-    ],
-    "phi5": [
-     0.001284645714829012,
-     2.3193184403381628e-10
-    ],
-    "phi7": [
-     0.0005922590981428499,
-     1.779805111437825e-10
-    ],
-    "phi9": [
-     0.0020365769050353813,
-     6.673779012820963e-10
-    ],
-    "phi10": [
-     0.02578030508860846,
-     9.094705869109443e-08
-    ],
-    "phi11": [
-     0.000299665502097232,
-     2.0758724318647615e-11
-    ],
-    "T3": [
-     0.0023566521931456226,
-     1.4222061992879956e-09
-    ]
-   },
-   "total": 0.9977383667227145,
-   "check_total": 0.9977384561836108
-  }
- },
- "variants": {
-  "single_split": {
-   "total": 0.9990032541331525,
-   "regions": {
-    "phi1": 0.3201604703979916,
-    "D2-R*": 0.34370282504709004,
-    "phi4": 0.21329217268917022,
-    "phi6": 0.04805124113788645,
-    "phi8": 0.06844373761221807,
-    "phi3": 9.827405227548537e-06,
-    "phi5": 0.0006199391203727691,
-    "phi7": 0.00044509736264584715,
-    "phi9": 0.0002727123439281723,
-    "phi10": 0.0028857796209890234,
-    "phi11": 9.881466031221644e-05,
-    "T3": 0.0010206367353205723
-   }
-  },
-  "cut": {
-   "HL at 0.119": {
-    "phi3": [
-     9.183832531241019e-05,
-     9.183832531241019e-05
-    ],
-    "phi9": [
-     0.001075194592988697,
-     0.001075194592988697
-    ]
-   },
-   "R* at 0.1129": {
-    "phi3": [
-     1.992046448349043e-05,
-     1.992046448349043e-05
-    ],
-    "phi9": [
-     0.0023376414441688234,
-     0.0023376414441688234
-    ]
-   },
-   "R*+G4+L at 0.1129": {
-    "phi3": [
-     9.827405227548537e-06,
-     9.827405227548537e-06
-    ],
-    "phi9": [
-     0.0002727123439281723,
-     0.0002727123439281723
-    ]
-   }
-  }
- },
- "convergence": {
-  "k=6,panels=2": {
-   "phi1": 0.32016047039806633,
-   "D2-R*": 0.34370282504709004,
-   "phi4": 0.21329217268917025,
-   "phi6": 0.048051241137886454,
-   "phi8": 0.06844373761221786,
-   "phi3": 9.827405227548871e-06,
-   "phi5": 0.0006199585460624744,
-   "phi7": 0.0004450543113138583,
-   "phi9": 0.0002728319194241086,
-   "phi10": 0.002894907900318959,
-   "phi11": 9.832808748221133e-05,
-   "T3": 0.0010206353196516578
-  },
-  "k=6,panels=4": {
-   "phi1": 0.3201604703979978,
-   "D2-R*": 0.34370282504709004,
-   "phi4": 0.21329217268917028,
-   "phi6": 0.048051241137886454,
-   "phi8": 0.06844373761221786,
-   "phi3": 9.827405227548539e-06,
-   "phi5": 0.0006199380950683741,
-   "phi7": 0.00044508392689871277,
-   "phi9": 0.00027266678246534634,
-   "phi10": 0.0028856488337624608,
-   "phi11": 9.87343960199013e-05,
-   "T3": 0.0010206366620342053
-  },
-  "k=8,panels=4": {
-   "phi1": 0.32016047039798934,
-   "D2-R*": 0.34370282504709004,
-   "phi4": 0.21329217268917025,
-   "phi6": 0.048051241137886454,
-   "phi8": 0.06844373761221786,
-   "phi3": 9.827405227548554e-06,
-   "phi5": 0.0006199386085440071,
-   "phi7": 0.0004451034680067547,
-   "phi9": 0.00027268311636544887,
-   "phi10": 0.0028859944058785164,
-   "phi11": 9.873517917196802e-05,
-   "T3": 0.0010206368030759854
-  },
-  "k=8,panels=8": {
-   "phi1": 0.3201604703979915,
-   "D2-R*": 0.34370282504709004,
-   "phi4": 0.21329217268917028,
-   "phi6": 0.048051241137886454,
-   "phi8": 0.06844373761221786,
-   "phi3": 9.82740522754854e-06,
-   "phi5": 0.0006199391334730496,
-   "phi7": 0.0004450987198614296,
-   "phi9": 0.00027271177544954943,
-   "phi10": 0.0028858109099837983,
-   "phi11": 9.87968129168022e-05,
-   "T3": 0.001020636735898554
-  },
-  "k=10,panels=8": {
-   "phi1": 0.32016047039799156,
-   "D2-R*": 0.34370282504709004,
-   "phi4": 0.21329217268917022,
-   "phi6": 0.04805124113788645,
-   "phi8": 0.06844373761221786,
-   "phi3": 9.827405227548532e-06,
-   "phi5": 0.0006199390857155342,
-   "phi7": 0.0004450975707503368,
-   "phi9": 0.0002727117091605299,
-   "phi10": 0.002885783985063901,
-   "phi11": 9.88018820079446e-05,
-   "T3": 0.0010206367353682681
-  },
-  "k=8,panels=16": {
-   "phi1": 0.32016047039799167,
-   "D2-R*": 0.34370282504709004,
-   "phi4": 0.21329217268917025,
-   "phi6": 0.048051241137886454,
-   "phi8": 0.06844373761221786,
-   "phi3": 9.827405227548542e-06,
-   "phi5": 0.0006199391100613052,
-   "phi7": 0.00044509760684188293,
-   "phi9": 0.0002727128098092539,
-   "phi10": 0.0028857799211792195,
-   "phi11": 9.881245119100347e-05,
-   "T3": 0.0010206367353602951
-  },
-  "k=10,panels=16": {
-   "phi1": 0.3201604703979916,
-   "D2-R*": 0.34370282504709004,
-   "phi4": 0.21329217268917022,
-   "phi6": 0.04805124113788645,
-   "phi8": 0.06844373761221807,
-   "phi3": 9.827405227548537e-06,
-   "phi5": 0.0006199391203727691,
-   "phi7": 0.00044509736264584715,
-   "phi9": 0.0002727123439281723,
-   "phi10": 0.0028857796209890234,
-   "phi11": 9.881466031221644e-05,
-   "T3": 0.0010206367353205723
-  },
-  "k=12,panels=16": {
-   "phi1": 0.32016047039799167,
-   "D2-R*": 0.34370282504709004,
-   "phi4": 0.21329217268917022,
-   "phi6": 0.048051241137886454,
-   "phi8": 0.0684437376122195,
-   "phi3": 9.82740522754854e-06,
-   "phi5": 0.0006199391178696549,
-   "phi7": 0.0004450971146982274,
-   "phi9": 0.0002727126572460054,
-   "phi10": 0.002885776550987113,
-   "phi11": 9.881799981068788e-05,
-   "T3": 0.0010206367353028547
-  },
-  "k=12,panels=32": {
-   "phi1": 0.3201604703979916,
-   "D2-R*": 0.34370282504709004,
-   "phi4": 0.21329217268917025,
-   "phi6": 0.048051241137886454,
-   "phi8": 0.06844373761222064,
-   "phi3": 9.827405227548537e-06,
-   "phi5": 0.0006199391175091857,
-   "phi7": 0.00044509724601504095,
-   "phi9": 0.00027271246426845895,
-   "phi10": 0.0028857774124082685,
-   "phi11": 9.881713272595968e-05,
-   "T3": 0.0010206367353039834
-  }
- }
 }

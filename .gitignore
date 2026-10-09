@@ -4,3 +4,19 @@
 # Dot files and dot directories (keep this file)
 .*
 !.gitignore
+
+# Python bytecode
+__pycache__/
+
+# LaTeX side files (main.pdf is kept)
+/Paper/*.aux
+/Paper/*.bbl
+/Paper/*.blg
+/Paper/*.log
+/Paper/*.out
+/Paper/*.thm
+/Paper/*.synctex.gz
+
+# Python version of the computation, and the project diary (local only)
+/Code_Python/
+/status.md

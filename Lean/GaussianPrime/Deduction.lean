@@ -144,7 +144,7 @@ theorem infinite_small_n {θ : ℝ} (hθ0 : 0 < θ) (hθ : θ < 1 / 2) (h : Sect
   have : (a : ℝ) < ((m ^ 2 + n ^ 2 : ℕ) : ℝ) := by linarith
   exact_mod_cast this
 
-/-- The step from `n < p^θ` to `{√p} < p^(2θ - 1/2)`, display (1.1) of the paper. -/
+/-- The step from `n < p^θ` to `{√p} < p^(2θ - 1/2)`, display (1) of the paper. -/
 lemma fract_sqrt_lt {θ : ℝ} (hθ : θ < 1 / 4) {p m n : ℕ} (hp : p.Prime) (hn : 0 < n)
     (hpmn : p = m ^ 2 + n ^ 2) (hlt : (n : ℝ) < (p : ℝ) ^ θ) :
     Int.fract (√(p : ℝ)) < (p : ℝ) ^ (2 * θ - 1 / 2) := by

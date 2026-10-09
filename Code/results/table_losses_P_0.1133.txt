@@ -1,0 +1,20 @@
+The losses (13) at theta = 0.1133, with G and P removed from the regions E_k, and their sum Phi_P(0.1133).
+First method: Gauss-Legendre, k = 10, panels = 16.  Second method: nested adaptive quadrature (D_k) and scrambled Sobol QMC,
+8 x 2^20 points (E_k), with its error estimate.
+
+region             first      second error est. difference
+----------------------------------------------------------
+D1             0.3171641   0.3171641    1.2e-12   +3.7e-13
+D2             0.3398803   0.3398803    9.0e-17   +1.7e-16
+D4             0.2094263   0.2094263    3.3e-13   -3.4e-14
+D6             0.0524427   0.0524427    0.0e+00   +2.8e-17
+D8             0.0659758   0.0659758    1.5e-13   +1.1e-14
+E3             0.0000111   0.0000111    9.7e-10   +1.2e-11
+ER             0.0010050   0.0010050    6.7e-08   -5.2e-08
+E5             0.0006172   0.0006172    3.7e-08   +2.9e-08
+E7             0.0004751   0.0004751    1.4e-08   +1.3e-08
+E9             0.0002408   0.0002407    9.3e-08   +8.4e-08
+E10            0.0104998   0.0105005    5.2e-07   -7.1e-07
+E11            0.0000862   0.0000862    9.4e-09   -6.4e-09
+Phi_P(0.1133)   0.9978243   0.9978250    5.3e-07   -6.4e-07
+1 - Phi_P      0.0021757   0.0021750
