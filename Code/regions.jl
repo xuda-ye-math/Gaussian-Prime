@@ -1,7 +1,7 @@
 # Parameters, discarded regions and the sets G, I, L, P of the paper (Paper/main.tex).
 #
 # Labels follow the paper: the two-dimensional regions D1, D2, D4, D6, D8 and the four-dimensional regions
-# E3, ER, E5, E7, E9, E10, E11 of Section 7 (Table 1 and display (32)), the region R (13), the sets G, I, L (14)
+# E3, ER, E5, E7, E9, E10, E11 of Section 7 (Table 1 and display (37)), the region R (13), the sets G, I, L (14)
 # and the polytope P (15).  "HL" is G. Harman and P. Lewis, Gaussian primes in narrow sectors, Mathematika 48
 # (2001) 119-135 (journal page numbers); the index k of D_k and E_k is that of their loss phi_k.  All exponents
 # are exponents of norms: |p|^2 = X^a, |q|^2 = X^b, |r|^2 = X^g, |s|^2 = X^d, with a > b > g > d.
@@ -71,7 +71,7 @@ function regions_2d(theta::Float64, rstar::Bool)
     ]
 end
 
-"""The four-dimensional regions E3, E5, E7, E9, E10, E11 of display (32), and ER if rstar.  E10 and E11 are
+"""The four-dimensional regions E3, E5, E7, E9, E10, E11 of display (37), and ER if rstar.  E10 and E11 are
 integrated over their full a-ranges for every theta, which for theta < 3/26 includes the interval
 [tau/4, sigma - 2 theta)."""
 function regions_4d(theta::Float64, rstar::Bool)

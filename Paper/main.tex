@@ -47,7 +47,7 @@ We prove that infinitely many primes $p = m^2 + n^2$ have $n < p^{0.1129}$, and 
 
 A prime $p \equiv 1 \pmod 4$ is the norm $p = m^2 + n^2$ of a Gaussian prime $m + in$. Landau asked whether $n = 1$ occurs for infinitely many primes, that is, whether infinitely many primes have the form $m^2 + 1$ \citep{pintz2009landau}. The question is open. \citet{iwaniec1978almost} showed that infinitely many integers $m^2 + 1$ have at most $2$ prime factors. Primes $p = m^2 + n^2$ are known with $n$ in sparse sets of arithmetic form: the squares \citep{friedlander1998polynomial}, the squares of primes \citep{heathbrown2017prime}, and the integers $y^2 + 1$ \citep{merikoski2023polynomials}. These results restrict the form of $n$, not its size. A weaker form of Landau's question asks how small $n$ can be taken for infinitely many primes $p = m^2 + n^2$. With $m > n > 0$, the condition $n < p^{\theta}$ places the Gaussian prime $m + in$ inside a sector of angle about $p^{\theta - 1/2}$ next to the real axis. So the problem is one of Gaussian primes in narrow sectors.
 
-Under the Riemann hypothesis for the Hecke $L$-functions of $\mathbb{Q}(i)$, \citet{ankeny1952representations} and \citet{kubilius1955problem} showed that infinitely many primes $p = m^2 + n^2$ have $n \ll \log p$. Without hypotheses, every sector of angle greater than $X^{-3/10 + \varepsilon}$, for fixed $\varepsilon > 0$, contains the expected number of Gaussian primes of norm in $(X, 2X]$, by a result of \citet{ricci1976local} quoted in \citet[\S1]{huang2020gaussian}. This covers $n < p^{\theta}$ for every $\theta > 1/5$. For smaller $\theta$, \citet{coleman1993rosser} obtained $n < p^{0.1631}$ with the Rosser--Iwaniec sieve in number fields. \citet{harman2001gaussian} used essentially the arithmetic information of Coleman with Harman's sieve \citep{harman2007prime}, and obtained $n < p^{0.119}$. For every sector, this bound has remained the best known \citep[p.~1298]{jarviniemi2024gaussian}. \citet{harman2004prime} apply the same sieve to sectors in which the norm also lies in a short interval. Results that hold for almost all sectors go much further. \citet{huang2020gaussian} prove an asymptotic formula for the number of Gaussian primes of norm in $(X, 2X]$ in almost all sectors of angle greater than $X^{-3/5 + \varepsilon}$, for every fixed $\varepsilon > 0$. \citet{jarviniemi2024gaussian} find products of exactly $2$ Gaussian primes in almost all sectors of area $(\log X)^{15.1}$ in the disc of radius $X^{1/2}$.
+Under the Riemann hypothesis for the Hecke $L$-functions of $\mathbb{Q}(i)$, \citet{ankeny1952representations} and \citet{kubilius1955problem} showed that infinitely many primes $p = m^2 + n^2$ have $n \ll \log p$. Without hypotheses, every sector of angle greater than $X^{-3/10 + \varepsilon}$, for fixed $\varepsilon > 0$, contains the expected number of Gaussian primes of norm in $(X, 2X]$, by a result of \citet{ricci1976local} quoted in \citet[\S1]{huang2020gaussian}. This covers $n < p^{\theta}$ for every $\theta > 1/5$. For smaller $\theta$, \citet{coleman1993rosser} obtained $n < p^{0.1631}$ with the Rosser--Iwaniec sieve in number fields. \citet{harman2001gaussian} used essentially the arithmetic information of Coleman with Harman's sieve \citep{harman2007prime}, and obtained $n < p^{0.119}$. For every sector, this bound has remained the best known \citep[\S1.2]{jarviniemi2024gaussian}. \citet{harman2004prime} apply the same sieve to sectors in which the norm also lies in a short interval. Results that hold for almost all sectors go much further. \citet{huang2020gaussian} prove an asymptotic formula for the number of Gaussian primes of norm in $(X, 2X]$ in almost all sectors of angle greater than $X^{-3/5 + \varepsilon}$, for every fixed $\varepsilon > 0$. \citet{jarviniemi2024gaussian} find products of exactly $2$ Gaussian primes in almost all sectors of area $(\log X)^{15.1}$ in the disc of radius $X^{1/2}$.
 
 If $p = m^2 + n^2$ with $n < p^{\theta}$, then
 \begin{equation}
@@ -76,7 +76,7 @@ The sector contains about $X^{1/2 + \theta}/(\pi \log X)$ Gaussian primes of nor
 Let $\theta = 0.1129$, and apply Theorem~\ref{thm: sector} with $\psi = 0$ and $X = 2^k$ for large $k$. The Gaussian primes of argument $0$ are the rational primes $\ell \equiv 3 \pmod 4$, and fewer than $X^{1/2}$ of them have norm $\ell^2 < X$. So the sector contains a Gaussian prime $\varpi = m + in$ with $m, n > 0$. Its norm $p = m^2 + n^2$ is a rational prime with $X/2 \Le p < X$. Since $\theta < 1/2$ and $p < X$,
 \begin{equation*}
 n = \sqrt{p}\, \sin(\arg \varpi) < \sqrt{p}\, X^{\theta - 1/2} < \sqrt{p}\, p^{\theta - 1/2} = p^{\theta}.
-\end{equation*} The ranges $[X/2, X)$ for different $k$ are disjoint. So the primes $p$ are distinct for different $k$, and there are infinitely many of them. The second statement follows from \eqref{eq: fractional part}, because $1/2 - 2\theta = 0.2742$.
+\end{equation*} The ranges $[X/2, X)$ for different $k$ are disjoint. So the primes $p$ are distinct for different $k$, and there are infinitely many of them. The bound $\{\sqrt{p}\} < p^{-0.2742}$ follows from \eqref{eq: fractional part}, because $1/2 - 2\theta = 0.2742$.
 \end{proof}
 
 \subsection{Outline of the method}
@@ -89,14 +89,14 @@ Sums of the second kind consist of non-negative terms that enter with the sign $
 \label{eq: lower bound intro}
 \#\{\varpi \in \mathcal{A} : \varpi \text{ prime}\} \Ge \frac{2X^{\theta - 1/2}}{\pi}\, \#\{\varpi \in \mathcal{B} : \varpi \text{ prime}\}\, \bigl(1 - \Phi(\theta) - o(1)\bigr).
 \end{equation}
-So the bound of Theorem~\ref{thm: sector} holds, with $\theta$ in place of $0.1129$, for every $\theta \in (1/9, 1/8)$ with $\Phi(\theta) < 1$. For their decomposition, Harman and Lewis show that the total loss at $\theta = 0.119$ is below $0.943$.
+So the bound of Theorem~\ref{thm: sector} holds, with $\theta$ in place of $0.1129$, for every $\theta \in (1/9, 1/8)$ with $\Phi(\theta) < 1$. For their decomposition, Harman and Lewis state that the total loss at $\theta = 0.119$ is below $0.943$ \citep[p.~134]{harman2001gaussian}.
 
-The argument of \citet{harman2001gaussian} leaves several steps unwritten or sketched: the fundamental lemma invoked in their Lemmas~8, 11 and~12, the proofs of their Lemmas~8 to~10, the removal of the conditions that couple the variables of their bilinear estimate, and the step used in part~6 of their \S5. Lemma~\ref{lem: fundamental}, Lemmas~\ref{lem: level large} and~\ref{lem: level small} with Corollary~\ref{cor: level one}, Lemma~\ref{lem: decoupling} and Lemma~\ref{lem: lemma 14} supply these steps. Appendix~\ref{app: comparison} lists every departure from their argument, including the corrections of statements and of discarded regions. Besides the prime number theorem in progressions modulo $4$, only the arithmetic information is quoted without proof. It consists of the sector inequality, the mean-value estimate for Hecke characters, the prime number theorem with Hecke characters, and Lemmas~6 and~7 of Harman and Lewis. Lemmas~\ref{lem: sector inequality} to~\ref{lem: type I input} of Appendix~\ref{app: arithmetic} state them.
+Besides the prime number theorem in progressions modulo $4$, only the arithmetic information is quoted without proof. It consists of the sector inequality, the mean-value estimate for Hecke characters, the prime number theorem with Hecke characters, and Lemmas~6 and~7 of Harman and Lewis. Lemmas~\ref{lem: sector inequality} to~\ref{lem: type I input} of Appendix~\ref{app: arithmetic} state them.
 
 \subsection{Contributions}
 \label{subsec: contributions}
 
-We add three groupings of terms that Harman and Lewis discard. A grouping gives an asymptotic formula to a set of terms on which their decomposition has none.
+We add three groupings of terms that Harman and Lewis discard. A grouping combines the primes of a sum into the variables of the linear or bilinear estimate, after a further application of Buchstab's identity where needed, and so gives an asymptotic formula to a set of terms on which their decomposition has none.
 \begin{itemize}
 \setlength{\itemsep}{0pt}
 \item \emph{A new factorization on a region $\mathsf{R}$.} On a two-dimensional region $\mathsf{R}$ of terms $pq$, with $p$ and $q$ Gaussian primes, Harman and Lewis discard the whole sum. We apply Buchstab's identity, which introduces a third prime $r$, and then the linear estimate to the factorization $p \cdot (qr)$. Harman and Lewis apply the linear estimate after Buchstab's identity only to the factorization $(pq) \cdot r$. On $\mathsf{R}$ the product $pq$ is too large for the linear estimate, while $p$ and $qr$ satisfy its conditions, because $q$ is small.
@@ -105,17 +105,21 @@ We add three groupings of terms that Harman and Lewis discard. A grouping gives 
 \end{itemize}
 Section~\ref{sec: outline} defines $\mathsf{R}$, $\mathsf{G}$ and $\mathsf{L}$ and places them in the decomposition.
 
-Table~\ref{tab: roots} shows the effect of each grouping. With the regions derived from the lemmas of Section~\ref{sec: two primes} (Remark~\ref{rem: misprints}), the decomposition of Harman and Lewis has total loss $1$ at $\theta = 0.1167825$. Adding $\mathsf{R}$ moves this value to $0.1141073$, and adding $\mathsf{G}$ and $\mathsf{L}$ moves it to $0.1128554$, so that the total loss is below $1$ at $\theta = 0.1129$. Harman and Lewis state that the constant in their lower bound ceases to be positive for some $\theta$ between $0.117$ and $0.118$, and that they did not spend much time on the numerical calculations \citep[p.~134]{harman2001gaussian}. The losses are computed in floating point by two methods (Section~\ref{sec: numerics}). At $\theta = 0.1129$ the total loss is $0.9990033$, and the margin $9.97 \times 10^{-4}$ exceeds the difference between the methods and their error estimates by a factor of more than $800$.
+Table~\ref{tab: roots} shows the effect of each grouping. With the regions derived from the lemmas of Section~\ref{sec: two primes} (Remark~\ref{rem: misprints}), the decomposition of Harman and Lewis has total loss $1$ at $\theta = 0.1167825$. This is just below the range from $0.117$ to $0.118$ in which, by \citet[p.~134]{harman2001gaussian}, the constant in their lower bound ceases to be positive; they add that they did not spend much time on the numerical calculations. Adding $\mathsf{R}$ moves the value $0.1167825$ to $0.1141073$, and adding $\mathsf{G}$ and $\mathsf{L}$ moves it to $0.1128554$, so that the total loss is below $1$ at $\theta = 0.1129$. The losses are computed in floating point by two methods (Section~\ref{sec: numerics}). At $\theta = 0.1129$ the total loss is $0.9990033$. The margin $1 - \Phi(0.1129) = 9.97 \times 10^{-4}$ exceeds by a factor of more than $800$ the difference between the totals of the methods, the error estimate of the second method and the change of the first method under refinement of its quadrature.
+
+The argument of \citet{harman2001gaussian} leaves several steps unwritten or sketched: the fundamental lemma invoked in their Lemmas~8, 11 and~12, the proofs of their Lemmas~8 to~10, the removal of the conditions that couple the variables of their bilinear estimate, and the step used in part~6 of their \S5. Lemma~\ref{lem: fundamental}, Lemmas~\ref{lem: level large} and~\ref{lem: level small} with Corollary~\ref{cor: level one}, Lemma~\ref{lem: decoupling} and Lemma~\ref{lem: lemma 14} supply these steps. Appendix~\ref{app: comparison} lists every departure from their argument, including the corrections of statements and of discarded regions.
 
 \subsection{Structure of the paper}
 \label{subsec: structure}
 
-Section~\ref{sec: notation} fixes the notation. Section~\ref{sec: outline} states the decomposition: identity \eqref{eq: identity 37}, the ranges of Table~\ref{tab: ranges}, the groupings $\mathsf{R}$, $\mathsf{G}$ and $\mathsf{L}$, and the total loss \eqref{eq: total loss}. Section~\ref{sec: estimates} states the linear and bilinear estimates, a fundamental lemma over $\mathbb{Z}[i]$, and asymptotic formulas for sifting functions with a variable level, and Section~\ref{sec: decoupling} removes the conditions that couple the variables of a sum. Section~\ref{sec: two primes} treats the sums over two primes. Section~\ref{sec: decomposition} proves identity \eqref{eq: identity 37}, checks the hypotheses of the lemmas on each range of Table~\ref{tab: ranges}, and defines the discarded regions. Section~\ref{sec: four} treats the four-dimensional sums on $\mathsf{G}$ and $\mathsf{L}$. Section~\ref{sec: integrals} turns the discarded sums into integrals and proves the lower bound, Lemma~\ref{lem: lower bound}. Section~\ref{sec: numerics} evaluates the integrals numerically and proves Theorem~\ref{thm: sector}, and Section~\ref{sec: conclusion} concludes. Theorem~\ref{thm: sector} thus follows from Lemma~\ref{lem: lower bound} and Table~\ref{tab: losses}. Lemma~\ref{lem: lower bound} rests on Lemmas~\ref{lem: lemma 11} to~\ref{lem: boxes to integrals}, and Lemmas~\ref{lem: lemma 11} to~\ref{lem: four dim} rest on the results of Sections~\ref{sec: estimates} and~\ref{sec: decoupling}. Appendix~\ref{app: arithmetic} collects standard facts on Gaussian primes and derives the linear and bilinear estimates from the arithmetic information. Appendix~\ref{app: sieve} proves Lemmas~\ref{lem: fundamental}, \ref{lem: level large}, \ref{lem: level small} and~\ref{lem: decoupling}, and Appendix~\ref{app: integrals} proves Lemma~\ref{lem: boxes to integrals}. Appendix~\ref{app: inequalities} lists the inequalities between the parameters, and Appendix~\ref{app: comparison} compares the argument with that of Harman and Lewis.
+Section~\ref{sec: notation} fixes the notation. Section~\ref{sec: outline} states the decomposition: identity \eqref{eq: identity 37}, the ranges of Table~\ref{tab: ranges}, the groupings $\mathsf{R}$, $\mathsf{G}$ and $\mathsf{L}$, and the total loss \eqref{eq: total loss}. Section~\ref{sec: estimates} states the linear and bilinear estimates, a fundamental lemma over $\mathbb{Z}[i]$, and asymptotic formulas for sifting functions with a variable level, and Section~\ref{sec: decoupling} removes the conditions that couple the variables of a sum. Section~\ref{sec: two primes} treats the sums over two primes. Section~\ref{sec: decomposition} proves identity \eqref{eq: identity 37}, checks the hypotheses of the lemmas on each range of Table~\ref{tab: ranges}, and defines the discarded regions. Section~\ref{sec: four} treats the four-dimensional sums on $\mathsf{G}$ and $\mathsf{L}$. Section~\ref{sec: integrals} turns the discarded sums into integrals and proves the lower bound, Lemma~\ref{lem: lower bound}. Section~\ref{sec: numerics} evaluates the integrals numerically and proves Theorem~\ref{thm: sector}, and Section~\ref{sec: conclusion} concludes. Appendix~\ref{app: arithmetic} collects standard facts on Gaussian primes and derives the linear and bilinear estimates from the arithmetic information. Appendix~\ref{app: sieve} proves Lemmas~\ref{lem: fundamental}, \ref{lem: level large}, \ref{lem: level small} and~\ref{lem: decoupling}, and Appendix~\ref{app: integrals} proves Lemma~\ref{lem: boxes to integrals}. Appendix~\ref{app: inequalities} lists the inequalities between the parameters, and Appendix~\ref{app: comparison} compares the argument with that of Harman and Lewis.
+
+Theorem~\ref{thm: sector} follows from Lemma~\ref{lem: lower bound} and Table~\ref{tab: losses}. Lemma~\ref{lem: lower bound} rests on Lemmas~\ref{lem: lemma 11} to~\ref{lem: boxes to integrals}, and Lemmas~\ref{lem: lemma 11} to~\ref{lem: four dim} rest on the results of Sections~\ref{sec: estimates} and~\ref{sec: decoupling}.
 
 \section{Notation}
 \label{sec: notation}
 
-Throughout, $1/9 < \theta < 1/8$, and $X$ is large in terms of $\theta$ and of the other fixed parameters. Following \citet[p.~120]{harman2001gaussian}, put
+Throughout, $1/9 < \theta < 1/8$, the range in which the inequalities of Table~\ref{tab: inequalities} hold, and $X$ is large in terms of $\theta$ and of the other fixed parameters. Following \citet[p.~120]{harman2001gaussian}, put
 \begin{equation}
 \label{eq: parameters}
 \sigma = \frac12 - \theta, \quad \tau = \frac12 + \theta, \quad \rho = \frac{1 + 22\theta}{12}, \quad \zeta = \frac{1 + 4\theta}{3}, \quad \nu = \frac{7 + 10\theta}{12},
@@ -163,11 +167,12 @@ Thus $z(y) = X^{\tau}/y$ for $y \Ge W$. For $y < W$ and $j = j(y)$,
 \label{eq: z lower}
 z(y) > \Bigl( \frac{X^{\tau}}{W X^{-j\theta}} \Bigr)^{1/(j+2)} = X^{\theta}.
 \end{equation}
+By Lemmas~\ref{lem: level large} and~\ref{lem: level small} below, a weighted sum of $S'(\mathcal{E}_n, l(n))$ over $|n|^2 \Le X^{\tau - \varepsilon}$ has an asymptotic formula when the level $l(n)$ is at most a constant times $z(|n|^2)$.
 
 \section{The decomposition and the total loss}
 \label{sec: outline}
 
-In the notation of Section~\ref{sec: notation}, the number of Gaussian primes in $\mathcal{A}$ is $S(\mathcal{A}, X^{1/2})$. Buchstab's identity \eqref{eq: buchstab} writes it as a combination of sums of the two kinds of Section~\ref{sec: introduction}, and the sums of the first kind have asymptotic formulas in the sense of \eqref{eq: asymptotic formula}. Lemma~\ref{lem: lower bound} proves the lower bound \eqref{eq: lower bound intro} in the form \eqref{eq: lower bound}, where $\Phi_\varepsilon(\theta)$ tends to the total loss $\Phi(\theta)$ of \eqref{eq: total loss} as $\varepsilon \to 0$. Theorem~\ref{thm: sector} follows once $\Phi(\theta) < 1$.
+In the notation of Section~\ref{sec: notation}, the number of Gaussian primes in $\mathcal{A}$ is $S(\mathcal{A}, X^{1/2})$. Lemma~\ref{lem: lower bound} proves the lower bound \eqref{eq: lower bound intro} in the form \eqref{eq: lower bound}, where $\Phi_\varepsilon(\theta)$ tends to the total loss $\Phi(\theta)$ of \eqref{eq: total loss} as $\varepsilon \to 0$.
 
 \subsection{The linear and bilinear estimates in exponent form}
 \label{subsec: exponent form}
@@ -182,7 +187,7 @@ The bilinear estimate applies at every level of sifting of $t$. It needs an inde
 \label{eq: bilinear exponents}
 \sigma \Le x_{\mathcal{S}} \Le \tau - x_{i_0}.
 \end{equation}
-Then the product of the primes of $\mathcal{S}$ has norm at least $W$, up to a constant factor. So does the quotient of $\varpi_1 \cdots \varpi_K t$ by this product and by $\varpi_{i_0}$. These numbers are the variables $u$ and $v$ of Lemma~\ref{lem: type II}, and $\varpi_{i_0}$ is its prime variable $\varpi$. Lemma~\ref{lem: pieces} states the condition $\sum_i x_i \Le \tau$ and \eqref{eq: linear exponents} as (P1) and (P2), for a free cofactor and for a cofactor without prime factors of norm below $\mu^4$, and \eqref{eq: bilinear exponents} as (P3), all with margin $\varepsilon$. Its condition (P4) covers a cofactor sifted at a level that depends on the product $\varpi_1 \cdots \varpi_K$, by Lemmas~\ref{lem: level large} and~\ref{lem: level small}. Lemma~\ref{lem: decoupling} reduces a sum with coupled variables, such as an order constraint $q \prec p$ or a sieve condition that depends on a prime, to sums over Cartesian products of short intervals, to which (P1) to (P4) apply.
+Then the product of the primes of $\mathcal{S}$ has norm at least $W$, up to a constant factor. So does the quotient of $\varpi_1 \cdots \varpi_K t$ by this product and by $\varpi_{i_0}$. These numbers are the variables $u$ and $v$ of Lemma~\ref{lem: type II}, and $\varpi_{i_0}$ is its prime variable $\varpi$. Lemma~\ref{lem: pieces} states the condition $\sum_i x_i \Le \tau$ and \eqref{eq: linear exponents} with margin $\varepsilon$ as (P1) and (P2), for a free cofactor and for a cofactor without prime factors of norm below $\mu^4$, and \eqref{eq: bilinear exponents}, up to constant factors in the norms, as (P3). Its condition (P4) covers a cofactor sifted at a level that depends on the product $\varpi_1 \cdots \varpi_K$, by Lemmas~\ref{lem: level large} and~\ref{lem: level small}. Lemma~\ref{lem: decoupling} reduces a sum with coupled variables, such as an order constraint $q \prec p$ or a sieve condition that depends on a prime, to sums over Cartesian products of short intervals, to which (P1) to (P4) apply.
 
 \subsection{The decomposition}
 \label{subsec: decomposition}
@@ -192,7 +197,9 @@ The decomposition begins with two applications of Buchstab's identity. Let $\Pi_
 \label{eq: identity 37}
 S(\mathcal{E}, X^{1/2}) = S(\mathcal{E}, X^{\theta}) - \sum_{p \in \Pi_1} S\bigl(\mathcal{E}_p, z(|p|^2)\bigr) - \sum_{p \in \Pi_2} S(\mathcal{E}_p, p) + \sideset{}{^*}\sum_{p, q} S(\mathcal{E}_{pq}, q),
 \end{equation}
-where $\sum^*$ runs over the pairs with $p \in \Pi_1$, $q \prec p$ and $|q|^2 \Ge z(|p|^2)$. The first application of Buchstab's identity gives the terms $S(\mathcal{E}_p, p)$ with $X^{\theta} \Le |p|^2 < X^{1/2}$. By Lemmas~\ref{lem: level large} and~\ref{lem: level small}, a weighted sum of $S'(\mathcal{E}_n, l(n))$ over $|n|^2 \Le X^{\tau - \varepsilon}$ has an asymptotic formula when the level $l(n)$ is at most a constant times $z(|n|^2)$, with $z$ of \eqref{eq: z function}. So the terms with $p \in \Pi_2$ have asymptotic formulas, and for $p \in \Pi_1$ the second application lowers the level of $S(\mathcal{E}_p, p)$ to $z(|p|^2)$ and subtracts the terms of $\sum^*$. Lemma~\ref{lem: identity 37} proves \eqref{eq: identity 37}. It gives the terms other than $\sum^*$ asymptotic formulas by Corollary~\ref{cor: level one} and Lemmas~\ref{lem: type I}, \ref{lem: level large} and~\ref{lem: level small}. The rest of the argument concerns $\sum^*$. We write $|p|^2 = X^{\alpha}$, $|q|^2 = X^{\beta}$, $|r|^2 = X^{\gamma}$ and $|s|^2 = X^{\delta}$. For $0 < \alpha < 1/2$ let $\beta_0(\alpha) = \log z(X^{\alpha})/\log X$, so that
+where $\sum^*$ runs over the pairs with $p \in \Pi_1$, $q \prec p$ and $|q|^2 \Ge z(|p|^2)$. The first application of Buchstab's identity gives the terms $S(\mathcal{E}_p, p)$ with $X^{\theta} \Le |p|^2 < X^{1/2}$. Since $|p|^2 < z(|p|^2)$ for $p \in \Pi_2$, the terms with $p \in \Pi_2$ have asymptotic formulas, and for $p \in \Pi_1$ the second application lowers the level of $S(\mathcal{E}_p, p)$ to $z(|p|^2)$ and subtracts the terms of $\sum^*$. Lemma~\ref{lem: identity 37} proves \eqref{eq: identity 37}. It gives the terms other than $\sum^*$ asymptotic formulas by Corollary~\ref{cor: level one} and Lemmas~\ref{lem: type I}, \ref{lem: level large} and~\ref{lem: level small}. The rest of the argument concerns $\sum^*$.
+
+We write $|p|^2 = X^{\alpha}$, $|q|^2 = X^{\beta}$, $|r|^2 = X^{\gamma}$ and $|s|^2 = X^{\delta}$. For $0 < \alpha < 1/2$ let $\beta_0(\alpha) = \log z(X^{\alpha})/\log X$, so that
 \begin{equation*}
 \beta_0(\alpha) = \begin{cases} \tau - \alpha & \text{for } \alpha \Ge \sigma, \\ (\tau - \alpha)/(j + 2) & \text{for } \alpha < \sigma, \text{ where } j = j(X^{\alpha}). \end{cases}
 \end{equation*}
@@ -224,14 +231,14 @@ $5$ & $\alpha < \sigma - \theta \Le \alpha + \beta < \sigma$ & $S_<$, and identi
 $6$ & $\alpha + \beta < \sigma - \theta$ & identity \eqref{eq: identity 36} with $j = 1$ (Lemma~\ref{lem: lemma 14}) & --- & $\mathsf{E}_{11}$ \\
 \bottomrule
 \end{tabular}
-\caption{The ranges of the domain $\mathsf{D}$ of \eqref{eq: domain}, with Range~5 in two rows. For each range: the exponents of the pairs $(p, q)$ of $\sum^*$; the treatment, where $S_<$ is the part of Lemma~\ref{lem: lemma 13} or~\ref{lem: lemma 14} with an asymptotic formula and the cases (a) and (b) are those of \eqref{eq: lemma 12 cases}; the two-dimensional region where the whole sum is discarded; and the four-dimensional regions where the third sum of \eqref{eq: identity 35} or \eqref{eq: identity 36} is discarded. The regions are defined in Section~\ref{sec: decomposition}. The index $k$ of a region $\mathsf{D}_k$ or $\mathsf{E}_k$ is that of the loss $\varphi_k$ of Harman and Lewis, and $\mathsf{E}_{\mathsf{R}}$ has no counterpart there.}
+\caption{The ranges of the domain $\mathsf{D}$ of \eqref{eq: domain}, with Range~5 in $2$ rows. For each range: the exponents of the pairs $(p, q)$ of $\sum^*$; the treatment, where $S_<$ is the part of Lemma~\ref{lem: lemma 13} or~\ref{lem: lemma 14} with an asymptotic formula and the cases (a) and (b) are those of \eqref{eq: lemma 12 cases}; the two-dimensional region where the whole sum is discarded; and the four-dimensional regions where the third sum of \eqref{eq: identity 35} or \eqref{eq: identity 36} is discarded. The regions are defined in Section~\ref{sec: decomposition}, by \eqref{eq: D1}--\eqref{eq: D8} and \eqref{eq: four dim regions}. The index $k$ of a region $\mathsf{D}_k$ or $\mathsf{E}_k$ is that of the loss $\varphi_k$ of Harman and Lewis, and $\mathsf{E}_{\mathsf{R}}$ has no counterpart there.}
 \label{tab: ranges}
 \end{table}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{../Code/figures/domain.pdf}
-\caption{The domain $\mathsf{D}$ of \eqref{eq: domain} in the $(\alpha, \beta)$-plane at $\theta = 0.1129$. Dashed lines separate the ranges of Table~\ref{tab: ranges}, numbered $1$ to $6$; the vertical ones are at $\alpha = \sigma = 0.3871$, $1/3$, $\rho = 0.29032$ and $\sigma - \theta = 0.2742$. Dark gray: the regions $\mathsf{D}_1$, $\mathsf{D}_2$, $\mathsf{D}_4$, $\mathsf{D}_6$ and $\mathsf{D}_8$ of Section~\ref{sec: decomposition}. Blue: the region $\mathsf{R}$ of \eqref{eq: region R}. Light gray: the rest of $\mathsf{D}$.}
+\caption{The domain $\mathsf{D}$ of \eqref{eq: domain} in the $(\alpha, \beta)$-plane at $\theta = 0.1129$. Dashed lines separate the ranges of Table~\ref{tab: ranges}, numbered $1$ to $6$: the vertical ones are at $\alpha = \sigma = 0.3871$, $1/3$, $\rho = 0.29032$ and $\sigma - \theta = 0.2742$, and the oblique one is the line $\alpha + \beta = \sigma - \theta$ between Ranges~$5$ and~$6$. Dark gray: the regions $\mathsf{D}_1$, $\mathsf{D}_2$, $\mathsf{D}_4$, $\mathsf{D}_6$ and $\mathsf{D}_8$ of Section~\ref{sec: decomposition}. Blue: the region $\mathsf{R}$ of \eqref{eq: region R}. Light gray: the rest of $\mathsf{D}$.}
 \label{fig: domain}
 \end{figure}
 
@@ -245,7 +252,7 @@ Three groupings give asymptotic formulas to parts of the discarded sums. The gro
 \end{equation}
 Case (a) of Lemma~\ref{lem: lemma 13} applies the linear estimate to the factorization $(pq) \cdot r$, which needs $\alpha + \beta \Le \zeta$. On $\mathsf{R}$, where $\alpha + \beta \Ge \zeta$, case (b) applies it to the factorization $p \cdot (qr)$, which needs $\alpha \Le \zeta$, $2\beta \Le \rho$ and $\alpha + 2\beta \Le \nu$ instead. So on $\mathsf{R}$, identity \eqref{eq: identity 35} replaces the discard of the whole sum, and only its third sum is discarded, over the region $\mathsf{E}_{\mathsf{R}}$.
 
-Harman and Lewis discard the third sums of \eqref{eq: identity 35} and \eqref{eq: identity 36}, except on a few subregions (Appendix~\ref{app: comparison}). The other two groupings give parts of these sums asymptotic formulas. On a region $\mathsf{G}$, the bilinear estimate applies to the products $pqrst$ with $s$ as its prime variable: \eqref{eq: bilinear exponents} holds with $x_{i_0} = \delta$ for a non-empty set $\mathcal{S} \subset \{p, q, r\}$. On a region $\mathsf{L}$, Buchstab's identity at level $\mu^4$ writes $S(\mathcal{A}_{pqrs}, s)$ as the difference \eqref{eq: L split} of a sum sifted at level $\mu^4$ and a sum over a further prime $s' \prec s$. The sum over $s'$ enters with the sign $-$, so both sums need asymptotic formulas. The linear estimate treats the sum sifted at level $\mu^4$ on the region $\mathsf{I}$ where the primes $p, q, r, s$ satisfy $\sum_i x_i \Le \tau$ or \eqref{eq: linear exponents}. Since $|s'|^2 \Le |s|^2$, the bilinear estimate with $s'$ as its prime variable treats the sum over $s'$ where \eqref{eq: bilinear exponents} holds with $x_{i_0} = \delta$ for a non-empty set $\mathcal{S} \subset \{p, q, r, s\}$. With an index set written by its primes, as in $x_{\{p, q\}} = \alpha + \beta$, these regions of $(\alpha, \beta, \gamma, \delta)$ are
+The other two groupings give parts of the third sums of \eqref{eq: identity 35} and \eqref{eq: identity 36} asymptotic formulas. On a region $\mathsf{G}$, the bilinear estimate applies to the products $pqrst$ with $s$ as its prime variable: \eqref{eq: bilinear exponents} holds with $x_{i_0} = \delta$ for a non-empty set $\mathcal{S} \subset \{p, q, r\}$. On a region $\mathsf{L}$, Buchstab's identity at level $\mu^4$ writes $S(\mathcal{A}_{pqrs}, s)$ as the difference \eqref{eq: L split} of a sum sifted at level $\mu^4$ and a sum over a further prime $s' \prec s$. The sum over $s'$ enters with the sign $-$, so both sums need asymptotic formulas. The linear estimate treats the sum sifted at level $\mu^4$ on the region $\mathsf{I}$ where the primes $p, q, r, s$ satisfy $\sum_i x_i \Le \tau$ or \eqref{eq: linear exponents}. Since $|s'|^2 \Le |s|^2$, the bilinear estimate with $s'$ as its prime variable treats the sum over $s'$ where \eqref{eq: bilinear exponents} holds with $x_{i_0} = \delta$ for a non-empty set $\mathcal{S} \subset \{p, q, r, s\}$. With an index set written by its primes, as in $x_{\{p, q\}} = \alpha + \beta$, these regions of $(\alpha, \beta, \gamma, \delta)$ are
 \begin{equation}
 \label{eq: regions G L}
 \begin{aligned}
@@ -254,7 +261,9 @@ Harman and Lewis discard the third sums of \eqref{eq: identity 35} and \eqref{eq
 \mathsf{L} &= \mathsf{I} \cap \bigcup_{\emptyset \neq \mathcal{S} \subset \{p, q, r, s\}} \bigl\{ \sigma \Le x_{\mathcal{S}} \Le \tau - \delta \bigr\}.
 \end{aligned}
 \end{equation}
-Lemma~\ref{lem: four dim} proves the formulas on $\mathsf{G}$ and $\mathsf{L}$. The region $\mathsf{L}$ contains the polytope
+Lemma~\ref{lem: four dim} proves the formulas on $\mathsf{G}$ and $\mathsf{L}$. These regions use the smallest prime of the product, $s$ or $s'$, as the prime variable of the bilinear estimate, and another prime in this role gives no further boxes. Indeed, let $x_0 \Le x_1$ be the exponents of the smallest prime of the product and of another prime $\varpi$ of the product, and let \eqref{eq: bilinear exponents} hold with $x_{i_0} = x_1$ for a set $\mathcal{S}$ of primes of the product with $\varpi \notin \mathcal{S}$. If $\mathcal{S}$ does not contain the smallest prime, then \eqref{eq: bilinear exponents} holds with $x_{i_0} = x_0$ for the same $\mathcal{S}$. If it does, replacing the smallest prime in $\mathcal{S}$ by $\varpi$ raises $x_{\mathcal{S}}$ by $x_1 - x_0$, to at least $\sigma$ and at most $\tau - x_0$.
+
+The region $\mathsf{L}$ contains the polytope
 \begin{equation}
 \label{eq: polytope}
 \mathsf{P} = \bigl\{ \alpha + \beta \Le \sigma,\ \gamma + \delta \Le \rho,\ \alpha + \beta + \delta \Ge \sigma,\ \alpha + \beta + 2\delta \Le \tau \bigr\}.
@@ -280,9 +289,9 @@ Let $\Phi(\theta)$ be the total loss
 \label{eq: total loss}
 \Phi(\theta) = \sum_{k \in \{1, 2, 4, 6, 8\}} \Phi(\mathsf{D}_k) + \sum_{k \in \{3, \mathsf{R}, 5, 7, 9, 10, 11\}} \Phi\bigl(\mathsf{E}_k \setminus (\mathsf{G} \cup \mathsf{L})\bigr),
 \end{equation}
-with $\mathsf{D}_k$ of Section~\ref{sec: decomposition}, $\mathsf{E}_k$ of \eqref{eq: four dim regions}, and $\mathsf{G}$, $\mathsf{L}$ of \eqref{eq: regions G L}. Let $\Phi_{\mathsf{P}}(\theta)$ be defined in the same way with $\mathsf{P}$ in place of $\mathsf{L}$.
+with $\mathsf{D}_k$ of \eqref{eq: D1}, \eqref{eq: D2}, \eqref{eq: D4}, \eqref{eq: D6} and \eqref{eq: D8}, $\mathsf{E}_k$ of \eqref{eq: four dim regions}, and $\mathsf{G}$, $\mathsf{L}$ of \eqref{eq: regions G L}. Let $\Phi_{\mathsf{P}}(\theta)$ be defined in the same way with $\mathsf{P}$ in place of $\mathsf{L}$.
 
-Lemma~\ref{lem: lower bound} splits $\sum^*$ and the third sums into dyadic boxes. It applies Lemmas~\ref{lem: lemma 11}, \ref{lem: lemma 13}, \ref{lem: lemma 14} and~\ref{lem: four dim} to the boxes that lie inside a region where these lemmas apply, at distance at least $\varepsilon$ from its boundary, and it bounds the other boxes by Lemma~\ref{lem: boxes to integrals}. Table~\ref{tab: losses} gives $\Phi(0.1129) = 0.9990033$, and Section~\ref{sec: numerics} completes the proof.
+Lemma~\ref{lem: lower bound} splits $\sum^*$ and the third sums into dyadic boxes. It applies Lemmas~\ref{lem: lemma 11}, \ref{lem: lemma 13}, \ref{lem: lemma 14} and~\ref{lem: four dim} to the boxes that lie inside a region where these lemmas apply, at distance at least $\varepsilon$ from its boundary, and it bounds the other boxes by Lemma~\ref{lem: boxes to integrals}. Section~\ref{sec: numerics} evaluates $\Phi(\theta)$ and completes the proof.
 
 \section{Asymptotic formulas from the linear and bilinear estimates}
 \label{sec: estimates}
@@ -329,7 +338,7 @@ Let $C_l \Ge 1$. Let $a_n \Ge 0$ be divisor-bounded and supported on $W/C_l \Le 
 
 \begin{lemma}
 \label{lem: level small}
-Let $C_l \Ge 1$. Let $a_n \Ge 0$ be divisor-bounded and supported on $1 \Le |n|^2 < W$, and let $l$ be any function on the support of $a$ with $1 \Le l(n) \Le C_l\, z(|n|^2)$. Then $\sum_n a_n S'(\mathcal{E}_n, l(n))$ has an asymptotic formula, uniformly in $a$ and $l$.
+Let $C_l \Ge 1$. Let $a_n \Ge 0$ be divisor-bounded and supported on $1 \Le |n|^2 < W$, and let $l$ be any function on the support of $a$ with $1 \Le l(n) \Le C_l\, z(|n|^2)$, with $z$ of \eqref{eq: z function}. Then $\sum_n a_n S'(\mathcal{E}_n, l(n))$ has an asymptotic formula, uniformly in $a$ and $l$.
 \end{lemma}
 
 \begin{corollary}
@@ -375,7 +384,7 @@ and its \emph{window} is
 \begin{equation*}
 \mathcal{W}(\iota) = \begin{cases} \emptyset & \text{in types (F) and (C)}, \\ \{\iota_{i_s}\} & \text{in type (S)}, \\ \{ \kappa : J_\kappa \cap [\inf_{\mathcal{T}(\iota)} m_s, \sup_{\mathcal{T}(\iota)} m_s) \neq \emptyset \} & \text{in type (M)}. \end{cases}
 \end{equation*}
-Since $m_s$ varies by at most the factor $(1 + 1/H)^{2k}$ on $\mathcal{T}(\iota)$, the window has at most $2k + 2$ elements. If $\iota$ satisfies all constraints, the requirements on types (S) and (M) give $y_\iota \Le \min_i |\varpi_i|^2$ on $\mathcal{T}(\iota)$ and $\xi_\kappa \Ge \mu^4/2$ for $\kappa \in \mathcal{W}(\iota)$.
+Since $m_s$ varies by at most the factor $(1 + 1/H)^{2k}$ on $\mathcal{T}(\iota)$, the window has at most $2k + 2$ elements. If $\iota$ satisfies all constraints, the requirements on types (S) and (M) give $y_\iota \Le \min_i |\varpi_i|^2$ on $\mathcal{T}(\iota)$ and $\xi_\kappa \Ge \mu^4/2$ for $\kappa \in \mathcal{W}(\iota)$. On the tuples of an index vector $\iota$ that satisfies all constraints, the sieve condition $\Xi(\varpi, t)$ and sifting at the constant level $y_\iota$ differ only at the prime factors of $t$ with norm in $J_\kappa$ for some $\kappa \in \mathcal{W}(\iota)$.
 
 \begin{lemma}
 \label{lem: decoupling}
@@ -442,7 +451,7 @@ In (P4), the piece is $\sum_n a_n S'(\mathcal{E}_n, y)$, where $a_n$ counts the 
 
 The lemmas of this section treat the sum $\sum^*$ of \eqref{eq: identity 37} on dyadic boxes. They supply the treatments of Table~\ref{tab: ranges}, and Section~\ref{sec: decomposition} checks their hypotheses on each range. In the proof of Lemma~\ref{lem: lemma 13}, Lemma~\ref{lem: three primes} gives the sum over $(p, q, r)$ in \eqref{eq: identity 35} an asymptotic formula.
 
-Throughout, $p \sim P$ and $q \sim Q$, where $P$ and $Q$ are powers of $2$. The pairs $(p, q)$ with $p \sim P$ and $q \sim Q$ form a \emph{box}. Its \emph{exponent rectangle} is the set of the pairs $(\alpha, \beta)$ with $X^{\alpha} \in [P, 2P)$ and $X^{\beta} \in [Q, 2Q)$, and the distance of a box from a set of exponents is that of its exponent rectangle. In every sifting function $S(\mathcal{A}_u, \cdot)$ below, the prime factors of $u$ satisfy the condition of the level, so $S(\mathcal{A}_u, \cdot) = S'(\mathcal{A}_u, \cdot)$ by the definition \eqref{eq: cofactor sieve} of $S'$.
+Throughout, $p \sim P$ and $q \sim Q$, where $P$ and $Q$ are powers of $2$. The pairs $(p, q)$ with $p \sim P$ and $q \sim Q$ form a \emph{box}. Its \emph{exponent rectangle} is the set of the pairs $(\alpha, \beta)$ with $X^{\alpha} \in [P, 2P)$ and $X^{\beta} \in [Q, 2Q)$, and the distance of a box from a set of exponents is that of its exponent rectangle. In every sifting function $S(\mathcal{A}_u, \cdot)$ below, the prime factors of $u$ satisfy the condition of the level, so $S(\mathcal{A}_u, \cdot) = S'(\mathcal{A}_u, \cdot)$ by the definition \eqref{eq: cofactor sieve} of $S'$. Identities \eqref{eq: identity 35} and \eqref{eq: identity 36} below are written for $\mathcal{A}$, and they hold with $\mathcal{B}$ in place of $\mathcal{A}$, since they follow from \eqref{eq: buchstab}.
 
 \begin{lemma}
 \label{lem: lemma 11}
@@ -504,7 +513,7 @@ with the outer sums over $p \sim P$, $q \sim Q$, $q \prec p$, $|q|^2 \Ge X^{\tau
 \end{lemma}
 
 \begin{proof}
-For $n = pq$ with $p \sim P$ and $q \sim Q$,
+Lemma~\ref{lem: decoupling} treats $S_<$, Lemma~\ref{lem: level large} the sum over $(p, q)$ in \eqref{eq: identity 35}, and Lemma~\ref{lem: three primes} the sum over $(p, q, r)$. For $n = pq$ with $p \sim P$ and $q \sim Q$,
 \begin{equation}
 \label{eq: lemma 13 pq}
 W \Le |n|^2 < 4PQ \Le X^{\tau - \varepsilon/2}, \qquad \frac{X^{\tau}}{PQ} < \frac{4X^{\tau}}{|n|^2}.
@@ -513,6 +522,8 @@ The sum $S_<$ is the configuration with variables $p, q$, ranges $[P, 2P)$ and $
 
 For $|q|^2 \Ge X^{\tau}/(PQ)$, Buchstab's identity \eqref{eq: buchstab}, applied first to $S(\mathcal{A}_{pq}, q)$ and then to each $S(\mathcal{A}_{pqr}, r)$ with $|r|^2 \Ge X^{\tau}/(PQ)$, gives \eqref{eq: identity 35}. The sum over $(p, q)$ in \eqref{eq: identity 35} is $\sum_n a_n S(\mathcal{A}_n, X^{\tau}/(PQ))$, with $n = pq$ and $a_n$ the number of pairs $(p, q)$ in the range of the outer sums with $pq = n$. Lemma~\ref{lem: level large} applies to it with $\varepsilon/2$ in place of $\varepsilon$, by \eqref{eq: lemma 13 pq}. The sum over $(p, q, r)$ is the case $\mathcal{Q} = [\max(Q, X^{\tau}/(PQ)), 2Q)$ and $\mathcal{I} = [X^{\tau}/(PQ), 2Q)$ of Lemma~\ref{lem: three primes}, whose hypothesis $X^{\tau}/(PQ) \Ge X^{\varepsilon}$ holds because $PQ \Le X^{\tau - \varepsilon}$.
 \end{proof}
+
+For the boxes with $PQ < W$, the level $X^{\tau}/(PQ)$ of \eqref{eq: identity 35} exceeds $z(PQ)$, the level that Lemma~\ref{lem: level small} admits up to a constant factor, and Lemma~\ref{lem: lemma 14} applies Buchstab's identity at levels given by $z$ instead.
 
 \begin{lemma}
 \label{lem: lemma 14}
@@ -532,7 +543,7 @@ with the outer sums over $p \sim P$, $q \sim Q$, $q \prec p$, $|q|^2 \Ge z(PQ)$.
 \end{lemma}
 
 \begin{proof}
-We first derive \eqref{eq: identity 36}. Then Lemmas~\ref{lem: level large} and~\ref{lem: level small} give asymptotic formulas to the sum over $(p, q)$ in \eqref{eq: identity 36} directly, and to $S_<$ and the sum over $(p, q, r)$ through Lemma~\ref{lem: decoupling} and (P4) of Lemma~\ref{lem: pieces}.
+We first derive \eqref{eq: identity 36} and prove the bounds \eqref{eq: lemma 14 small products} to \eqref{eq: lemma 14 pq levels}. With these bounds, Lemmas~\ref{lem: level large} and~\ref{lem: level small} give asymptotic formulas to the sum over $(p, q)$ in \eqref{eq: identity 36} directly, and to $S_<$ and the sum over $(p, q, r)$ through Lemma~\ref{lem: decoupling}: the pieces of its hypothesis (a) fall under (P4) of Lemma~\ref{lem: pieces}, and the straddling and window pieces under (P1) or (P3).
 
 For $|q|^2 \Ge z(PQ)$, Buchstab's identity \eqref{eq: buchstab} gives
 \begin{equation*}
@@ -615,39 +626,44 @@ So the sums of $|\mathcal{A}_{pp'}|$ and of $2|\mathcal{B}_{pp'}|/(\pi W)$ over 
 By the definition of $\beta_0$, a prime $p$ with $|p|^2 = X^{\alpha}$ and $\theta \Le \alpha < 1/2$ lies in $\Pi_2$ exactly when $\beta_0(\alpha) > \alpha$. For $\alpha \Ge \sigma$, $\beta_0(\alpha) = \tau - \alpha \Le \alpha$. For $\alpha < \sigma$ and $j = j(X^{\alpha})$, the inequality $\beta_0(\alpha) > \alpha$ means $\alpha < \tau/(j+3)$. For $j = 0$ this is impossible, because $j = 0$ gives $\alpha \Ge \sigma - \theta > \tau/3$. For $j = 1$ it gives $\alpha \in [\sigma - 2\theta, \tau/4)$, and $\tau/4 \Le \sigma - 2\theta$ for $\theta \Le 3/26$. For $j = 2$ it gives $\theta \Le \alpha < \tau/5$, since $\theta > \sigma - 3\theta$ and $\tau/5 < \sigma - 2\theta$. For $j \Ge 3$, $\alpha < \sigma - 3\theta < \theta$, which is excluded.
 \end{proof}
 
-At $\theta = 0.1129$ the primes of $\Pi_2$ have $\alpha \in [0.1129, 0.12258)$.
+At $\theta = 0.1129$ the primes of $\Pi_2$ have $\alpha \in [0.1129, 0.12258)$, so $\mathsf{D}$ begins at $\alpha = \tau/5 = 0.12258$ in Figure~\ref{fig: domain}.
 
 In the sum $\sum^*$, a term with $|p|^2 |q|^4 \Ge X$ has cofactor $t = 1$, because $t \neq 1$ would give $|pqt|^2 \Ge |p|^2 |q|^4 \Ge X$. Then $pq \in \mathcal{E}$ and $q \prec p$ force $|p|^4 \Ge X/2$ and $|q|^2 \Ge X^{1/2}/2$, and the number of such pairs with $pq \in \mathcal{B}$ is $\mathcal{O}(X/(\log X)^2)$. These terms are non-negative and enter \eqref{eq: identity 37} with the sign $+$, so we discard them. Their contribution tends to $0$ after division by $S(\mathcal{B}, X^{1/2})$, which is of order $X/\log X$ by \eqref{eq: primes in B}. The remaining pairs have exponents in the domain $\mathsf{D}$ of \eqref{eq: domain}.
 
 On each part of Ranges~1 to~6, the hypotheses of the lemmas used there are linear inequalities in $\alpha$, $\beta$ and $\theta$. Appendix~\ref{app: inequalities} lists the inequalities between the parameters that these hypotheses use, with their values at $\theta = 0.1129$.
 
 Range~1 consists of the pairs with $\sigma \Le \alpha < 1/2$. Here $\beta_0(\alpha) = \tau - \alpha$ and $\beta < (1 - \alpha)/2 < \alpha$. Lemma~\ref{lem: lemma 11} gives an asymptotic formula where $\alpha \Le \zeta$, $\beta \Ge \alpha - 2\theta$ and $\alpha + \beta \Le \nu$. The discarded region is
-\begin{equation*}
+\begin{equation}
+\label{eq: D1}
 \mathsf{D}_1 = \bigl\{ \sigma \Le \alpha < 1/2,\ \tau - \alpha \Le \beta < (1 - \alpha)/2 \bigr\} \setminus \bigl\{ \alpha - 2\theta \Le \beta \Le \nu - \alpha \bigr\}.
-\end{equation*}
+\end{equation}
 The set subtracted in $\mathsf{D}_1$ is empty for $\alpha > \chi$, where $\chi = (\nu + 2\theta)/2$. Since $\chi < \zeta$, the condition $\alpha \Le \zeta$ of Lemma~\ref{lem: lemma 11} holds wherever this set is non-empty. The exponent $\chi$ is that of the hypothesis $P \ll X^{\chi}$ of Lemma~11 of \citet{harman2001gaussian} (Appendix~\ref{app: comparison}).
 
 Range~2 consists of the pairs with $1/3 \Le \alpha < \sigma$. Here $j(X^{\alpha}) = 0$, so $\beta_0(\alpha) = (\tau - \alpha)/2$, and $\beta < (1 - \alpha)/2$. Lemma~\ref{lem: lemma 13} applies in case (a) of \eqref{eq: lemma 12 cases} where $\alpha + \beta \Le \zeta$, since there $\beta \Le \zeta - 1/3 < \rho$ and $\alpha + 2\beta \Le 2\zeta - 1/3 < \nu$. It applies in case (b) on the region $\mathsf{R}$ of \eqref{eq: region R}, since there $\alpha < \sigma < \zeta$, $2\beta \Le \rho$, $\alpha + 2\beta < \sigma + \rho = \nu$ and $\alpha + \beta < \sigma + \rho/2 < \tau$. In both cases $\alpha + \beta \Ge (\alpha + \tau)/2 > \sigma$ and $\beta \Ge (\tau - \alpha)/2$, so $PQ \Ge W$ and $S_< = 0$, and the third sum of \eqref{eq: identity 35} is discarded. The two-dimensional discarded region is
-\begin{equation*}
+\begin{equation}
+\label{eq: D2}
 \mathsf{D}_2 = \bigl\{ 1/3 \Le \alpha < \sigma,\ \max(\zeta - \alpha, (\tau - \alpha)/2) \Le \beta < (1 - \alpha)/2,\ \beta > \rho/2 \bigr\}.
-\end{equation*}
+\end{equation}
 
 Range~3 consists of the pairs with $\rho \Le \alpha < 1/3$. Here $\beta_0(\alpha) = (\tau - \alpha)/2$ and $\beta < \alpha$. Lemma~\ref{lem: lemma 13} applies in case (a) where $\alpha + \beta \Le \zeta$, since there $\beta \Le \zeta - \rho < \rho$, $\alpha + 2\beta \Le 2\zeta - \rho = \nu$ and $\alpha + \beta \Ge (\rho + \tau)/2 > \sigma$. The discarded region is
-\begin{equation*}
+\begin{equation}
+\label{eq: D4}
 \mathsf{D}_4 = \bigl\{ \rho \Le \alpha < 1/3,\ \zeta - \alpha \Le \beta < \alpha \bigr\}.
-\end{equation*}
+\end{equation}
 
 Range~4 consists of the pairs with $\sigma - \theta \Le \alpha < \rho$. Here $\beta_0(\alpha) = (\tau - \alpha)/2$. Lemma~\ref{lem: lemma 13} applies in case (a) where $\alpha + 2\beta \Le \nu$, since there $\alpha + \beta \Le (\alpha + \nu)/2 < (\rho + \nu)/2 = \zeta$, $\beta \Le (\nu - \sigma + \theta)/2 = (\rho + \theta)/2 < \rho$ and $\alpha + \beta \Ge (\alpha + \tau)/2 \Ge (1 - \theta)/2 > \sigma$. The discarded region is
-\begin{equation*}
+\begin{equation}
+\label{eq: D6}
 \mathsf{D}_6 = \bigl\{ \sigma - \theta \Le \alpha < \rho,\ (\nu - \alpha)/2 \Le \beta < \alpha \bigr\}.
-\end{equation*}
+\end{equation}
 
-Range~5 consists of the pairs with $\alpha < \sigma - \theta$ and $\alpha + \beta \Ge \sigma - \theta$. Where $\alpha + \beta \Ge \sigma$ and $\beta < (\tau - \alpha)/2$, the sum equals $S_<$ of Lemma~\ref{lem: lemma 13} and has an asymptotic formula. Where $\alpha + \beta \Ge \sigma$, $\beta \Ge (\tau - \alpha)/2$ and $\alpha + 2\beta \Le \nu$, Lemma~\ref{lem: lemma 13} applies in case (a). Where $\alpha + \beta < \sigma$, Lemma~\ref{lem: lemma 14} with $j = 0$ applies. The discarded region is
-\begin{equation*}
+Range~5 consists of the pairs with $\alpha < \sigma - \theta$ and $\alpha + \beta \Ge \sigma - \theta$. Where $\alpha + \beta \Ge \sigma$ and $\beta < (\tau - \alpha)/2$, the sum equals $S_<$ of Lemma~\ref{lem: lemma 13} and has an asymptotic formula. Where $\alpha + \beta \Ge \sigma$, $\beta \Ge (\tau - \alpha)/2$ and $\alpha + 2\beta \Le \nu$, Lemma~\ref{lem: lemma 13} applies in case (a), since there $\beta < \alpha < \sigma - \theta < \rho$ and $\alpha + \beta \Le (\alpha + \nu)/2 < (\sigma - \theta + \nu)/2 < \zeta$. Where $\alpha + \beta < \sigma$, Lemma~\ref{lem: lemma 14} with $j = 0$ applies. The discarded region is
+\begin{equation}
+\label{eq: D8}
 \mathsf{D}_8 = \bigl\{ \nu/3 \Le \alpha < \sigma - \theta,\ (\nu - \alpha)/2 \Le \beta < \alpha \bigr\}.
-\end{equation*}
+\end{equation}
 
-Range~6 consists of the pairs with $\alpha + \beta < \sigma - \theta$. By Lemma~\ref{lem: identity 37}, $\alpha \Ge \tau/5 > \sigma - 3\theta$, so $j(X^{\alpha}) \Le 2$ and $\beta \Ge \beta_0(\alpha) \Ge (\tau - \alpha)/4$. Hence $\alpha + \beta \Ge (3\alpha + \tau)/4 \Ge 2\tau/5 > \sigma - 2\theta$, so $j(X^{\alpha + \beta}) = 1$, and Lemma~\ref{lem: lemma 14} with $j = 1$ applies. Since $\beta \Ge (\tau - \alpha)/4$ is equivalent to $|q|^2 \Ge z(|pq|^2)$, $S_< = 0$ on every box at distance at least $\varepsilon$ from the boundary of $\mathsf{D}$.
+Range~6 consists of the pairs with $\alpha + \beta < \sigma - \theta$. Since $p \in \Pi_1$, Lemma~\ref{lem: identity 37} gives $\alpha \Ge \tau/5 > \sigma - 3\theta$, so $j(X^{\alpha}) \Le 2$ and $\beta \Ge \beta_0(\alpha) \Ge (\tau - \alpha)/4$. Hence $\alpha + \beta \Ge (3\alpha + \tau)/4 \Ge 2\tau/5 > \sigma - 2\theta$, so $j(X^{\alpha + \beta}) = 1$, and Lemma~\ref{lem: lemma 14} with $j = 1$ applies. Since $\beta \Ge (\tau - \alpha)/4$ is equivalent to $|q|^2 \Ge z(|pq|^2)$, $S_< = 0$ on every box at distance at least $\varepsilon$ from the boundary of $\mathsf{D}$.
 
 In the third sum of \eqref{eq: identity 35}, the exponents satisfy $\tau - \alpha - \beta \Le \delta < \gamma < \beta$. In that of \eqref{eq: identity 36}, they satisfy
 \begin{equation*}
@@ -684,7 +700,7 @@ On $\mathsf{D}$, $\alpha \Ge \theta$ and $\beta \Ge \beta_0(\alpha)$. For $\alph
 \begin{equation*}
 \beta_0(\alpha) = \frac{\tau - \alpha}{j + 2} > \frac{2\theta}{j + 2} > 4\theta^2.
 \end{equation*}
-Also $\alpha + \beta < 1 - \beta \Le 1 - c(\theta)$ on $\mathsf{D}$, since $\beta < (1 - \alpha)/2$. On the regions \eqref{eq: four dim regions}, $\alpha \Ge \beta \Ge \gamma \Ge \delta$, so it suffices to bound $\delta$ from below and $\alpha + 3\beta$ from above. On $\mathsf{E}_3$ and $\mathsf{E}_5$, $\alpha + \beta \Le \zeta$. On $\mathsf{E}_7$ and $\mathsf{E}_9$, $\alpha + \beta \Le (\alpha + \nu)/2 < \zeta$, by $\alpha < \rho$ and $(\rho + \nu)/2 = \zeta$, and by $\alpha < \sigma - \theta$ and Table~\ref{tab: inequalities}. On $\mathsf{E}_{\mathsf{R}}$, $\alpha + \beta < \sigma + \rho/2$. On these regions, $\delta \Ge \tau - \alpha - \beta \Ge \min((1 - 2\theta)/6, (26\theta - 1)/24)$. On $\mathsf{E}_{10}$, $\alpha + \beta < \sigma$ and $\gamma < \beta < \sigma/2$, so $\delta \Ge \tau - \alpha - \beta - \gamma > \tau - 3\sigma/2 = 5\theta/2 - 1/4$. On $\mathsf{E}_{11}$, $\alpha + \beta < \sigma - \theta$ and $\gamma < \beta < (\sigma - \theta)/2$, so $\delta > 2\theta - 1/8 \Ge 5\theta/2 - 1/4$. For the sums, $\alpha + 3\beta$ is at most
+Also $\alpha + \beta < 1 - \beta \Le 1 - c(\theta)$ on $\mathsf{D}$, since $\beta < (1 - \alpha)/2$. On the regions \eqref{eq: four dim regions}, $\alpha \Ge \beta \Ge \gamma \Ge \delta$, so it suffices to bound $\delta$ from below and $\alpha + 3\beta$ from above. On $\mathsf{E}_3$ and $\mathsf{E}_5$, $\alpha + \beta \Le \zeta$. On $\mathsf{E}_7$, $\alpha + \beta \Le (\alpha + \nu)/2 < (\rho + \nu)/2 = \zeta$. On $\mathsf{E}_9$, $\alpha + \beta \Le (\alpha + \nu)/2 < (\sigma - \theta + \nu)/2 < \zeta$, by Table~\ref{tab: inequalities}. On $\mathsf{E}_{\mathsf{R}}$, $\alpha + \beta < \sigma + \rho/2$. On these regions, $\delta \Ge \tau - \alpha - \beta \Ge \min((1 - 2\theta)/6, (26\theta - 1)/24)$. On $\mathsf{E}_{10}$, $\alpha + \beta < \sigma$ and $\gamma < \beta < \sigma/2$, so $\delta \Ge \tau - \alpha - \beta - \gamma > \tau - 3\sigma/2 = 5\theta/2 - 1/4$. On $\mathsf{E}_{11}$, $\alpha + \beta < \sigma - \theta$ and $\gamma < \beta < (\sigma - \theta)/2$, so $\delta > 2\theta - 1/8 \Ge 5\theta/2 - 1/4$. For the sums, $\alpha + 3\beta$ is at most
 \begin{equation*}
 3\zeta - \frac23, \quad \sigma + \frac{3\rho}{2}, \quad 3\zeta - 2\rho, \quad \frac{3\nu - \sigma + \theta}{2}, \quad \frac{4\nu}{3}, \quad 2\sigma, \quad 2\sigma - 2\theta
 \end{equation*}
@@ -712,8 +728,6 @@ S'(\mathcal{A}_{pqrs}, s) = S'(\mathcal{A}_{pqrs}, \mu^4) - \sum_{s' \prec s,\ |
 \end{equation}
 Summed over the box, the term $S'(\mathcal{A}_{pqrs}, \mu^4)$ of \eqref{eq: L split} is the configuration with the same variables and constraints, and with the sieve condition of type (C). As for $\mathsf{G}$, the definition of $\mathsf{I}$ in \eqref{eq: regions G L} holds with margin $\varepsilon/2$ on the whole exponent box, for one of its alternatives, so the pieces of hypothesis (a) fall under (P2), and the straddling pieces under (P1), with $\varepsilon/4$ in place of $\varepsilon$. The sum of $S'(\mathcal{A}_{pqrss'}, s')$ is the configuration with the further prime variable $s'$, the constraint $s' \prec s$, and the sieve condition of type (S) with $i_s$ the index of $s'$. As for $\mathsf{G}$, a non-empty set $\mathcal{S} \subset \{p, q, r, s\}$ satisfies $\sigma \Le x_{\mathcal{S}} \Le \tau - \delta$ with margin $\varepsilon/2$ on the whole exponent box. Since $|s'|^2 \Le |s|^2 < 2X^{\delta}$, the quotient $(X/2)/\sup|s' \prod_{i \in \mathcal{S}} \varpi_i|^2$ is at least $X^{1 - x_{\mathcal{S}} - \delta - \varepsilon/4} \Ge X^{\sigma + \varepsilon/4}$. So every piece, the window pieces included, falls under (P3) with this $\mathcal{S}$ and $\varpi_{i_0} = s'$. Both terms of \eqref{eq: L split} have asymptotic formulas.
 \end{proof}
-
-The regions $\mathsf{G}$ and $\mathsf{L}$ use the smallest prime of the tuple, $s$ or $s'$, as the prime variable of the bilinear estimate. Another prime in this role gives no further boxes. Let $x_0 \Le x_1$ be the exponents of the smallest prime and of another prime, and let $\sigma \Le x_{\mathcal{S}} \Le \tau - x_1$ for a set $\mathcal{S}$ of primes of the tuple that does not contain the latter prime. If $\mathcal{S}$ does not contain the smallest prime, then $\sigma \Le x_{\mathcal{S}} \Le \tau - x_0$. If it does, replacing the smallest prime in $\mathcal{S}$ by the other prime raises $x_{\mathcal{S}}$ by $x_1 - x_0$, to at least $\sigma$ and at most $\tau - x_0$.
 
 \section{The discarded sums and the lower bound}
 \label{sec: integrals}
@@ -765,7 +779,7 @@ As $\varepsilon \to 0$, these neighborhoods decrease to the closures of the regi
 \section{Evaluation of the losses and proof of \texorpdfstring{Theorem~\ref{thm: sector}}{Theorem 2}}
 \label{sec: numerics}
 
-The losses \eqref{eq: loss} are computed numerically by two methods, implemented in the folder \texttt{Code} (see the data availability statement). Both use the same limits of the regions and the same tables of Buchstab's function $\omega$ and of its integral $\Omega(u) = \int_1^u \omega(t)\, dt$, on a grid of step $10^{-5}$, computed from \eqref{eq: buchstab function}. They differ in the quadrature and in the treatment of $\mathsf{G}$ and $\mathsf{L}$. On $[1, 3]$, where $\omega(u) = 1/u$ for $u \Le 2$ and $\omega(u) = (1 + \log(u - 1))/u$ for $u \Ge 2$, the tables agree with these formulas and their integrals to $10^{-14}$. On $[2, 40)$, they satisfy \eqref{eq: buchstab function} to $1.5 \times 10^{-13}$.
+The losses \eqref{eq: loss} are computed numerically by two methods, implemented in the folder \texttt{Code} (see the data availability statement). Both use the same limits of the regions and the same tables of Buchstab's function $\omega$ and of its integral $\Omega(u) = \int_1^u \omega(t)\, dt$. On each interval $[k, k + 1]$, $\omega$ and $\Omega$ are Chebyshev series of degree $40$, built in order of $k$ from \eqref{eq: buchstab function}; they are tabulated on a grid of step $10^{-5}$ and evaluated between grid points by cubic Hermite interpolation. By \eqref{eq: exponent floor}, every argument of $\omega$ in the losses is below $1/c(\theta) < 40$. The methods differ in the quadrature and in the treatment of $\mathsf{G}$ and $\mathsf{L}$. On $[1, 3]$, where $\omega(u) = 1/u$ for $u \Le 2$ and $\omega(u) = (1 + \log(u - 1))/u$ for $u \Ge 2$, the tables agree with these formulas and their integrals to $10^{-14}$. On $[2, 40)$, they satisfy \eqref{eq: buchstab function} to $1.5 \times 10^{-13}$.
 
 In the first method, the innermost integral is evaluated exactly through $\Omega$, since
 \begin{equation*}
@@ -773,7 +787,7 @@ In the first method, the innermost integral is evaluated exactly through $\Omega
 \end{equation*}
 This gives the integral over $\beta$ in the two-dimensional regions. With $\alpha + \beta + \gamma$ in place of $\alpha$ and $\delta$ in place of $\beta$, it gives the integral over the part of the $\delta$-range outside $\mathsf{G} \cup \mathsf{L}$ in the four-dimensional regions, which is a finite union of intervals. The outer integrals are computed by composite Gauss--Legendre quadrature. For the regions $\mathsf{D}_k$, the $\alpha$-axis is cut into $256$ equal panels. For the regions $\mathsf{E}_k$, each of the $\alpha$-, $\beta$- and $\gamma$-axes is cut into $16$ equal panels. The panels are cut further at the points where a limit of integration or the set $\mathsf{G} \cup \mathsf{L}$ changes its formula, and, on the $\gamma$-axis, where a limit of $\delta$ meets $(1 - \alpha - \beta - \gamma)/2$ or where the $\delta$-range opens, since the integrand in $\gamma$ has a kink at these points. Each resulting subinterval carries $10$ Gauss--Legendre nodes.
 
-In the second method, the two-dimensional losses are computed by nested adaptive quadrature of the integrand itself \citep{piessens1983quadpack}. The four-dimensional losses are computed by scrambled Sobol quasi-Monte Carlo integration \citep{sobol1967distribution, matousek1998l2}, with $\omega$ evaluated directly and with the sets $\mathsf{G}$ and $\mathsf{L}$ tested pointwise. Each of these losses is the mean of $8$ estimates, from independent scramblings of $2^{20}$ points each, and its error estimate is the square root of the sum of the squared deviations of the $8$ estimates from their mean, divided by $(8 \cdot 7)^{1/2}$.
+In the second method, the two-dimensional losses are computed by nested adaptive Gauss--Kronrod quadrature of the integrand itself \citep{piessens1983quadpack}, and their error estimate is that of the outer adaptive rule. The four-dimensional losses are computed by scrambled Sobol quasi-Monte Carlo integration \citep{sobol1967distribution, matousek1998l2}, with $\omega$ read from its table instead of through $\Omega$ and with the sets $\mathsf{G}$ and $\mathsf{L}$ tested pointwise. Each of these losses is the mean of $8$ estimates, from independent scramblings of $2^{20}$ points each, and its error estimate is the square root of the sum of the squared deviations of the $8$ estimates from their mean, divided by $(8 \cdot 7)^{1/2}$.
 
 Table~\ref{tab: losses} lists the losses at $\theta = 0.1129$. The first method gives $\Phi(0.1129) = 0.9990033$, and the second gives $0.9990044$. At $\theta = 0.119$, the decomposition of Harman and Lewis, with the regions derived from the lemmas (Remark~\ref{rem: misprints}) and with their exclusion in $\varphi_7$ (Appendix~\ref{app: comparison}), gives the total $0.9425585$, below the bound $0.943$ of \citet[p.~134]{harman2001gaussian}. Table~\ref{tab: hl 0119} compares the losses with their bounds region by region. Table~\ref{tab: roots} lists the values of $\theta$ at which the total loss equals $1$ as the groupings are added. Figure~\ref{fig: total loss} shows the total loss of each of these decompositions as a function of $\theta$. At each of the $61$ values of $\theta$ in the figure, the total loss decreases down the rows of Table~\ref{tab: roots}.
 
@@ -842,7 +856,7 @@ Of the total loss $0.999$ at $\theta = 0.1129$, the regions $\mathsf{D}_1$, $\ma
 
 \section*{Data availability}
 
-The code that computes every number in Section~\ref{sec: numerics} and Appendix~\ref{app: inequalities}, and the data of Figures~\ref{fig: domain} and~\ref{fig: total loss}, is in the folder \texttt{Code} of the repository \url{https://github.com/xuda-ye-math/Gaussian-Prime}. It is written in Julia, and its file \texttt{README.md} describes each computation and its output.
+The code that computes every number in Section~\ref{sec: numerics} and Appendix~\ref{app: inequalities}, and the data of Figures~\ref{fig: domain} and~\ref{fig: total loss}, is in the folder \texttt{Code} of the repository \url{https://github.com/xuda-ye-math/Gaussian-Prime}. It is written in Julia~1.13, with the versions of its packages fixed by its file \texttt{Manifest.toml}, and its file \texttt{README.md} describes each computation and its output.
 
 \appendix
 
@@ -870,7 +884,7 @@ We have $\pi_G(y) = \mathrm{Li}(y) + \mathcal{O}(y \exp(-c (\log y)^{1/2}))$ for
 \end{lemma}
 
 \begin{proof}
-For $a \in \{1, 3\}$, let $\pi(y; 4, a)$ be the number of rational primes $\ell < y$ with $\ell \equiv a \pmod 4$. A Gaussian prime is $1 + i$, a prime of norm $\ell$ for a rational prime $\ell \equiv 1 \pmod 4$, or a rational prime $\ell \equiv 3 \pmod 4$, of norm $\ell^2$. Hence $\pi_G(y) = 2\pi(y; 4, 1) + \pi(y^{1/2}; 4, 3) + \mathcal{O}(1)$. The first statement follows by partial summation from the prime number theorem in progressions modulo $4$ \citep[Section~1.2]{thorner2024refinements}, in the form
+For $a \in \{1, 3\}$, let $\pi(y; 4, a)$ be the number of rational primes $\ell < y$ with $\ell \equiv a \pmod 4$. A Gaussian prime is $1 + i$, a prime of norm $\ell$ for a rational prime $\ell \equiv 1 \pmod 4$, or a rational prime $\ell \equiv 3 \pmod 4$, of norm $\ell^2$. Hence $\pi_G(y) = 2\pi(y; 4, 1) + \pi(y^{1/2}; 4, 3) + \mathcal{O}(1)$. The asymptotic formula for $\pi_G(y)$ follows by partial summation from the prime number theorem in progressions modulo $4$ \citep[Section~1.2]{thorner2024refinements}, in the form
 \begin{equation*}
 \sum_{\ell \Le x,\ \ell \equiv a \,(4)} \log \ell = \frac{x}{2} \Bigl( 1 + \mathcal{O}\bigl( \exp(-c' (\log x)^{3/5} (\log\log x)^{-1/5}) \bigr) \Bigr), \qquad a \in \{1, 3\},
 \end{equation*}
@@ -906,7 +920,7 @@ I(y) = \frac{1}{2\pi i} \int_{c - iT_0}^{c + iT_0} y^s\, \frac{ds}{s}.
 \end{lemma}
 
 \begin{proof}
-The first bound follows from $|I(y)| \Le (y^c/2\pi) \int_{-T_0}^{T_0} (c^2 + t^2)^{-1/2}\, dt$. For $y > 1$, move the segment to $\mathrm{Re}\, s = -K$ and let $K \to \infty$. The residue at $0$ is $1$, the integral over $\mathrm{Re}\, s = -K$ tends to $0$, and each horizontal side is at most
+The bound $|I(y)| \Le y^c \log(3T_0/c)$ follows from $|I(y)| \Le (y^c/2\pi) \int_{-T_0}^{T_0} (c^2 + t^2)^{-1/2}\, dt$. For $y > 1$, move the segment to $\mathrm{Re}\, s = -K$ and let $K \to \infty$. The residue at $0$ is $1$, the integral over $\mathrm{Re}\, s = -K$ tends to $0$, and each horizontal side is at most
 \begin{equation*}
 \frac{1}{2\pi T_0} \int_{-\infty}^{c} y^u\, du = \frac{y^c}{2\pi T_0 \log y}.
 \end{equation*}
@@ -917,13 +931,13 @@ For an integer $m$ and a Gaussian integer $n \neq 0$ put $\lambda^m(n) = (n/|n|)
 
 \begin{lemma}[\citet{harman2001gaussian}, (12)]
 \label{lem: sector inequality}
-For every $T \Ge 1$ and all weights $a_n$,
+For every $T \Ge 1$ and all non-negative weights $a_n$,
 \begin{equation*}
-\sum_{n \in \mathcal{A}} a_n = \frac{2}{\pi W} \sum_{n \in \mathcal{B}} a_n + \mathcal{O}\Bigl( \frac{1}{T} \sum_{n \in \mathcal{B}} |a_n| \Bigr) + \mathcal{O}\Bigl( \frac{1}{W} \sum_{m = 1}^{T} \Bigl| \sum_{n \in \mathcal{B}} a_n \lambda^m(n) \Bigr| \Bigr).
+\sum_{n \in \mathcal{A}} a_n = \frac{2}{\pi W} \sum_{n \in \mathcal{B}} a_n + \mathcal{O}\Bigl( \frac{1}{T} \sum_{n \in \mathcal{B}} a_n \Bigr) + \mathcal{O}\Bigl( \frac{1}{W} \sum_{m = 1}^{T} \Bigl| \sum_{n \in \mathcal{B}} a_n \lambda^m(n) \Bigr| \Bigr).
 \end{equation*}
 \end{lemma}
 
-Harman and Lewis derive Lemma~\ref{lem: sector inequality} from \citet[Chapter~2]{baker1986diophantine}. We apply it only with non-negative weights, and with $T = W (\log X)^A$, so that its error term $\mathcal{O}(T^{-1} \sum_{n \in \mathcal{B}} |a_n|)$ is $\mathcal{O}(W^{-1} (\log X)^{-A} \sum_{n \in \mathcal{B}} |a_n|)$.
+Harman and Lewis derive Lemma~\ref{lem: sector inequality} from \citet[Chapter~2]{baker1986diophantine}. Harman and Lewis state it for any weights; it is quoted here for non-negative weights, the only ones used. We apply it with $T = W (\log X)^A$, so that its error term $\mathcal{O}(T^{-1} \sum_{n \in \mathcal{B}} a_n)$ is $\mathcal{O}(W^{-1} (\log X)^{-A} \sum_{n \in \mathcal{B}} a_n)$.
 
 \begin{lemma}[\citet{harman2001gaussian}, Lemma~1]
 \label{lem: mean value}
@@ -977,6 +991,8 @@ W^{-1} (\log X)^{-A} \cdot C X \sum_v c_v |v|^{-2} \ll X W^{-1} (\log X)^{C - A}
 \end{proof}
 
 \begin{proof}[Proof of Lemma~\ref{lem: type II}]
+Lemma~\ref{lem: perron} separates the variables $u$, $v$ and $\varpi$. Cauchy's inequality and Lemma~\ref{lem: mean value} then bound the sums over $u$ and over $v$ in mean square over $m$, and Lemma~\ref{lem: hecke pnt} bounds the sum over $\varpi$ uniformly in $m$.
+
 Fix $A$, put $T = W (\log X)^A$, and let $E_m$ be the sum of $a_u b_v \lambda^m(uv\varpi)$ over the triples counted in \eqref{eq: type II} with $\mathcal{E} = \mathcal{B}$. As in the proof of Lemma~\ref{lem: type I}, it suffices to show that $\sum_{m \Le T} |E_m| \ll X (\log X)^{-A}$. A triple occurs only if $X/(8UV) \Le |\varpi|^2 < X/(UV)$. Put $Z_1' = \max(Z_1, X/(8UV))$ and $Z_2' = \min(Z_2, X/(UV))$, and assume that $Z_1' < Z_2'$. For $N = |uv\varpi|^2 \Le 4X$,
 \begin{equation*}
 1[X/2 \Le N < X] = 1[X/N > 1] - 1\bigl[(X/2)/N > 1\bigr],
@@ -1034,7 +1050,7 @@ Collecting the bounds in \eqref{eq: type II reduction}, we obtain
 This appendix proves Lemmas~\ref{lem: fundamental}, \ref{lem: level large} and~\ref{lem: level small} of Section~\ref{sec: estimates} and Lemma~\ref{lem: decoupling} of Section~\ref{sec: decoupling}. In the proofs of Lemmas~\ref{lem: level large} and~\ref{lem: level small}, we keep every prime of a bilinear estimate at norm at least $\mu^4/2$, and Lemma~\ref{lem: fundamental} treats the sifting by the primes of norm below $\mu^4$. We remove the conditions that couple the variables by short intervals. The proof of Lemma~\ref{lem: level small} iterates Buchstab's identity in stages, one for each length of a chain of primes.
 
 \begin{proof}[Proof of Lemma~\ref{lem: fundamental}]
-Put $M + 1 = \lfloor (\varepsilon_0/4) (\log X)^{1/5} \rfloor$. For $z \Ge 1$, let $\mathfrak{P}(z)$ be the product of the primes of norm less than $z$, and for a squarefree $\mathfrak{d}$ let $\mathfrak{o}(\mathfrak{d})$ be its number of prime factors. For squarefree $\mathfrak{d}$ put
+The proof is Brun's pure sieve: the inclusion--exclusion over the primes of norm below $z_0(u)$ that divide the cofactor is truncated after the divisors with $M$ prime factors, and the divisors with $M + 1$ prime factors bound the error of the truncation. Put $M + 1 = \lfloor (\varepsilon_0/4) (\log X)^{1/5} \rfloor$. For $z \Ge 1$, let $\mathfrak{P}(z)$ be the product of the primes of norm less than $z$, and for a squarefree $\mathfrak{d}$ let $\mathfrak{o}(\mathfrak{d})$ be its number of prime factors. For squarefree $\mathfrak{d}$ put
 \begin{equation*}
 \mathfrak{b}^{\pm}_{\mathfrak{d}}(u) = 1\bigl[\mathfrak{d} \mid \mathfrak{P}(z_0(u)),\ \mathfrak{o}(\mathfrak{d}) \Le M,\ (-1)^{\mathfrak{o}(\mathfrak{d})} = \pm 1\bigr], \qquad \mathfrak{b}^{0}_{\mathfrak{d}}(u) = 1\bigl[\mathfrak{d} \mid \mathfrak{P}(z_0(u)),\ \mathfrak{o}(\mathfrak{d}) = M + 1\bigr],
 \end{equation*}
@@ -1157,16 +1173,12 @@ This gives $k \Le j + 1$, and then
 \begin{equation*}
 |N(\mathfrak{c})|^2 |q|^2 \Le |n|^2 |p_1|^{2(k+1)} \Le |n|^2 |p_1|^{2(j+2)} \Le C_l^{j+2} X^{\tau}.
 \end{equation*}
-It remains to bound $|N(\mathfrak{c})|^2$. If $k \Ge 2$, then
+It remains to bound $|N(\mathfrak{c})|^2$. Since $|N'|^2 < W$ and $|q|^2 \Le |p_1|^2 < l(n) \Le C_l X^{3\theta/2}$,
 \begin{equation*}
-|N(\mathfrak{c})|^2 < W|q|^2 \Le W |p_1|^2 < C_l W X^{3\theta/2} = C_l X^{\tau - \theta/2}.
-\end{equation*}
-If $k = 1$, then
-\begin{equation*}
-|N(\mathfrak{c})|^2 = |n|^2 |q|^2 < C_l |n|^2 z(|n|^2) = C_l |n|^{2(j+1)/(j+2)} X^{\tau/(j+2)} \Le C_l X^{(\sigma(j+1) + \tau)/(j+2)} \Le C_l X^{1/2}.
+|N(\mathfrak{c})|^2 < W|q|^2 < C_l W X^{3\theta/2} = C_l X^{\tau - \theta/2}.
 \end{equation*}
 
-Now split the last prime into short intervals. For $\mathfrak{c} \in \mathcal{K}^{\Ge}_i$ with $\iota_{q(\mathfrak{c})} = \iota$, the difference $S'(\mathcal{E}_{N(\mathfrak{c})}, \xi_\iota) - S'(\mathcal{E}_{N(\mathfrak{c})}, q(\mathfrak{c}))$ lies between $0$ and the number of prime factors of the cofactor with norm in $J_\iota$. Hence
+Now split the prime $q(\mathfrak{c})$ into short intervals. For $\mathfrak{c} \in \mathcal{K}^{\Ge}_i$ with $\iota_{q(\mathfrak{c})} = \iota$, the difference $S'(\mathcal{E}_{N(\mathfrak{c})}, \xi_\iota) - S'(\mathcal{E}_{N(\mathfrak{c})}, q(\mathfrak{c}))$ lies between $0$ and the number of prime factors of the cofactor with norm in $J_\iota$. Hence
 \begin{equation}
 \label{eq: exit split}
 \Bigl| \mathfrak{E}_i - \sum_\iota \sum_N c_{i,\iota}(N) S'(\mathcal{E}_N, \xi_\iota) \Bigr| \Le \mathfrak{E}'_i = \sum_\iota \sum_N c_{i,\iota}(N) \sum_{|\varpi'|^2 \in J_\iota} |\mathcal{E}_{N\varpi'}|,
@@ -1219,11 +1231,7 @@ It therefore suffices to show
 E^+(\mathcal{B}) \ll \frac{X (\log\log X)^k}{H (\log X)^{4/5}}.
 \end{equation}
 
-By Lemma~\ref{lem: counting}(a), a tuple $\varpi$ contributes at most $CX/|\varpi_1 \cdots \varpi_k|^2$ to $\mathcal{P}_\iota(\mathcal{B}; 1)$, and a tuple $(\varpi, \varpi')$ at most $CX/|\varpi_1 \cdots \varpi_k \varpi'|^2$ to $\mathcal{P}'_{\iota,\kappa}(\mathcal{B})$. If $\iota$ straddles $c$, every tuple of $\mathcal{T}(\iota)$ has $m_c(\varpi)$ within the factor $(1 + 1/H)^{2k}$ of $Z_c$. Choose $i_1$ with $e_{c,i_1} \neq 0$. For fixed $\varpi_i$, $i \neq i_1$, the norm $|\varpi_{i_1}|^2$ then lies in an interval $[Y, Y(1 + 1/H)^{4k})$ with $Y \Ge \mu^4$, and Lemma~\ref{lem: prime ideal theorem}(a) bounds the sum of $|\varpi_{i_1}|^{-2}$ over it by $8k/(H \log \mu^4)$. Each other variable contributes at most $\sum_{|\varpi|^2 \Le X} |\varpi|^{-2} \Le 2\log\log X$. This bounds the sums over $\mathfrak{I}_c$ in $E^+(\mathcal{B})$ by the right side of \eqref{eq: diagonal bound}. In the sum over $\mathfrak{I}_0$, for fixed $\iota$, the norm of $\varpi'$ runs over an interval $[Y', Y'(1 + 1/H)^{2k+2})$ with $Y' \Ge \mu^4/2$, so that
-\begin{equation*}
-\sum_{\varpi'} |\varpi'|^{-2} \Le \frac{4k + 4}{H \log(\mu^4/2)}.
-\end{equation*}
-The remaining sums over $\mathcal{T}(\iota)$ add up, over all $\iota$, to at most $(2\log\log X)^k$. This bounds the sum over $\mathfrak{I}_0$ by the right side of \eqref{eq: diagonal bound}.
+By Lemma~\ref{lem: counting}(a), a tuple $\varpi$ contributes at most $CX/|\varpi_1 \cdots \varpi_k|^2$ to $\mathcal{P}_\iota(\mathcal{B}; 1)$, and a tuple $(\varpi, \varpi')$ at most $CX/|\varpi_1 \cdots \varpi_k \varpi'|^2$ to $\mathcal{P}'_{\iota,\kappa}(\mathcal{B})$. If $\iota$ straddles $c$, every tuple of $\mathcal{T}(\iota)$ has $m_c(\varpi)$ within the factor $(1 + 1/H)^{2k}$ of $Z_c$. Choose $i_1$ with $e_{c,i_1} \neq 0$. For fixed $\varpi_i$, $i \neq i_1$, the norm $|\varpi_{i_1}|^2$ then lies in an interval $[Y, Y(1 + 1/H)^{4k})$ with $Y \Ge \mu^4$, and Lemma~\ref{lem: prime ideal theorem}(a) bounds the sum of $|\varpi_{i_1}|^{-2}$ over it by $8k/(H \log \mu^4)$. Each other variable contributes at most $\sum_{|\varpi|^2 \Le X} |\varpi|^{-2} \Le 2\log\log X$. This bounds the sums over $\mathfrak{I}_c$ in $E^+(\mathcal{B})$ by the right side of \eqref{eq: diagonal bound}. In the sum over $\mathfrak{I}_0$, for fixed $\iota$, the norm of $\varpi'$ runs over an interval $[Y', Y'(1 + 1/H)^{2k+2})$ with $Y' \Ge \mu^4/2$, and Lemma~\ref{lem: prime ideal theorem}(a) bounds the sum of $|\varpi'|^{-2}$ over it by $(4k + 4)/(H \log(\mu^4/2))$. The remaining sums over $\mathcal{T}(\iota)$ add up, over all $\iota$, to at most $(2\log\log X)^k$. This bounds the sum over $\mathfrak{I}_0$ by the right side of \eqref{eq: diagonal bound}.
 
 The bound \eqref{eq: diagonal bound} also covers the terms of $\Sigma_{\mathcal{C}}$ in which two primes have equal norm, and those in which a prime factor of $t$ equals $\varpi_{i_s}$. Two primes of equal norm lie in the same short interval, so the index vector of such a tuple straddles the order constraint between them. A prime factor of $t$ equal to $\varpi_{i_s}$ has its norm in $J_\kappa$ with $\kappa = \iota_{i_s} \in \mathcal{W}(\iota)$. On the side of $\mathcal{A}$, the straddling pieces and the window pieces are controlled through their own asymptotic formulas, hypotheses (b) and (c).
 \end{proof}
@@ -1337,12 +1345,12 @@ part~6 of \S5 & step used without a statement & Lemma~\ref{lem: lemma 14} \\
 (37), sum of $S(\mathcal{E}_p, z(|p|^2))$ & level above the prime for small $|p|^2$ & Lemma~\ref{lem: identity 37}, Remark~\ref{rem: second term 37} \\
 \S5 & decomposition extended to $\theta < 3/26$ & Section~\ref{sec: decomposition} \\
 value of $\chi$, regions of $\varphi_2$ and $\varphi_{10}$ & misprints & Remark~\ref{rem: misprints} \\
-cuts in $\varphi_3$, $\varphi_7$, $\varphi_9$ & a grouping of $\mathsf{G}$; a cut implied by the limits of $\delta$ & Section~\ref{sec: four}; \eqref{eq: four dim regions} and \eqref{eq: loss} \\
+cuts in $\varphi_3$, $\varphi_7$, $\varphi_9$ & the cut in $\varphi_7$ lies in $\mathsf{G}$; that in $\varphi_3$ and $\varphi_9$ follows from the limits of $\delta$ & Section~\ref{sec: four}; \eqref{eq: four dim regions} and \eqref{eq: loss} \\
 bounds for $\varphi_2$, $\varphi_5$, $\varphi_9$ at $\theta = 0.119$ & below the losses & Table~\ref{tab: hl 0119} \\
 (17) & factor $1 + \mathcal{O}(\eta)$ & Lemma~\ref{lem: boxes to integrals} \\
 \bottomrule
 \end{tabular}
-\caption{Departures from the argument of \citet{harman2001gaussian}, with the numbering of lemmas and displays of Harman and Lewis in the first column, and the place where each is treated in this paper. The symbols $\eta$ and $\varphi_k$ are those of \citet{harman2001gaussian}, and $\chi$ is the exponent of Section~\ref{sec: decomposition}.}
+\caption{Departures from the argument of \citet{harman2001gaussian}, with the numbering of lemmas and displays of Harman and Lewis in the first column, and the place where each is treated in this paper. The symbols $\eta$ and $\varphi_k$ are those of \citet{harman2001gaussian}, and $\chi$ is the exponent of Section~\ref{sec: decomposition}. The cuts are the inequalities by which Harman and Lewis remove subregions of the regions of $\varphi_3$, $\varphi_7$ and $\varphi_9$.}
 \label{tab: corrections}
 \end{table}
 
@@ -1390,7 +1398,7 @@ Part~6 of \citet[\S5]{harman2001gaussian} uses, without a statement, the case $j
 
 \begin{remark}
 \label{rem: second term 37}
-\citet[(37)]{harman2001gaussian} write the second term as the sum of $S(\mathcal{E}_p, z(|p|^2))$ over all $p$ with $X^{\theta} \Le |p|^2 < X^{1/2}$. For $p \in \Pi_2$ the function $S(\mathcal{E}_p, z(|p|^2))$ sifts $p$ itself and vanishes, while the term $S(\mathcal{E}_p, p)$ of the first Buchstab step remains. Lemma~\ref{lem: identity 37} gives the correct term.
+\citet[(37)]{harman2001gaussian} sum $S(\mathcal{E}_p, z(|p|^2))$ over all $p$ with $X^{\theta} \Le |p|^2 < X^{1/2}$. For $p \in \Pi_2$ the function $S(\mathcal{E}_p, z(|p|^2))$ sifts $p$ itself and vanishes, while the term $S(\mathcal{E}_p, p)$ of the first Buchstab step remains. Lemma~\ref{lem: identity 37} gives the correct term.
 \end{remark}
 
 The decomposition of \citet[\S5]{harman2001gaussian} does not treat the primes with $\tau/4 \Le \alpha < \sigma - 2\theta$, which exist for $\theta < 3/26$. Section~\ref{sec: decomposition} treats them in the paragraph after \eqref{eq: four dim regions}.
@@ -1402,7 +1410,7 @@ The regions of Section~\ref{sec: decomposition} are derived from the lemmas. The
 
 Harman and Lewis discard the third sums of \eqref{eq: identity 35} and \eqref{eq: identity 36}, except on a few subregions of the regions of $\varphi_3$, $\varphi_7$ and $\varphi_9$ that they remove by further inequalities, the \emph{cuts}. \citet[p.~133]{harman2001gaussian} use a grouping of the kind that defines $\mathsf{G}$ and $\mathsf{L}$ only in their $\varphi_7$. There, the condition $\delta > 1 - \alpha - \gamma - \sigma$ when $\alpha + \gamma \Ge \sigma$ excludes from the region of $\varphi_7$ the subset of $\mathsf{G}$ given by $\mathcal{S} = \{p, r\}$. This exclusion lies in $\mathsf{G}$, so it changes no loss once $\mathsf{G}$ is added, and the decomposition of Harman and Lewis in Section~\ref{sec: numerics} keeps it. Their cut $\gamma \Le \alpha + \beta - 2\theta$ in $\varphi_3$ and $\varphi_9$ is implied by the limits of $\delta$. On $\mathsf{E}_3$ and $\mathsf{E}_9$, $\delta \Ge \tau - \alpha - \beta$ by \eqref{eq: four dim regions}, and the integrand of $\Phi(\mathsf{F}')$ in \eqref{eq: loss} vanishes unless $\delta \Le (1 - \alpha - \beta - \gamma)/2$. These bounds are compatible only if $\gamma \Le 1 - 2\tau + \alpha + \beta = \alpha + \beta - 2\theta$.
 
-Table~\ref{tab: hl 0119} compares the losses of the decomposition of Harman and Lewis at $\theta = 0.119$, with the regions derived from the lemmas (Remark~\ref{rem: misprints}) and their exclusion in $\varphi_7$, with the bounds that \citet[pp.~132--134]{harman2001gaussian} print for them. The losses of $\varphi_2$, $\varphi_5$ and $\varphi_9$ exceed the printed bounds, and the total, $0.9425585$, is below their bound $0.943$.
+In Table~\ref{tab: hl 0119}, the losses of $\varphi_2$, $\varphi_5$ and $\varphi_9$ exceed the bounds printed by Harman and Lewis.
 
 \begin{table}[ht]
 \centering
