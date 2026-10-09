@@ -255,7 +255,7 @@ function main()
             losses_first(theta, dec; RES...), losses_second(theta, dec; QMC...)
         end
         removed = endswith(dec, "L") ? "G and L" : "G and P"
-        title = "The losses (16) at theta = $theta, with $removed removed from the regions E_k, and their sum $total.\n" *
+        title = "The losses (18) at theta = $theta, with $removed removed from the regions E_k, and their sum $total.\n" *
                 "First method: Gauss-Legendre, k = $(RES.k), panels = $(RES.panels).  Second method: nested adaptive " *
                 "quadrature (D_k) and scrambled Sobol QMC,\n$(QMC.reps) x 2^$(QMC.m) points (E_k), with its error estimate."
         write_result(fname, loss_table(title, fm, sm, total))

@@ -1,8 +1,8 @@
 # Parameters, discarded regions and the sets G, I, L, P of the paper (Paper/main.tex).
 #
 # Labels follow the paper: the two-dimensional regions D1, D2, D4, D6, D8 and the four-dimensional regions
-# E3, ER, E5, E7, E9, E10, E11 of Section 7 (Table 1 and display (37)), the region R (13), the sets G, I, L (14)
-# and the polytope P (15).  "HL" is G. Harman and P. Lewis, Gaussian primes in narrow sectors, Mathematika 48
+# E3, ER, E5, E7, E9, E10, E11 of Section 7 (Table 1 and display (42)), the region R (15), the sets G, I, L (16)
+# and the polytope P (17).  "HL" is G. Harman and P. Lewis, Gaussian primes in narrow sectors, Mathematika 48
 # (2001) 119-135 (journal page numbers); the index k of D_k and E_k is that of their loss phi_k.  All exponents
 # are exponents of norms: |p|^2 = X^a, |q|^2 = X^b, |r|^2 = X^g, |s|^2 = X^d, with a > b > g > d.
 #
@@ -16,7 +16,7 @@
 # forms: pointwise, as defined in the paper (the second method of Section 10), and as a union of d-intervals for
 # fixed (a, b, g) (the first method).
 
-"""The parameters (3) of the paper, and chi = (nu + 2 theta)/2 of Section 7, in the arithmetic of theta."""
+"""The parameters (4) of the paper, and chi = (nu + 2 theta)/2 of Section 7, in the arithmetic of theta."""
 function params(theta)
     return (theta = theta, sigma = (1 - 2theta) / 2, tau = (1 + 2theta) / 2, rho = (1 + 22theta) / 12,
             zeta = (1 + 4theta) / 3, nu = (10theta + 7) / 12, chi = (34theta + 7) / 24)
@@ -71,7 +71,7 @@ function regions_2d(theta::Float64, rstar::Bool)
     ]
 end
 
-"""The four-dimensional regions E3, E5, E7, E9, E10, E11 of display (37), and ER if rstar.  E10 and E11 are
+"""The four-dimensional regions E3, E5, E7, E9, E10, E11 of display (42), and ER if rstar.  E10 and E11 are
 integrated over their full a-ranges for every theta, which for theta < 3/26 includes the interval
 [tau/4, sigma - 2 theta)."""
 function regions_4d(theta::Float64, rstar::Bool)
@@ -121,7 +121,7 @@ const MODES = ("none", "G", "G+P", "G+L")
 @inline masked_sum(mask, a, b, g, d) =
     (mask & 1 != 0 ? a : 0.0) + (mask & 2 != 0 ? b : 0.0) + (mask & 4 != 0 ? g : 0.0) + (mask & 8 != 0 ? d : 0.0)
 
-"""G of (14): the union over non-empty S of {p, q, r} of {sigma <= sum_S <= tau - d}."""
+"""G of (16): the union over non-empty S of {p, q, r} of {sigma <= sum_S <= tau - d}."""
 @inline function g_set(a, b, g, d, p)
     for S in 1:7
         sS = masked_sum(S, a, b, g, d)
@@ -130,7 +130,7 @@ const MODES = ("none", "G", "G+P", "G+L")
     return false
 end
 
-"""I of (14): {a + b + g + d <= tau}, union, over the splits U | V of {p, q, r, s}, of
+"""I of (16): {a + b + g + d <= tau}, union, over the splits U | V of {p, q, r, s}, of
 {sum_U <= zeta, sum_V <= rho, a + b + g + d <= nu}."""
 @inline function i_set(a, b, g, d, p)
     s4 = a + b + g + d
@@ -142,7 +142,7 @@ end
     return false
 end
 
-"""L of (14): I intersected with the union over non-empty S of {p, q, r, s} of {sigma <= sum_S <= tau - d}."""
+"""L of (16): I intersected with the union over non-empty S of {p, q, r, s} of {sigma <= sum_S <= tau - d}."""
 @inline function l_set(a, b, g, d, p)
     i_set(a, b, g, d, p) || return false
     for S in 1:15
@@ -152,7 +152,7 @@ end
     return false
 end
 
-"""P of (15): a + b <= sigma, g + d <= rho, a + b + d >= sigma, a + b + 2d <= tau."""
+"""P of (17): a + b <= sigma, g + d <= rho, a + b + d >= sigma, a + b + 2d <= tau."""
 @inline p_set(a, b, g, d, p) =
     (a + b <= p.sigma) & (g + d <= p.rho) & (a + b + d >= p.sigma) & (a + b + 2d <= p.tau)
 

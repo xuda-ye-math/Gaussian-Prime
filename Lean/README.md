@@ -13,11 +13,11 @@ definition says what the paper means: the definitions `sectorPrimes` and `Sector
 | Part of the paper | What Lean verifies | Status |
 |---|---|---|
 | Theorem 1 from Theorem 2 (Section 1) | the full deduction: a Gaussian prime in the sector at `ψ = 0` gives a prime `p = m² + n²` with `n < p^θ`, hence `{√p} < p^(2θ − 1/2)` | proved: `theorem1` |
-| Parameters (3) and Table 4 (Section 2, Appendix D) | every relation for `1/9 < θ < 1/8`, every quantity, every printed value at `θ = 0.1129` | proved |
+| Parameters (4) and Table 4 (Section 2, Appendix D) | every relation for `1/9 < θ < 1/8`, every quantity, every printed value at `θ = 0.1129` | proved |
 | Buchstab's function (Sections 3 and 10) | the definition by `uω(u) = 1 + ∫₁^{u-1} ω`, the closed forms on `[1, 3]`, the bounds used | verifiable; layer 2 |
 | Decomposition and loss regions (Sections 3 and 7, Table 1) | the regions as sets cut out by linear inequalities, and the facts the paper checks on them: the hypotheses of each range, `E₁₀` inside Range 5, `P ⊆ L`, `R ≠ ∅` | verifiable by linear arithmetic; layer 3 |
 | `Φ(0.1129) < 1` (Section 10, Table 2) | a rigorous upper bound by exact rational arithmetic checked by the kernel, in place of the floating-point computation of `../Code` | verifiable; layer 4 |
-| Sieve combinatorics (Buchstab's identity (5), the reduction to short intervals of Section 5, the fundamental lemma, Lemma 3, proved by Brun's pure sieve in Appendix B) | elementary but long proofs | verifiable in principle; not yet planned |
+| Sieve combinatorics (Buchstab's identity (6), the reduction to short intervals of Section 5, the fundamental lemma, Lemma 3, proved by Brun's pure sieve in Appendix B) | elementary but long proofs | verifiable in principle; not yet planned |
 | Asymptotic formulas and the lower bound (Sections 4–9) | they rest on the arithmetic information below and on the prime number theorem in progressions modulo `4` | assumed: one axiom `lower_bound`, layer 5 |
 | Arithmetic information (Lemmas 20–23 of Appendix A: the sector inequality, the mean-value estimate and the prime number theorem for Hecke characters, the linear estimates of Harman and Lewis) | none: these results are not in Mathlib, and the paper quotes them without proof | not verifiable in this project |
 
@@ -39,8 +39,8 @@ the numerical claim and every elementary step checked by Lean.
 
 `SectorTheorem θ` follows the paper's convention: a Gaussian prime is represented by its associate
 with positive real part and non-negative imaginary part, and the argument condition is taken
-modulo `π/2` (`toIcoMod`). The threshold for `X` may depend on `ψ`, which is the weaker reading of
-Theorem 2 and all that the deduction uses.
+modulo `π/2` (`toIcoMod`). The threshold for `X` may depend on `ψ`, while in Theorem 2 it does not.
+This weaker form follows from Theorem 2 and is all that the deduction uses.
 
 ## Plan for the next layers
 
@@ -65,7 +65,7 @@ Layers, each building on a product that already builds:
   four-dimensional regions.
 - **Layer 3 — the regions and the loss.** Define `D₁, D₂, D₄, D₆, D₈`, `R` (two-dimensional) and
   `E₃, E_R, E₅, E₇, E₉, E₁₀, E₁₁`, `G`, `I`, `L` (four-dimensional) exactly as in Sections 3
-  and 7, and `Φ θ` as display (18), with the integrals as lower Lebesgue integrals of non-negative
+  and 7, and `Φ θ` as display (20), with the integrals as lower Lebesgue integrals of non-negative
   integrands (no integrability side conditions).
 - **Layer 4 — the certified bound `Φ θ₀ < 1`.** The margin is `1 − 0.9990033 ≈ 9.97 · 10⁻⁴`.
   - Two-dimensional losses (`99.4 %` of `Φ`): the substitution `u = (1 − α − β)/β` gives

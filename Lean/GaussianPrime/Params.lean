@@ -3,7 +3,7 @@ import Mathlib
 /-!
 # Parameters (Section 2) and the inequalities of Appendix D
 
-`σ, τ, ρ, ζ, ν` are the parameters of display (3) of the paper, and `χ` is the exponent of
+`σ, τ, ρ, ζ, ν` are the parameters of display (4) of the paper, and `χ` is the exponent of
 Section 7. `appD_relations` proves the second column of Table 4 for `1/9 < θ < 1/8`;
 `appD_quantities` proves that each first-column quantity is a positive multiple of the
 corresponding difference; `appD_values` checks the third column at `θ = 0.1129`.

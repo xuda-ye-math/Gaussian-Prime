@@ -8,9 +8,9 @@ with positive real part and non-negative imaginary part, and arguments are taken
 `sectorPrimes θ ψ X` is the set of Gaussian primes counted in Theorem 2: norm in `[X/2, X)` and
 argument in `[ψ, ψ + X^(θ - 1/2))` modulo `π/2`.
 
-`SectorTheorem θ` is Theorem 2 at exponent `θ`. The threshold for `X` may depend on `ψ`; this is
-the weaker of the two readings of "for every `ψ` and every sufficiently large `X`", and it is all
-that the proof of Theorem 1 uses.
+`SectorTheorem θ` is Theorem 2 at exponent `θ`, in a weaker form: the paper's threshold for `X`
+does not depend on `ψ`, while here it may. The weaker form follows from the paper's statement,
+and it is all that the proof of Theorem 1 uses.
 -/
 
 local notation "ℤ[i]" => GaussianInt
