@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-09 11:56:33",
+  "generated": "2026-10-09 13:50:57",
   "julia": "1.13.0",
   "threads": 32,
   "resolution": {
@@ -11,13 +11,13 @@
     "reps": 8
   },
   "runtimes": {
-    "buchstab": 0.03126406669616699,
-    "inequalities": 0.307175874710083,
-    "hl_0119": 25.24838399887085,
-    "roots": 6.870553016662598,
-    "losses": 0.5297601222991943,
-    "convergence": 3.874314785003662,
-    "total": 36.8617639541626
+    "buchstab": 0.03527116775512695,
+    "inequalities": 0.6941487789154053,
+    "hl_0119": 25.814361095428467,
+    "roots": 6.993195056915283,
+    "losses": 0.5196089744567871,
+    "convergence": 3.8902909755706787,
+    "total": 37.947444915771484
   },
   "buchstab": {
     "max |omega - 1/u| on [1,2]": 5.88418203051333e-15,
@@ -35,20 +35,25 @@
     "rows": [
       {
         "quantity": "theta - 1/10",
-        "inequality": "3 sigma/2 < tau; Lemma 12",
+        "inequality": "3 sigma/2 < tau, sigma - 3 theta < theta; Lemmas 12 and 13",
         "value_0_1129": "129/10000",
         "value_0_1133": "133/10000",
-        "multiple": "5/2",
+        "multiples": [
+          "5/2",
+          "5"
+        ],
         "printed": "0.0129000",
         "agrees": true,
         "ok": true
       },
       {
         "quantity": "1/8 - theta",
-        "inequality": "range of theta",
+        "inequality": "tau/5 < sigma - 2 theta; Lemma 13",
         "value_0_1129": "121/10000",
         "value_0_1133": "117/10000",
-        "multiple": "1",
+        "multiples": [
+          "16/5"
+        ],
         "printed": "0.0121000",
         "agrees": true,
         "ok": true
@@ -58,17 +63,21 @@
         "inequality": "nu + rho < 1; Lemma 9",
         "value_0_1129": "121/3750",
         "value_0_1133": "39/1250",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0322667",
         "agrees": true,
         "ok": true
       },
       {
         "quantity": "1/6 - theta",
-        "inequality": "Lemma 2",
+        "inequality": "2 theta < sigma; Lemmas 2 and 9",
         "value_0_1129": "1613/30000",
         "value_0_1133": "1601/30000",
-        "multiple": "1",
+        "multiples": [
+          "3"
+        ],
         "printed": "0.0537667",
         "agrees": true,
         "ok": true
@@ -78,7 +87,9 @@
         "inequality": "sigma - theta < 1/3; j = 0 in Range 2",
         "value_0_1129": "887/15000",
         "value_0_1133": "899/15000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0591333",
         "agrees": true,
         "ok": true
@@ -88,7 +99,9 @@
         "inequality": "sigma < (1/3 + tau)/2; PQ >= W in Range 2 and on R",
         "value_0_1129": "5161/60000",
         "value_0_1133": "5197/60000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0860167",
         "agrees": true,
         "ok": true
@@ -98,7 +111,9 @@
         "inequality": "2 zeta - 1/3 < nu; PQ^2 <= X^nu in Range 2",
         "value_0_1129": "2581/60000",
         "value_0_1133": "2537/60000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0430167",
         "agrees": true,
         "ok": true
@@ -108,7 +123,9 @@
         "inequality": "zeta - 1/3 < rho; Q <= X^rho in Range 2",
         "value_0_1129": "8387/60000",
         "value_0_1133": "8399/60000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.1397833",
         "agrees": true,
         "ok": true
@@ -118,27 +135,35 @@
         "inequality": "zeta < tau; PQ <= X^(tau - eps) where alpha + beta <= zeta",
         "value_0_1129": "3871/30000",
         "value_0_1133": "1289/10000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.1290333",
         "agrees": true,
         "ok": true
       },
       {
         "quantity": "(14 theta - 1)/6",
-        "inequality": "sigma < zeta; P <= X^zeta on R",
+        "inequality": "sigma < zeta, zeta < 2 rho; P <= X^zeta on R, Q <= X^rho in Range 3",
         "value_0_1129": "2903/30000",
         "value_0_1133": "977/10000",
-        "multiple": "1",
+        "multiples": [
+          "1",
+          "1"
+        ],
         "printed": "0.0967667",
         "agrees": true,
         "ok": true
       },
       {
         "quantity": "(5 - 34 theta)/24",
-        "inequality": "zeta - sigma < rho/2; R non-empty",
+        "inequality": "zeta - sigma < rho/2, rho < sigma; R non-empty, Lemma 9",
         "value_0_1129": "5807/120000",
         "value_0_1133": "1913/40000",
-        "multiple": "1",
+        "multiples": [
+          "1",
+          "2"
+        ],
         "printed": "0.0483917",
         "agrees": true,
         "ok": true
@@ -148,8 +173,22 @@
         "inequality": "sigma + rho/2 < tau; PQ <= X^(tau - eps) on R",
         "value_0_1129": "9677/120000",
         "value_0_1133": "3243/40000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0806417",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(1 - 7 theta)/3",
+        "inequality": "tau/3 < sigma - theta; Lemma 13",
+        "value_0_1129": "699/10000",
+        "value_0_1133": "2069/30000",
+        "multiples": [
+          "1"
+        ],
+        "printed": "0.0699000",
         "agrees": true,
         "ok": true
       },
@@ -158,17 +197,21 @@
         "inequality": "sigma - theta < rho; j = 0 in Range 3, Q <= X^rho in Range 5",
         "value_0_1129": "967/60000",
         "value_0_1133": "353/20000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0161167",
         "agrees": true,
         "ok": true
       },
       {
         "quantity": "(58 theta - 5)/24",
-        "inequality": "sigma < chi; PQ >= W in Range 3",
+        "inequality": "sigma < (rho + tau)/2; PQ >= W in Range 3",
         "value_0_1129": "7741/120000",
         "value_0_1133": "2619/40000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0645083",
         "agrees": true,
         "ok": true
@@ -178,7 +221,9 @@
         "inequality": "chi < zeta; Lemma 9 in Range 1",
         "value_0_1129": "3871/120000",
         "value_0_1133": "1289/40000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0322583",
         "agrees": true,
         "ok": true
@@ -188,7 +233,9 @@
         "inequality": "nu/3 < sigma - theta; D8 non-empty",
         "value_0_1129": "8711/180000",
         "value_0_1133": "2849/60000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0483944",
         "agrees": true,
         "ok": true
@@ -198,7 +245,9 @@
         "inequality": "(nu + sigma - theta)/2 < zeta; PQ <= X^zeta in Range 5",
         "value_0_1129": "967/120000",
         "value_0_1133": "353/40000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0080583",
         "agrees": true,
         "ok": true
@@ -208,7 +257,9 @@
         "inequality": "sigma < 2 tau/3; PQ >= W on E9",
         "value_0_1129": "43/2000",
         "value_0_1133": "133/6000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0215000",
         "agrees": true,
         "ok": true
@@ -218,7 +269,9 @@
         "inequality": "sigma - theta < tau/2; E10 lies in Range 5",
         "value_0_1129": "129/4000",
         "value_0_1133": "133/4000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0322500",
         "agrees": true,
         "ok": true
@@ -228,7 +281,9 @@
         "inequality": "sigma - 2 theta < 2 tau/5; |pq|^2 >= W X^(-2 theta) in Range 6",
         "value_0_1129": "4193/50000",
         "value_0_1133": "4261/50000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0838600",
         "agrees": true,
         "ok": true
@@ -238,7 +293,9 @@
         "inequality": "sigma - 3 theta < tau/5; j(X^alpha) <= 2 in Range 6",
         "value_0_1129": "3709/50000",
         "value_0_1133": "3793/50000",
-        "multiple": "1",
+        "multiples": [
+          "1"
+        ],
         "printed": "0.0741800",
         "agrees": true,
         "ok": true
@@ -597,6 +654,13 @@
       "agrees": true
     },
     {
+      "location": "Section 10",
+      "name": "residual of the relation defining omega on [2, 40)",
+      "printed": "1.5e-13",
+      "computed": 1.4921397450962104e-13,
+      "agrees": true
+    },
+    {
       "location": "Table 2",
       "name": "D1 at 0.1129, first method",
       "printed": "0.3201605",
@@ -766,6 +830,90 @@
     },
     {
       "location": "Table 2",
+      "name": "D1 at 0.1129, error estimate of the second method",
+      "printed": "<1e-12",
+      "computed": 2.9268081030783863e-13,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D2 at 0.1129, error estimate of the second method",
+      "printed": "<1e-12",
+      "computed": 4.85722573273506e-17,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D4 at 0.1129, error estimate of the second method",
+      "printed": "<1e-12",
+      "computed": 1.3877787807814457e-17,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D6 at 0.1129, error estimate of the second method",
+      "printed": "<1e-12",
+      "computed": 1.3877787807814457e-17,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "D8 at 0.1129, error estimate of the second method",
+      "printed": "<1e-12",
+      "computed": 2.0816681711721685e-17,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E3 at 0.1129, error estimate of the second method",
+      "printed": "8.8e-10",
+      "computed": 8.804681940019467e-10,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "ER at 0.1129, error estimate of the second method",
+      "printed": "6.8e-8",
+      "computed": 6.807594013919032e-8,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E5 at 0.1129, error estimate of the second method",
+      "printed": "4.4e-8",
+      "computed": 4.352308640642631e-8,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E7 at 0.1129, error estimate of the second method",
+      "printed": "8.5e-9",
+      "computed": 8.493267398693316e-9,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E9 at 0.1129, error estimate of the second method",
+      "printed": "5.6e-8",
+      "computed": 5.603870015505681e-8,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E10 at 0.1129, error estimate of the second method",
+      "printed": "1.0e-6",
+      "computed": 1.011557445085092e-6,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
+      "name": "E11 at 0.1129, error estimate of the second method",
+      "printed": "1.1e-8",
+      "computed": 1.0769633501457999e-8,
+      "agrees": true
+    },
+    {
+      "location": "Table 2",
       "name": "Phi(0.1129), first method",
       "printed": "0.9990033",
       "computed": 0.9990032541331529,
@@ -779,10 +927,178 @@
       "agrees": true
     },
     {
+      "location": "Table 2",
+      "name": "error estimate of the second method over all regions at 0.1129",
+      "printed": "1.0e-6",
+      "computed": 1.0164183632341118e-6,
+      "agrees": true
+    },
+    {
       "location": "Section 10",
       "name": "total of HL at 0.119, first method",
       "printed": "0.9425585",
       "computed": 0.9425584924647853,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D1 of HL at 0.119, first method",
+      "printed": "0.2747838",
+      "computed": 0.274783805321575,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D1 of HL at 0.119, second method",
+      "printed": "0.2747838",
+      "computed": 0.274783805321391,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D2+R of HL at 0.119, first method",
+      "printed": "0.3456458",
+      "computed": 0.3456457768665668,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D2+R of HL at 0.119, second method",
+      "printed": "0.3456458",
+      "computed": 0.34564577686656717,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E3 of HL at 0.119, first method",
+      "printed": "0.0000918",
+      "computed": 9.183832531241042e-5,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E3 of HL at 0.119, second method",
+      "printed": "0.0000918",
+      "computed": 9.183831933658835e-5,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D4 of HL at 0.119, first method",
+      "printed": "0.1554561",
+      "computed": 0.15545607199993922,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D4 of HL at 0.119, second method",
+      "printed": "0.1554561",
+      "computed": 0.15545607199990935,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E5 of HL at 0.119, first method",
+      "printed": "0.0011859",
+      "computed": 0.0011858505530353476,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E5 of HL at 0.119, second method",
+      "printed": "0.0011859",
+      "computed": 0.0011858504965241057,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D6 of HL at 0.119, first method",
+      "printed": "0.1116255",
+      "computed": 0.11162548776700557,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D6 of HL at 0.119, second method",
+      "printed": "0.1116255",
+      "computed": 0.11162548776700532,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E7 of HL at 0.119, first method",
+      "printed": "0.0008847",
+      "computed": 0.0008846665049972055,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E7 of HL at 0.119, second method",
+      "printed": "0.0008847",
+      "computed": 0.0008846663223321084,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D8 of HL at 0.119, first method",
+      "printed": "0.0356394",
+      "computed": 0.035639376739889074,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "D8 of HL at 0.119, second method",
+      "printed": "0.0356394",
+      "computed": 0.035639376739845866,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E9 of HL at 0.119, first method",
+      "printed": "0.0010752",
+      "computed": 0.0010751945929886961,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E9 of HL at 0.119, second method",
+      "printed": "0.0010752",
+      "computed": 0.0010751945579750427,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E10 of HL at 0.119, first method",
+      "printed": "0.0161420",
+      "computed": 0.016141952585797287,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E10 of HL at 0.119, second method",
+      "printed": "0.0161419",
+      "computed": 0.016141923805691044,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E11 of HL at 0.119, first method",
+      "printed": "0.0000285",
+      "computed": 2.847120767881958e-5,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "E11 of HL at 0.119, second method",
+      "printed": "0.0000285",
+      "computed": 2.8471206046728608e-5,
+      "agrees": true
+    },
+    {
+      "location": "Table 6",
+      "name": "total of HL at 0.119, second method",
+      "printed": "0.9425585",
+      "computed": 0.9425584634026242,
       "agrees": true
     },
     {
@@ -860,6 +1176,27 @@
       "name": "change of Phi(0.1129) from the rule of Table 2 to the finest rule",
       "printed": "2.6e-10",
       "computed": 2.6466373537203935e-10,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "largest change of a loss from the rule of Table 2 to the finest rule",
+      "printed": "2.5e-9",
+      "computed": 2.472413743111494e-9,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "change of Phi(0.1129) from the coarsest rule to the finest rule",
+      "printed": "8.7e-6",
+      "computed": 8.735976095519682e-6,
+      "agrees": true
+    },
+    {
+      "location": "Section 10",
+      "name": "change of Phi(0.1129) from the second finest rule to the finest rule",
+      "printed": "6.8e-11",
+      "computed": 6.768385851785297e-11,
       "agrees": true
     },
     {

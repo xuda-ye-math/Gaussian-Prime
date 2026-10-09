@@ -4,9 +4,9 @@ import GaussianPrime.Statements
 import GaussianPrime.GaussianPrimeNorm
 
 /-!
-# Theorem 2 from Theorem 1
+# Theorem 1 from Theorem 2
 
-The proof of Theorem 2 in Section 1: apply Theorem 1 with `ψ = 0`. Fewer than `√X + 1` of the
+The proof of Theorem 1 in Section 1: apply Theorem 2 with `ψ = 0`. Fewer than `√X + 1` of the
 counted Gaussian primes have imaginary part `0`, so for large `X` the sector contains a Gaussian
 prime `m + in` with `m, n > 0`; its norm `p = m² + n²` is a rational prime with `n < p^θ`. Then
 `0 < √p - m = n² / (√p + m) < p^(2θ - 1/2)` gives the statement on `{√p}`.
@@ -50,7 +50,7 @@ lemma ncard_le_of_im_eq_zero {θ X : ℝ}
     _ = (⌊√X⌋₊ : ℝ) + 1 := by simp
     _ ≤ √X + 1 := by gcongr; exact Nat.floor_le (Real.sqrt_nonneg X)
 
-/-- The lower bound of Theorem 1 eventually exceeds `√X + 1`. -/
+/-- The lower bound of Theorem 2 eventually exceeds `√X + 1`. -/
 lemma eventually_sqrt_lt {θ c : ℝ} (hθ : 0 < θ) (hc : 0 < c) :
     ∀ᶠ X in atTop, √X + 1 < c * X ^ (1 / 2 + θ) / Real.log X := by
   have h1 := (isLittleO_log_rpow_atTop hθ).def (by positivity : (0 : ℝ) < c / 4)
@@ -69,7 +69,7 @@ lemma eventually_sqrt_lt {θ c : ℝ} (hθ : 0 < θ) (hc : 0 < c) :
     _ ≤ (2 * √X) * (c / 4 * X ^ θ) := by gcongr
     _ < c * (√X * X ^ θ) := by nlinarith [mul_pos hc hP]
 
-/-- For every bound `B`, Theorem 1 with `ψ = 0` gives an `X > 2B` and a counted Gaussian prime
+/-- For every bound `B`, Theorem 2 with `ψ = 0` gives an `X > 2B` and a counted Gaussian prime
 with non-zero imaginary part. -/
 lemma exists_far {θ : ℝ} (hθ : 0 < θ) (h : SectorTheorem θ) (B : ℝ) :
     ∃ X : ℝ, B < X / 2 ∧ ∃ z ∈ sectorPrimes θ 0 X, z.im ≠ 0 := by
@@ -133,7 +133,7 @@ lemma prime_of_mem {θ X : ℝ} (hθ : θ < 1 / 2) {z : ℤ[i]} (hz : z ∈ sect
     _ = P ^ θ := by
         rw [Real.sqrt_eq_rpow, ← Real.rpow_add hPpos]; ring_nf
 
-/-- Theorem 2, first statement, from Theorem 1 at any `0 < θ < 1/2`. -/
+/-- Theorem 1, first statement, from Theorem 2 at any `0 < θ < 1/2`. -/
 theorem infinite_small_n {θ : ℝ} (hθ0 : 0 < θ) (hθ : θ < 1 / 2) (h : SectorTheorem θ) :
     {p : ℕ | p.Prime ∧ ∃ m n : ℕ, 0 < m ∧ 0 < n ∧ p = m ^ 2 + n ^ 2 ∧
       (n : ℝ) < (p : ℝ) ^ θ}.Infinite := by
@@ -178,15 +178,15 @@ lemma fract_sqrt_lt {θ : ℝ} (hθ : θ < 1 / 4) {p m n : ℕ} (hp : p.Prime) (
     rw [Int.floor_eq_iff]; push_cast; constructor <;> linarith
   rw [Int.fract, hfloor]; push_cast; exact hbound
 
-/-- Theorem 2, second statement, from Theorem 1 at any `0 < θ < 1/4`. -/
+/-- Theorem 1, second statement, from Theorem 2 at any `0 < θ < 1/4`. -/
 theorem infinite_fract_sqrt {θ : ℝ} (hθ0 : 0 < θ) (hθ : θ < 1 / 4) (h : SectorTheorem θ) :
     {p : ℕ | p.Prime ∧ Int.fract (√(p : ℝ)) < (p : ℝ) ^ (2 * θ - 1 / 2)}.Infinite := by
   refine (infinite_small_n hθ0 (by linarith) h).mono ?_
   rintro p ⟨hp, m, n, -, hn, hpmn, hlt⟩
   exact ⟨hp, fract_sqrt_lt hθ hp hn hpmn hlt⟩
 
-/-- **Theorem 2** of the paper, from Theorem 1 at `θ = 0.1129`. -/
-theorem theorem2 (h : SectorTheorem θ₀) :
+/-- **Theorem 1** of the paper, from Theorem 2 at `θ = 0.1129`. -/
+theorem theorem1 (h : SectorTheorem θ₀) :
     {p : ℕ | p.Prime ∧ ∃ m n : ℕ, 0 < m ∧ 0 < n ∧ p = m ^ 2 + n ^ 2 ∧
       (n : ℝ) < (p : ℝ) ^ (0.1129 : ℝ)}.Infinite ∧
     {p : ℕ | p.Prime ∧ Int.fract (√(p : ℝ)) < (p : ℝ) ^ (-0.2742 : ℝ)}.Infinite := by

@@ -1,11 +1,11 @@
-# The losses (13) of the paper, by the two methods of Section 10, and the theta at which the total loss is 1.
+# The losses (16) of the paper, by the two methods of Section 10, and the theta at which the total loss is 1.
 #
 # Decompositions (the rows of Table 3; each is a list of regions from regions.jl and a rescued set):
 #     "HL"        the decomposition of Harman and Lewis, with the regions derived from the lemmas (Remark 27):
 #                 D1, D2+R, D4, D6, D8, E3, E5, E7, E9, E10, E11;
 #     "HL+R"      with R: D2 in place of D2+R, and the region ER;
 #     "HL+R+G", "HL+R+G+P", "HL+R+G+L"   with R, and with G, G union P or G union L removed from the regions E_k.
-# The total loss of "HL+R+G+L" is Phi(theta) of (14), and that of "HL+R+G+P" is Phi_P(theta).
+# The total loss of "HL+R+G+L" is Phi(theta) of (18), and that of "HL+R+G+P" is Phi_P(theta).
 #
 # First method (`losses_first`), deterministic:
 #   * D_k: the b-integral is exact, int_{b0}^{b1} omega((1-a-b)/b)/b^2 db = (Omega((1-a)/b0 - 1) - Omega((1-a)/b1 - 1))

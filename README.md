@@ -10,7 +10,7 @@ Harman and Lewis proved that infinitely many primes $p = m^2 + n^2$ have $n < p^
 |---|---|
 | [`Paper/`](Paper) | the manuscript `main.tex`, the bibliography `references.bib` and the build `main.pdf` |
 | [`Code/`](Code) | Julia computation of every number of Section 10 and Appendix D of the paper: the losses by both methods of Section 10, Tables 2–4, and a comparison of each number with the paper; outputs in `Code/results/` |
-| [`Lean/`](Lean) | Lean 4 formalization: the deduction of Theorem 2 from Theorem 1 and the parameter table of Appendix D are proved; the plan for the remaining parts is in `Lean/README.md` |
+| [`Lean/`](Lean) | Lean 4 formalization: the deduction of Theorem 1 from Theorem 2 and the parameter table of Appendix D are proved; the plan for the remaining parts is in `Lean/README.md` |
 
 `Code/README.md` and `Lean/README.md` give the details of each part.
 

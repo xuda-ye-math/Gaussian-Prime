@@ -41,13 +41,30 @@ const TABLE2 = ["D1" => ("0.3201605", "0.3201605"), "D2" => ("0.3437028", "0.343
 const TABLE3 = ["HL" => ("0.1167825", "0.2664351"), "HL+R" => ("0.1141073", "0.2717854"),
                 "HL+R+G" => ("0.1139312", "0.2721376"), "HL+R+G+P" => ("0.1132049", "0.2735902"),
                 "HL+R+G+L" => ("0.1128554", "0.2742892")]
+const TABLE2_ERR = ["D1" => "<1e-12", "D2" => "<1e-12", "D4" => "<1e-12", "D6" => "<1e-12", "D8" => "<1e-12",
+                    "E3" => "8.8e-10", "ER" => "6.8e-8", "E5" => "4.4e-8", "E7" => "8.5e-9", "E9" => "5.6e-8",
+                    "E10" => "1.0e-6", "E11" => "1.1e-8"]
+const TABLE6 = ["D1" => ("0.2747838", "0.2747838"), "D2+R" => ("0.3456458", "0.3456458"),
+                "E3" => ("0.0000918", "0.0000918"), "D4" => ("0.1554561", "0.1554561"),
+                "E5" => ("0.0011859", "0.0011859"), "D6" => ("0.1116255", "0.1116255"),
+                "E7" => ("0.0008847", "0.0008847"), "D8" => ("0.0356394", "0.0356394"),
+                "E9" => ("0.0010752", "0.0010752"), "E10" => ("0.0161420", "0.0161419"),
+                "E11" => ("0.0000285", "0.0000285")]
 const PAPER = vcat(
-    [("Section 10", "omega and Omega against their closed forms on [1, 3]", "10^-14")],
+    [("Section 10", "omega and Omega against their closed forms on [1, 3]", "10^-14"),
+     ("Section 10", "residual of the relation defining omega on [2, 40)", "1.5e-13")],
     [("Table 2", "$n at 0.1129, $m method", v[i]) for (n, v) in TABLE2 for (i, m) in enumerate(("first", "second"))],
+    [("Table 2", "$n at 0.1129, error estimate of the second method", v) for (n, v) in TABLE2_ERR],
     [("Table 2", "Phi(0.1129), first method", "0.9990033"), ("Table 2", "Phi(0.1129), second method", "0.9990044"),
+     ("Table 2", "error estimate of the second method over all regions at 0.1129", "1.0e-6"),
      ("Section 10", "total of HL at 0.119, first method", "0.9425585")],
+    [("Table 6", "$n of HL at 0.119, $m method", v[i]) for (n, v) in TABLE6 for (i, m) in enumerate(("first", "second"))],
+    [("Table 6", "total of HL at 0.119, second method", "0.9425585")],
     [("Table 3", "$(ROWS_TABLE3[dec]): $c", v[i]) for (dec, v) in TABLE3 for (i, c) in enumerate(("theta", "1/2 - 2 theta"))],
     [("Section 10", "change of Phi(0.1129) from the rule of Table 2 to the finest rule", "2.6e-10"),
+     ("Section 10", "largest change of a loss from the rule of Table 2 to the finest rule", "2.5e-9"),
+     ("Section 10", "change of Phi(0.1129) from the coarsest rule to the finest rule", "8.7e-6"),
+     ("Section 10", "change of Phi(0.1129) from the second finest rule to the finest rule", "6.8e-11"),
      ("Section 10", "error estimate of the second method over the E_k at 0.1129", "1.0e-6"),
      ("Section 10", "difference of the two methods in Phi(0.1129)", "1.2e-6"),
      ("Section 10", "difference of the two methods over the error estimate", "1.1"),
@@ -94,7 +111,7 @@ end
 
 """The value written with the digits of the printed number."""
 function formatted(value, printed)
-    (startswith(printed, "10^") || startswith(printed, ">")) && return @sprintf("%.3g", value)
+    (startswith(printed, "10^") || startswith(printed, ">") || startswith(printed, "<")) && return @sprintf("%.3g", value)
     if occursin('e', printed)
         mantissa = split(printed, 'e')[1]
         digits = occursin('.', mantissa) ? length(split(mantissa, '.')[2]) : 0
@@ -109,6 +126,7 @@ end
 function agrees(value, printed)
     startswith(printed, "10^") && return floor(Int, log10(abs(value))) <= parse(Int, printed[4:end])
     startswith(printed, ">") && return value > parse(Float64, printed[2:end])
+    startswith(printed, "<") && return value < parse(Float64, printed[2:end])
     return formatted(value, printed) == printed
 end
 
@@ -152,6 +170,7 @@ function main()
     summary["buchstab"] = obj(b)
     computed["omega and Omega against their closed forms on [1, 3]"] =
         maximum(v for (n, v) in b if occursin("on [1,2]", n) || occursin("on [2,3]", n))
+    computed["residual of the relation defining omega on [2, 40)"] = only(v for (n, v) in b if occursin("on [2,40)", n))
     runtimes["buchstab"] = time() - t0
 
     # 2. Table 4 (Appendix D).
@@ -161,13 +180,13 @@ function main()
     text, failures = inequalities_table(rows)
     write_result("table_inequalities.txt",
         "Table 4 (Appendix D): the inequalities between the parameters, written as quantities that must be positive.\n" *
-        "For each row, in exact arithmetic: the margin of the inequality (right side minus left side) is the\n" *
+        "For each row, in exact arithmetic: the margin of each inequality (right side minus left side) is the\n" *
         "quantity times 'multiple'; the quantity at theta = 0.1129 and 0.1133; and its value at 0.1129 against\n" *
         "the value printed in the table.\n\n" * text * "\n\n$(length(rows)) rows; failures: " *
         (isempty(failures) ? "none" : string(failures)))
     summary["inequalities"] = obj(["failures" => failures, "rows" => [obj([
         "quantity" => r.quantity, "inequality" => r.inequality, "value_0_1129" => ratstring(r.value),
-        "value_0_1133" => ratstring(r.value_p), "multiple" => r.multiple === nothing ? nothing : ratstring(r.multiple),
+        "value_0_1133" => ratstring(r.value_p), "multiples" => [m === nothing ? nothing : ratstring(m) for m in r.multiples],
         "printed" => r.printed, "agrees" => r.agrees, "ok" => r.ok]) for r in rows]])
     logline("  $(length(rows)) rows, failures: $(length(failures))")
     runtimes["inequalities"] = time() - t0
@@ -189,6 +208,11 @@ function main()
     push!(lines, @sprintf("%-7s %11.7f %11.7f %10s %9s", "total", sum(last, fm), sum(first, values(s)), "", "< 0.943"))
     write_result("table_hl_0119.txt", join(lines, "\n"))
     computed["total of HL at 0.119, first method"] = sum(last, fm)
+    computed["total of HL at 0.119, second method"] = sum(first, values(s))
+    for (n, v) in fm
+        computed["$n of HL at 0.119, first method"] = v
+        computed["$n of HL at 0.119, second method"] = s[n][1]
+    end
     summary["hl_0119"] = obj(["first" => obj(fm), "second" => obj([n => collect(v) for (n, v) in sm])])
     runtimes["hl_0119"] = time() - t0
 
@@ -231,7 +255,7 @@ function main()
             losses_first(theta, dec; RES...), losses_second(theta, dec; QMC...)
         end
         removed = endswith(dec, "L") ? "G and L" : "G and P"
-        title = "The losses (13) at theta = $theta, with $removed removed from the regions E_k, and their sum $total.\n" *
+        title = "The losses (16) at theta = $theta, with $removed removed from the regions E_k, and their sum $total.\n" *
                 "First method: Gauss-Legendre, k = $(RES.k), panels = $(RES.panels).  Second method: nested adaptive " *
                 "quadrature (D_k) and scrambled Sobol QMC,\n$(QMC.reps) x 2^$(QMC.m) points (E_k), with its error estimate."
         write_result(fname, loss_table(title, fm, sm, total))
@@ -243,7 +267,9 @@ function main()
             for (n, v) in fm
                 computed["$n at 0.1129, first method"] = v
                 computed["$n at 0.1129, second method"] = s[n][1]
+                computed["$n at 0.1129, error estimate of the second method"] = s[n][2]
             end
+            computed["error estimate of the second method over all regions at 0.1129"] = sqrt(sum(e^2 for (_, (_, e)) in sm))
             computed["Phi(0.1129), first method"] = tot
             computed["Phi(0.1129), second method"] = ctot
             computed["error estimate of the second method over the E_k at 0.1129"] =
@@ -294,6 +320,12 @@ function main()
                           RES.k, RES.panels, change))
     write_result("table_convergence_0.1129.txt", join(lines, "\n"))
     computed["change of Phi(0.1129) from the rule of Table 2 to the finest rule"] = abs(change)
+    table2 = Dict(last(ladder[findfirst(x -> first(x) == (RES.k, RES.panels), ladder)]))
+    computed["largest change of a loss from the rule of Table 2 to the finest rule"] =
+        maximum(abs(table2[n] - finest[n]) for n in keys(finest))
+    computed["change of Phi(0.1129) from the coarsest rule to the finest rule"] = abs(sum(last, last(ladder[1])) - ftot)
+    computed["change of Phi(0.1129) from the second finest rule to the finest rule"] =
+        abs(sum(last, last(ladder[end - 1])) - ftot)
     summary["convergence"] = obj(["k=$k,panels=$panels" => obj(out) for ((k, panels), out) in ladder])
     runtimes["convergence"] = time() - t0
 

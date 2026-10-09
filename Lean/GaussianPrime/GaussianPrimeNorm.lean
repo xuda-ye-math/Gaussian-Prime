@@ -4,8 +4,8 @@ import Mathlib
 # Norms of Gaussian primes
 
 A Gaussian prime `m + in` with `m ≠ 0` and `n ≠ 0` has a rational prime `m² + n²` as its norm.
-This is the step "Its norm `p = m² + n²` is a rational prime" in the proof of Theorem 2 from
-Theorem 1.
+This is the step "Its norm `p = m² + n²` is a rational prime" in the proof of Theorem 1 from
+Theorem 2.
 -/
 
 local notation "ℤ[i]" => GaussianInt
