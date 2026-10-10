@@ -1,4 +1,4 @@
-The losses (18) at theta = 0.1129, with G and L removed from the regions E_k, and their sum Phi(0.1129).
+The losses (29) at theta = 0.1129, with G and L removed from the regions E_k, and their sum Phi(0.1129).
 First method: Gauss-Legendre, k = 10, panels = 16.  Second method: nested adaptive quadrature (D_k) and scrambled Sobol QMC,
 8 x 2^20 points (E_k), with its error estimate.
 

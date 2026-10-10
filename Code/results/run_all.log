@@ -1,81 +1,81 @@
-[13:50:57] step buchstab
-[13:50:57]   wrote results/buchstab.log
-[13:50:57] step inequalities
-[13:50:58]   wrote results/table_inequalities.txt
-[13:50:58]   22 rows, failures: 0
-[13:50:58] step hl_0119
-[13:51:18]   ... hl_0119: running, 20s
-[13:51:24]   wrote results/table_hl_0119.txt
-[13:51:24] step roots
-[13:51:24]     HL         theta = 0.1160000000  total = 1.020738151  (0.1s)
-[13:51:24]     HL         theta = 0.1190000000  total = 0.942558492  (0.0s)
-[13:51:24]     HL         theta = 0.1167957882  total = 0.999648993  (0.0s)
-[13:51:24]     HL         theta = 0.1167825432  total = 0.999997842  (0.1s)
-[13:51:24]     HL         theta = 0.1167824612  total = 1.000000000  (0.0s)
-[13:51:24]     HL         theta = 0.1167824612  total = 1.000000000  (0.0s)
-[13:51:24]   HL: total loss 1 at theta = 0.1167825  (0s)
-[13:51:24]   quantities of Table 4 at this theta: all positive
-[13:51:24]     HL+R       theta = 0.1115000000  total = 1.065645556  (0.1s)
-[13:51:24]     HL+R       theta = 0.1175000000  total = 0.920147050  (0.0s)
-[13:51:24]     HL+R       theta = 0.1142070610  total = 0.997566310  (0.0s)
-[13:51:24]     HL+R       theta = 0.1141102893  total = 0.999926739  (0.1s)
-[13:51:24]     HL+R       theta = 0.1141072892  total = 1.000000001  (0.0s)
-[13:51:24]     HL+R       theta = 0.1141072892  total = 1.000000000  (0.0s)
-[13:51:24]   HL+R: total loss 1 at theta = 0.1141073  (0s)
-[13:51:24]   quantities of Table 4 at this theta: all positive
-[13:51:24]     HL+R+G     theta = 0.1115000000  total = 1.060505945  (0.1s)
-[13:51:24]     HL+R+G     theta = 0.1175000000  total = 0.916767096  (0.1s)
-[13:51:25]     HL+R+G     theta = 0.1140256614  total = 0.997714425  (0.1s)
-[13:51:25]     HL+R+G     theta = 0.1139337288  total = 0.999938312  (0.1s)
-[13:51:25]     HL+R+G     theta = 0.1139311813  total = 1.000000001  (0.1s)
-[13:51:25]     HL+R+G     theta = 0.1139311814  total = 1.000000000  (0.1s)
-[13:51:25]   HL+R+G: total loss 1 at theta = 0.1139312  (1s)
-[13:51:25]   quantities of Table 4 at this theta: all positive
-[13:51:25]     HL+R+G+P   theta = 0.1115000000  total = 1.039622534  (0.1s)
-[13:51:25]     HL+R+G+P   theta = 0.1175000000  total = 0.905185758  (0.1s)
-[13:51:25]     HL+R+G+P   theta = 0.1132683792  total = 0.998547187  (0.1s)
-[13:51:25]     HL+R+G+P   theta = 0.1132058326  total = 0.999978231  (0.1s)
-[13:51:25]     HL+R+G+P   theta = 0.1132048817  total = 1.000000000  (0.1s)
-[13:51:26]     HL+R+G+P   theta = 0.1132048817  total = 1.000000000  (0.1s)
-[13:51:26]   HL+R+G+P: total loss 1 at theta = 0.1132049  (1s)
-[13:51:26]   quantities of Table 4 at this theta: all positive
-[13:51:26]     HL+R+G+L   theta = 0.1115000000  total = 1.030650087  (0.2s)
-[13:51:26]     HL+R+G+L   theta = 0.1175000000  total = 0.899838294  (0.3s)
-[13:51:26]     HL+R+G+L   theta = 0.1129058405  total = 0.998872739  (0.2s)
-[13:51:27]     HL+R+G+L   theta = 0.1128559701  total = 0.999987560  (0.2s)
-[13:51:27]     HL+R+G+L   theta = 0.1128554139  total = 1.000000000  (0.3s)
-[13:51:27]     HL+R+G+L   theta = 0.1128554139  total = 1.000000000  (0.3s)
-[13:51:27]     HL+R+G+L   theta = 0.1128554139  total = 1.000000000  (0.2s)
-[13:51:28]     HL+R+G+L   theta = 0.1128556920  total = 0.999993780  (0.3s)
-[13:51:28]     HL+R+G+L   theta = 0.1128555530  total = 0.999996890  (0.2s)
-[13:51:28]     HL+R+G+L   theta = 0.1128554834  total = 0.999998445  (0.2s)
-[13:51:28]     HL+R+G+L   theta = 0.1128554487  total = 0.999999223  (0.2s)
-[13:51:29]     HL+R+G+L   theta = 0.1128554313  total = 0.999999611  (0.3s)
-[13:51:29]     HL+R+G+L   theta = 0.1128554226  total = 0.999999806  (0.2s)
-[13:51:29]     HL+R+G+L   theta = 0.1128554182  total = 0.999999903  (0.2s)
-[13:51:29]     HL+R+G+L   theta = 0.1128554161  total = 0.999999951  (0.3s)
-[13:51:30]     HL+R+G+L   theta = 0.1128554150  total = 0.999999976  (0.3s)
-[13:51:30]     HL+R+G+L   theta = 0.1128554144  total = 0.999999988  (0.3s)
-[13:51:30]     HL+R+G+L   theta = 0.1128554142  total = 0.999999994  (0.2s)
-[13:51:30]     HL+R+G+L   theta = 0.1128554140  total = 0.999999997  (0.3s)
-[13:51:31]     HL+R+G+L   theta = 0.1128554140  total = 0.999999998  (0.2s)
-[13:51:31]   HL+R+G+L: total loss 1 at theta = 0.1128554  (5s)
-[13:51:31]   quantities of Table 4 at this theta: all positive
-[13:51:31]   wrote results/roots.log
-[13:51:31]   wrote results/table_roots.txt
-[13:51:31] step losses
-[13:51:31]   wrote results/table_losses_0.1129.txt
-[13:51:31]   wrote results/table_losses_P_0.1133.txt
-[13:51:31] step convergence
-[13:51:31]   k = 6, panels = 2: Phi(0.1129) = 0.9990119904 (0s)
-[13:51:31]   k = 6, panels = 4: Phi(0.1129) = 0.9990029830 (0s)
-[13:51:31]   k = 8, panels = 4: Phi(0.1129) = 0.9990033659 (0s)
-[13:51:31]   k = 8, panels = 8: Phi(0.1129) = 0.9990032684 (0s)
-[13:51:31]   k = 10, panels = 8: Phi(0.1129) = 0.9990032453 (0s)
-[13:51:31]   k = 8, panels = 16: Phi(0.1129) = 0.9990032529 (0s)
-[13:51:32]   k = 10, panels = 16: Phi(0.1129) = 0.9990032541 (0s)
-[13:51:32]   k = 12, panels = 16: Phi(0.1129) = 0.9990032545 (0s)
-[13:51:35]   k = 12, panels = 32: Phi(0.1129) = 0.9990032544 (3s)
-[13:51:35]   wrote results/table_convergence_0.1129.txt
-[13:51:35]   wrote results/paper_numbers.txt
-[13:51:35] wrote results/summary.json; numbers of Section 10 that differ from the paper: none; total runtime 38s; max RSS 1913 MB
+[17:00:11] step buchstab
+[17:00:11]   wrote results/buchstab.log
+[17:00:11] step inequalities
+[17:00:12]   wrote results/table_inequalities.txt
+[17:00:12]   28 rows, failures: 0
+[17:00:12] step hl_0119
+[17:00:32]   ... hl_0119: running, 20s
+[17:00:38]   wrote results/table_hl_0119.txt
+[17:00:38] step roots
+[17:00:38]     HL         theta = 0.1160000000  total = 1.020738151  (0.1s)
+[17:00:38]     HL         theta = 0.1190000000  total = 0.942558492  (0.0s)
+[17:00:38]     HL         theta = 0.1167957882  total = 0.999648993  (0.0s)
+[17:00:38]     HL         theta = 0.1167825432  total = 0.999997842  (0.0s)
+[17:00:38]     HL         theta = 0.1167824612  total = 1.000000000  (0.0s)
+[17:00:38]     HL         theta = 0.1167824612  total = 1.000000000  (0.0s)
+[17:00:38]   HL: total loss 1 at theta = 0.1167825  (0s)
+[17:00:38]   quantities of Table 4 at this theta: all positive
+[17:00:38]     HL+R       theta = 0.1115000000  total = 1.065645556  (0.1s)
+[17:00:38]     HL+R       theta = 0.1175000000  total = 0.920147050  (0.0s)
+[17:00:38]     HL+R       theta = 0.1142070610  total = 0.997566310  (0.1s)
+[17:00:38]     HL+R       theta = 0.1141102893  total = 0.999926739  (0.1s)
+[17:00:38]     HL+R       theta = 0.1141072892  total = 1.000000001  (0.0s)
+[17:00:38]     HL+R       theta = 0.1141072892  total = 1.000000000  (0.1s)
+[17:00:38]   HL+R: total loss 1 at theta = 0.1141073  (0s)
+[17:00:38]   quantities of Table 4 at this theta: all positive
+[17:00:38]     HL+R+G     theta = 0.1115000000  total = 1.060505945  (0.1s)
+[17:00:39]     HL+R+G     theta = 0.1175000000  total = 0.916767096  (0.1s)
+[17:00:39]     HL+R+G     theta = 0.1140256614  total = 0.997714425  (0.1s)
+[17:00:39]     HL+R+G     theta = 0.1139337288  total = 0.999938312  (0.1s)
+[17:00:39]     HL+R+G     theta = 0.1139311813  total = 1.000000001  (0.1s)
+[17:00:39]     HL+R+G     theta = 0.1139311814  total = 1.000000000  (0.1s)
+[17:00:39]   HL+R+G: total loss 1 at theta = 0.1139312  (1s)
+[17:00:39]   quantities of Table 4 at this theta: all positive
+[17:00:39]     HL+R+G+P   theta = 0.1115000000  total = 1.039622534  (0.1s)
+[17:00:39]     HL+R+G+P   theta = 0.1175000000  total = 0.905185758  (0.1s)
+[17:00:39]     HL+R+G+P   theta = 0.1132683792  total = 0.998547187  (0.1s)
+[17:00:39]     HL+R+G+P   theta = 0.1132058326  total = 0.999978231  (0.1s)
+[17:00:40]     HL+R+G+P   theta = 0.1132048817  total = 1.000000000  (0.1s)
+[17:00:40]     HL+R+G+P   theta = 0.1132048817  total = 1.000000000  (0.1s)
+[17:00:40]   HL+R+G+P: total loss 1 at theta = 0.1132049  (1s)
+[17:00:40]   quantities of Table 4 at this theta: all positive
+[17:00:40]     HL+R+G+L   theta = 0.1115000000  total = 1.030650087  (0.2s)
+[17:00:40]     HL+R+G+L   theta = 0.1175000000  total = 0.899838294  (0.3s)
+[17:00:40]     HL+R+G+L   theta = 0.1129058405  total = 0.998872739  (0.3s)
+[17:00:41]     HL+R+G+L   theta = 0.1128559701  total = 0.999987560  (0.3s)
+[17:00:41]     HL+R+G+L   theta = 0.1128554139  total = 1.000000000  (0.2s)
+[17:00:41]     HL+R+G+L   theta = 0.1128554139  total = 1.000000000  (0.3s)
+[17:00:41]     HL+R+G+L   theta = 0.1128554139  total = 1.000000000  (0.3s)
+[17:00:42]     HL+R+G+L   theta = 0.1128556920  total = 0.999993780  (0.2s)
+[17:00:42]     HL+R+G+L   theta = 0.1128555530  total = 0.999996890  (0.3s)
+[17:00:42]     HL+R+G+L   theta = 0.1128554834  total = 0.999998445  (0.2s)
+[17:00:42]     HL+R+G+L   theta = 0.1128554487  total = 0.999999223  (0.2s)
+[17:00:43]     HL+R+G+L   theta = 0.1128554313  total = 0.999999611  (0.3s)
+[17:00:43]     HL+R+G+L   theta = 0.1128554226  total = 0.999999806  (0.3s)
+[17:00:43]     HL+R+G+L   theta = 0.1128554182  total = 0.999999903  (0.3s)
+[17:00:43]     HL+R+G+L   theta = 0.1128554161  total = 0.999999951  (0.3s)
+[17:00:44]     HL+R+G+L   theta = 0.1128554150  total = 0.999999976  (0.3s)
+[17:00:44]     HL+R+G+L   theta = 0.1128554144  total = 0.999999988  (0.3s)
+[17:00:44]     HL+R+G+L   theta = 0.1128554142  total = 0.999999994  (0.3s)
+[17:00:44]     HL+R+G+L   theta = 0.1128554140  total = 0.999999997  (0.2s)
+[17:00:45]     HL+R+G+L   theta = 0.1128554140  total = 0.999999998  (0.3s)
+[17:00:45]   HL+R+G+L: total loss 1 at theta = 0.1128554  (5s)
+[17:00:45]   quantities of Table 4 at this theta: all positive
+[17:00:45]   wrote results/roots.log
+[17:00:45]   wrote results/table_roots.txt
+[17:00:45] step losses
+[17:00:45]   wrote results/table_losses_0.1129.txt
+[17:00:45]   wrote results/table_losses_P_0.1133.txt
+[17:00:45] step convergence
+[17:00:45]   k = 6, panels = 2: Phi(0.1129) = 0.9990119904 (0s)
+[17:00:45]   k = 6, panels = 4: Phi(0.1129) = 0.9990029830 (0s)
+[17:00:45]   k = 8, panels = 4: Phi(0.1129) = 0.9990033659 (0s)
+[17:00:45]   k = 8, panels = 8: Phi(0.1129) = 0.9990032684 (0s)
+[17:00:45]   k = 10, panels = 8: Phi(0.1129) = 0.9990032453 (0s)
+[17:00:45]   k = 8, panels = 16: Phi(0.1129) = 0.9990032529 (0s)
+[17:00:46]   k = 10, panels = 16: Phi(0.1129) = 0.9990032541 (0s)
+[17:00:46]   k = 12, panels = 16: Phi(0.1129) = 0.9990032545 (0s)
+[17:00:49]   k = 12, panels = 32: Phi(0.1129) = 0.9990032544 (3s)
+[17:00:49]   wrote results/table_convergence_0.1129.txt
+[17:00:49]   wrote results/paper_numbers.txt
+[17:00:49] wrote results/summary.json; numbers of Section 10 that differ from the paper: none; total runtime 38s; max RSS 1833 MB

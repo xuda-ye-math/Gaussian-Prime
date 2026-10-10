@@ -1,4 +1,4 @@
-# Driver: every number of Section 10 and Appendix D of the paper (Paper/main.tex), written to Code/results/.
+# Driver: every number of Section 10, Table 6 and Appendix D of the paper (Paper/main.tex), written to Code/results/.
 #
 #     julia --project=. -t 32,1 run_all.jl
 #
@@ -68,7 +68,7 @@ const PAPER = vcat(
      ("Section 10", "error estimate of the second method over the E_k at 0.1129", "1.0e-6"),
      ("Section 10", "difference of the two methods in Phi(0.1129)", "1.2e-6"),
      ("Section 10", "difference of the two methods over the error estimate", "1.1"),
-     ("Section 10", "1 - Phi(0.1129)", "9.97e-4"),
+     ("Section 10", "1 - Phi(0.1129)", "9.967e-4"),
      ("Section 10", "1 - Phi(0.1129) over the largest of the three quantities above", ">800"),
      ("Section 10", "Phi_P(0.1133), first method", "0.9978243"),
      ("Section 10", "Phi_P(0.1133), second method", "0.9978250"),
@@ -255,7 +255,7 @@ function main()
             losses_first(theta, dec; RES...), losses_second(theta, dec; QMC...)
         end
         removed = endswith(dec, "L") ? "G and L" : "G and P"
-        title = "The losses (18) at theta = $theta, with $removed removed from the regions E_k, and their sum $total.\n" *
+        title = "The losses (29) at theta = $theta, with $removed removed from the regions E_k, and their sum $total.\n" *
                 "First method: Gauss-Legendre, k = $(RES.k), panels = $(RES.panels).  Second method: nested adaptive " *
                 "quadrature (D_k) and scrambled Sobol QMC,\n$(QMC.reps) x 2^$(QMC.m) points (E_k), with its error estimate."
         write_result(fname, loss_table(title, fm, sm, total))

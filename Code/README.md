@@ -1,13 +1,13 @@
-# Code: the numbers of Section 10 and Appendix D
+# Code: the numbers of Section 10, Table 6 and Appendix D
 
-This folder computes every number of Section 10 and Appendix D of the paper (`../Paper/main.tex`), in Julia. Labels follow the paper; table, display and lemma numbers are those of its current build.
+This folder computes every number of Section 10, Table 6 and Appendix D of the paper (`../Paper/main.tex`), in Julia. Labels follow the paper; table, display and lemma numbers are those of its current build.
 
 ## Files
 
 - `buchstab.jl`: Buchstab's function ω and Ω(u) = ∫₁ᵘ ω. On each unit interval, Chebyshev series of degree 40 are built from the relation that defines ω; ω, ω′ and Ω are tabulated on a grid of step 10⁻⁵ and evaluated by cubic Hermite interpolation. Includes the accuracy check of Section 10.
-- `regions.jl`: the parameters (4); the regions D1, D2, D4, D6, D8 and E3, ER, E5, E7, E9, E10, E11 of Section 7 (Table 1, display (42)); the region R (15), the sets G, I, L (16) and the polytope P (17), pointwise and as unions of δ-intervals. In the decomposition of Harman and Lewis, where R is not grouped, the region of Range 2 is D2 ∪ R, labelled `D2+R`.
-- `losses.jl`: the losses (18) by the two methods of Section 10, and the θ at which the total loss is 1 (Table 3).
-  - First method: the innermost integral exact through Ω; composite Gauss–Legendre in the outer variables, split at the kinks of the region limits and at the planes where G ∪ L or G ∪ P changes its formula; k = 10 nodes per piece, 256 panels on the α-axis for the regions D_k, 16 panels per axis for the regions E_k.
+- `regions.jl`: the parameters (5); the regions D1, D2, D4, D6, D8 and E3, ER, E5, E7, E9, E10, E11 of Section 7 (Table 1, display (78)); the region R (26), the sets G, I, L (27) and the polytope P (28), pointwise and as unions of δ-intervals. In the decomposition of Harman and Lewis, where R is not grouped, the region of Range 2 is D2 ∪ R, labelled `D2+R`.
+- `losses.jl`: the losses (29) by the two methods of Section 10, and the θ at which the total loss is 1 (Table 3).
+  - First method: the innermost integral exact through Ω; composite Gauss–Legendre in the outer variables, split at the kinks of the region limits and at the planes where the part of the δ-range in G ∪ L or G ∪ P jumps (a sum of some of α, β, γ equals σ, ρ or ζ); k = 10 nodes per piece, 256 panels on the α-axis for the regions D_k, 16 panels per axis for the regions E_k.
   - Second method: nested adaptive Gauss–Kronrod quadrature (21-point rule, at most 200 subintervals per piece) for the regions D_k; for the regions E_k, the mean of 8 scrambled Sobol estimates with 2²⁰ points each (Joe–Kuo direction numbers, Matoušek's linear matrix scramble and a digital shift, scrambling r from the generator `Xoshiro(r)`), with the sets tested pointwise.
 - `inequalities.jl`: Table 4 (Appendix D) in exact rational arithmetic.
 - `run_all.jl`: runs everything, writes `results/`, and compares every number of Section 10 with the number printed in the paper.
@@ -22,7 +22,7 @@ Every computation is deterministic: the first method sums the contributions in a
 | output | paper | result |
 |---|---|---|
 | `buchstab.log` | Section 10 | ω and Ω agree with their closed forms on [1, 3] to 5.9 × 10⁻¹⁵, and satisfy the relation defining ω on [2, 40) to 1.5 × 10⁻¹³ |
-| `table_inequalities.txt` | Table 4 | all 22 rows: the margin of each inequality of a row is a positive multiple of its quantity, the quantity is positive at θ = 0.1129 and 0.1133, and its value at 0.1129 is the printed value |
+| `table_inequalities.txt` | Table 4 | all 28 rows: the margin of each inequality of a row is a positive multiple of its quantity, the quantity is positive at θ = 0.1129 and 0.1133, and its value at 0.1129 is the printed value |
 | `table_hl_0119.txt` | Section 10, Table 6 | the decomposition of Harman and Lewis at θ = 0.119, region by region against their bounds: total 0.9425585, below their bound 0.943 |
 | `table_roots.txt`, `roots.log` | Table 3 | θ = 0.1167825, 0.1141073, 0.1139312, 0.1132049, 0.1128554; the quantities of Table 4 are positive at each |
 | `table_losses_0.1129.txt` | Table 2 | first method: every region, and Φ(0.1129) = 0.9990033; second method: every region with its error estimate, and Φ(0.1129) = 0.9990044, error estimate 1.0 × 10⁻⁶ |

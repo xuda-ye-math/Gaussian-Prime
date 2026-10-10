@@ -7,25 +7,31 @@ quantity              at 0.1129    exact at 0.1129  at 0.1133 multiple    printe
 -----------------------------------------------------------------------------------------------------
 theta - 1/10          0.0129000          129/10000  0.0133000    5/2,5  0.0129000  3 sigma/2 < tau, sigma - 3 theta < theta; Lemmas 12 and 13
 1/8 - theta           0.0121000          121/10000  0.0117000     16/5  0.0121000  tau/5 < sigma - 2 theta; Lemma 13
-(1 - 8 theta)/3       0.0322667           121/3750  0.0312000        1  0.0322667  nu + rho < 1; Lemma 9
-1/6 - theta           0.0537667         1613/30000  0.0533667        3  0.0537667  2 theta < sigma; Lemmas 2 and 9
-2 theta - 1/6         0.0591333          887/15000  0.0599333        1  0.0591333  sigma - theta < 1/3; j = 0 in Range 2
+(1 - 8 theta)/3       0.0322667           121/3750  0.0312000      1,1  0.0322667  nu + rho < 1, 2 rho < tau; Lemma 9, case (b) fails in Ranges 4 and 5
+1/6 - theta           0.0537667         1613/30000  0.0533667    3,3,1  0.0537667  2 theta < sigma, tau < 2 sigma, 1/3 < sigma; Lemmas 2 and 9 to 13, Range 1
+2 theta - 1/6         0.0591333          887/15000  0.0599333        1  0.0591333  sigma - theta < 1/3; j(X^alpha) = 0 in Range 2
 3 theta/2 - 1/12      0.0860167         5161/60000  0.0866167        1  0.0860167  sigma < (1/3 + tau)/2; PQ >= W in Range 2 and on R
-(3 - 22 theta)/12     0.0430167         2581/60000  0.0422833        1  0.0430167  2 zeta - 1/3 < nu; PQ^2 <= X^nu in Range 2
+(3 - 22 theta)/12     0.0430167         2581/60000  0.0422833      1,1  0.0430167  2 zeta - 1/3 < nu, rho < 1/3; PQ^2 <= X^nu in Range 2, beta <= alpha on E3
 (1 + 6 theta)/12      0.1397833         8387/60000  0.1399833        1  0.1397833  zeta - 1/3 < rho; Q <= X^rho in Range 2
 (1 - 2 theta)/6       0.1290333         3871/30000  0.1289000        1  0.1290333  zeta < tau; PQ <= X^(tau - eps) where alpha + beta <= zeta
-(14 theta - 1)/6      0.0967667         2903/30000  0.0977000      1,1  0.0967667  sigma < zeta, zeta < 2 rho; P <= X^zeta on R, Q <= X^rho in Range 3
+(14 theta - 1)/6      0.0967667         2903/30000  0.0977000      1,1  0.0967667  sigma < zeta, zeta < 2 rho; P <= X^zeta on R, Q <= X^rho in Range 3, beta <= alpha on E3 and E5
 (5 - 34 theta)/24     0.0483917        5807/120000  0.0478250      1,2  0.0483917  zeta - sigma < rho/2, rho < sigma; R non-empty, Lemma 9
 (26 theta - 1)/24     0.0806417        9677/120000  0.0810750        1  0.0806417  sigma + rho/2 < tau; PQ <= X^(tau - eps) on R
+(7 - 22 theta)/24     0.1881750         7527/40000  0.1878083        1  0.1881750  rho/2 < 1/3; beta < alpha on E_R
 (1 - 7 theta)/3       0.0699000          699/10000  0.0689667        1  0.0699000  tau/3 < sigma - theta; Lemma 13
-(46 theta - 5)/12     0.0161167          967/60000  0.0176500        1  0.0161167  sigma - theta < rho; j = 0 in Range 3, Q <= X^rho in Range 5
+(46 theta - 5)/12     0.0161167          967/60000  0.0176500        1  0.0161167  sigma - theta < rho; j(X^alpha) = 0 in Range 3, Q <= X^rho in Range 5
 (58 theta - 5)/24     0.0645083        7741/120000  0.0654750        1  0.0645083  sigma < (rho + tau)/2; PQ >= W in Range 3
+(10 theta - 1)/12     0.0107500            43/4000  0.0110833        1  0.0107500  rho < 8 theta/3; case (b) fails in Range 3
+(10 theta - 1)/6      0.0215000            43/2000  0.0221667        1  0.0215000  1/3 < 2 zeta - tau; beta_0(alpha) < zeta - alpha on D4
 (1 - 2 theta)/24      0.0322583        3871/120000  0.0322250        1  0.0322583  chi < zeta; Lemma 9 in Range 1
-(11 - 82 theta)/36    0.0483944        8711/180000  0.0474833        1  0.0483944  nu/3 < sigma - theta; D8 non-empty
+(11 - 82 theta)/36    0.0483944        8711/180000  0.0474833        1  0.0483944  nu/3 < sigma - theta; D8 non-empty, beta <= alpha on E7
+(1 - 2 theta)/12      0.0645167         3871/60000  0.0644500        1  0.0645167  tau < nu; beta_0(alpha) < (nu - alpha)/2 on D6 and D8
+(14 theta - 1)/9      0.0645111         2903/45000  0.0651333        1  0.0645111  sigma < 2 nu/3; alpha + beta > sigma on D8
 (46 theta - 5)/24     0.0080583         967/120000  0.0088250        1  0.0080583  (nu + sigma - theta)/2 < zeta; PQ <= X^zeta in Range 5
 5 theta/3 - 1/6       0.0215000            43/2000  0.0221667        1  0.0215000  sigma < 2 tau/3; PQ >= W on E9
 5 theta/2 - 1/4       0.0322500           129/4000  0.0332500        1  0.0322500  sigma - theta < tau/2; E10 lies in Range 5
+5 theta - 1/2         0.0645000           129/2000  0.0665000        1  0.0645000  sigma < 4 theta; alpha + beta < sigma for alpha < sigma - 2 theta
 17 theta/5 - 3/10     0.0838600         4193/50000  0.0852200        1  0.0838600  sigma - 2 theta < 2 tau/5; |pq|^2 >= W X^(-2 theta) in Range 6
 21 theta/5 - 2/5      0.0741800         3709/50000  0.0758600        1  0.0741800  sigma - 3 theta < tau/5; j(X^alpha) <= 2 in Range 6
 
-22 rows; failures: none
+28 rows; failures: none

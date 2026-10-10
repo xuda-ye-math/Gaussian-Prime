@@ -84,7 +84,7 @@ Section 10     6.8e-11    6.8e-11  agrees   change of Phi(0.1129) from the secon
 Section 10      1.0e-6     1.0e-6  agrees   error estimate of the second method over the E_k at 0.1129
 Section 10      1.2e-6     1.2e-6  agrees   difference of the two methods in Phi(0.1129)
 Section 10         1.1        1.1  agrees   difference of the two methods over the error estimate
-Section 10     9.97e-4    9.97e-4  agrees   1 - Phi(0.1129)
+Section 10    9.967e-4   9.967e-4  agrees   1 - Phi(0.1129)
 Section 10        >800        855  agrees   1 - Phi(0.1129) over the largest of the three quantities above
 Section 10   0.9978243  0.9978243  agrees   Phi_P(0.1133), first method
 Section 10   0.9978250  0.9978250  agrees   Phi_P(0.1133), second method

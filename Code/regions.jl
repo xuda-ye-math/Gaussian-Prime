@@ -1,8 +1,8 @@
 # Parameters, discarded regions and the sets G, I, L, P of the paper (Paper/main.tex).
 #
 # Labels follow the paper: the two-dimensional regions D1, D2, D4, D6, D8 and the four-dimensional regions
-# E3, ER, E5, E7, E9, E10, E11 of Section 7 (Table 1 and display (42)), the region R (15), the sets G, I, L (16)
-# and the polytope P (17).  "HL" is G. Harman and P. Lewis, Gaussian primes in narrow sectors, Mathematika 48
+# E3, ER, E5, E7, E9, E10, E11 of Section 7 (Table 1 and display (78)), the region R (26), the sets G, I, L (27)
+# and the polytope P (28).  "HL" is G. Harman and P. Lewis, Gaussian primes in narrow sectors, Mathematika 48
 # (2001) 119-135 (journal page numbers); the index k of D_k and E_k is that of their loss phi_k.  All exponents
 # are exponents of norms: |p|^2 = X^a, |q|^2 = X^b, |r|^2 = X^g, |s|^2 = X^d, with a > b > g > d.
 #
@@ -16,7 +16,7 @@
 # forms: pointwise, as defined in the paper (the second method of Section 10), and as a union of d-intervals for
 # fixed (a, b, g) (the first method).
 
-"""The parameters (4) of the paper, and chi = (nu + 2 theta)/2 of Section 7, in the arithmetic of theta."""
+"""The parameters (5) of the paper, and chi = (nu + 2 theta)/2 of Section 7, in the arithmetic of theta."""
 function params(theta)
     return (theta = theta, sigma = (1 - 2theta) / 2, tau = (1 + 2theta) / 2, rho = (1 + 22theta) / 12,
             zeta = (1 + 4theta) / 3, nu = (10theta + 7) / 12, chi = (34theta + 7) / 24)
@@ -71,41 +71,41 @@ function regions_2d(theta::Float64, rstar::Bool)
     ]
 end
 
-"""The four-dimensional regions E3, E5, E7, E9, E10, E11 of display (42), and ER if rstar.  E10 and E11 are
+"""The four-dimensional regions E3, E5, E7, E9, E10, E11 of display (78), and ER if rstar.  E10 and E11 are
 integrated over their full a-ranges for every theta, which for theta < 3/26 includes the interval
 [tau/4, sigma - 2 theta)."""
 function regions_4d(theta::Float64, rstar::Bool)
     p = params(theta)
     s, t, r, z, n = p.sigma, p.tau, p.rho, p.zeta, p.nu
-    # E3 and E9 carry HL's cut g <= a + b - 2 theta (Lemma 9 applied to pq and r).  It is implied by the
+    # E3 and E9 carry HL's cut g <= a + b - 2 theta (HL pp. 132-133; Appendix E).  It is implied by the
     # d-limits tau - a - b <= d <= (1 - a - b - g)/2: these give tau - a - b <= (1 - a - b - g)/2, i.e.
     # g <= 1 - 2 tau + a + b = a + b - 2 theta.  Where the cut binds, the d-range is empty, so the cut changes
     # no loss (Appendix E).
     regs = Any[
-        # E3: Lemma 11, identity (35) of HL; phi3 of HL (p. 132).  The b-range closes at a = 2 zeta - tau.
+        # E3: the third sum of identity (51) in Lemma 11; identity (35) and phi3 of HL (p. 132).  The b-range closes at a = 2 zeta - tau.
         Region4("E3", 1 / 3, s, a -> (t - a) / 2, a -> z - a, (a, b) -> t - a - b, (a, b) -> min(b, a + b - 2theta),
                 (a, b, g) -> t - a - b, (a, b, g) -> g, [2z - t]),
-        # E5: Lemma 11, identity (35) of HL; phi5 of HL (p. 132).
+        # E5: the third sum of identity (51) in Lemma 11; identity (35) and phi5 of HL (p. 132).
         Region4("E5", r, 1 / 3, a -> (t - a) / 2, a -> z - a, (a, b) -> t - a - b, (a, b) -> b,
                 (a, b, g) -> t - a - b, (a, b, g) -> g),
-        # E7: Lemma 11, identity (35) of HL; phi7 of HL (p. 133).  HL's exclusion "d > 1 - a - g - sigma
+        # E7: the third sum of identity (51) in Lemma 11; identity (35) and phi7 of HL (p. 133).  HL's exclusion "d > 1 - a - g - sigma
         # if a + g >= sigma" (HL p. 133) is kept in the region; it lies inside G (S = {p, r}), so it changes
         # nothing when G is used, and it reproduces HL's region otherwise (Appendix E).
         Region4("E7", 0.5 - 2theta, r, a -> (t - a) / 2, a -> (n - a) / 2, (a, b) -> t - a - b, (a, b) -> b,
                 (a, b, g) -> a + g >= s ? max(t - a - b, 1 - a - g - s) : t - a - b, (a, b, g) -> g),
-        # E9: Lemma 11, identity (35) of HL, with pq >= W; phi9 of HL (p. 133).
+        # E9: the third sum of identity (51) in Lemma 11, with pq >= W; identity (35) and phi9 of HL (p. 133).
         Region4("E9", t / 3, s - theta, a -> (t - a) / 2, a -> min((n - a) / 2, a), (a, b) -> t - a - b,
                 (a, b) -> min(b, b + a - 2theta), (a, b, g) -> t - a - b, (a, b, g) -> g, [n / 3, 2theta]),
-        # E10: Lemma 12 with j = 0, identity (36) of HL, with pq < W; phi10 of HL (p. 133), with the upper
+        # E10: the third sum of identity (56) in Lemma 12 with j(PQ) = 0, with pq < W; identity (36) and phi10 of HL (p. 133), with the upper
         # b-limit min(a, sigma - a) (Remark 27).
         Region4("E10", t / 4, s - theta, a -> (t - a) / 3, a -> min(a, s - a), (a, b) -> (t - a - b) / 2,
                 (a, b) -> b, (a, b, g) -> t - a - b - g, (a, b, g) -> g, [s / 2]),
-        # E11: Lemma 12 with j = 1; phi11 of HL (p. 134).
+        # E11: the third sum of identity (56) in Lemma 12 with j(PQ) = 1; phi11 of HL (p. 134).
         Region4("E11", t / 5, s - 2theta, a -> (t - a) / 4, a -> min(a, s - theta - a), (a, b) -> (t - a - b) / 3,
                 (a, b) -> b, (a, b, g) -> (t - a - b - g) / 2, (a, b, g) -> g, [(s - theta) / 2]),
     ]
     if rstar
-        # ER: the third sum of identity (35) of HL on R = {1/3 <= a < sigma, max(zeta - a, (tau - a)/2) <= b <= rho/2}.
+        # ER: the third sum of identity (51) in Lemma 11 on R = {1/3 <= a < sigma, max(zeta - a, (tau - a)/2) <= b <= rho/2}.
         push!(regs, Region4("ER", 1 / 3, s, a -> max(z - a, (t - a) / 2), a -> r / 2, (a, b) -> t - a - b,
                             (a, b) -> b, (a, b, g) -> t - a - b, (a, b, g) -> g, [2z - t, z - r / 2, t - r]))
     end
@@ -121,7 +121,7 @@ const MODES = ("none", "G", "G+P", "G+L")
 @inline masked_sum(mask, a, b, g, d) =
     (mask & 1 != 0 ? a : 0.0) + (mask & 2 != 0 ? b : 0.0) + (mask & 4 != 0 ? g : 0.0) + (mask & 8 != 0 ? d : 0.0)
 
-"""G of (16): the union over non-empty S of {p, q, r} of {sigma <= sum_S <= tau - d}."""
+"""G of (27): the union over non-empty S of {p, q, r} of {sigma <= sum_S <= tau - d}."""
 @inline function g_set(a, b, g, d, p)
     for S in 1:7
         sS = masked_sum(S, a, b, g, d)
@@ -130,7 +130,7 @@ const MODES = ("none", "G", "G+P", "G+L")
     return false
 end
 
-"""I of (16): {a + b + g + d <= tau}, union, over the splits U | V of {p, q, r, s}, of
+"""I of (27): {a + b + g + d <= tau}, union, over the splits U | V of {p, q, r, s}, of
 {sum_U <= zeta, sum_V <= rho, a + b + g + d <= nu}."""
 @inline function i_set(a, b, g, d, p)
     s4 = a + b + g + d
@@ -142,7 +142,7 @@ end
     return false
 end
 
-"""L of (16): I intersected with the union over non-empty S of {p, q, r, s} of {sigma <= sum_S <= tau - d}."""
+"""L of (27): I intersected with the union over non-empty S of {p, q, r, s} of {sigma <= sum_S <= tau - d}."""
 @inline function l_set(a, b, g, d, p)
     i_set(a, b, g, d, p) || return false
     for S in 1:15
@@ -152,7 +152,7 @@ end
     return false
 end
 
-"""P of (17): a + b <= sigma, g + d <= rho, a + b + d >= sigma, a + b + 2d <= tau."""
+"""P of (28): a + b <= sigma, g + d <= rho, a + b + d >= sigma, a + b + 2d <= tau."""
 @inline p_set(a, b, g, d, p) =
     (a + b <= p.sigma) & (g + d <= p.rho) & (a + b + d >= p.sigma) & (a + b + 2d <= p.tau)
 

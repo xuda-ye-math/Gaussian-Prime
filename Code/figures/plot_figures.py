@@ -3,8 +3,8 @@ total_loss.json).
 
     python plot_figures.py
 
-    domain.pdf        the domain D of (13) at theta = 0.1129, its Ranges 1-6 (Table 1), the discarded regions
-                      D1, D2, D4, D6, D8 and the region R (15)
+    domain.pdf        the domain D of (24) at theta = 0.1129, its Ranges 1-6 (Table 1), the discarded regions
+                      D1, D2, D4, D6, D8 and the region R (26)
     total_loss.pdf    the total loss of each decomposition of Table 3 for 0.112 <= theta <= 0.118
 """
 import json

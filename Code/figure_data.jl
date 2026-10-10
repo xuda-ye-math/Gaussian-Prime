@@ -3,8 +3,8 @@
 #
 #     julia --project=. -t 32 figure_data.jl
 #
-#   figures/domain.json       the domain D of (13) at theta = 0.1129, its Ranges 1-6 (Table 1), the discarded regions
-#                             D1, D2, D4, D6, D8 and the region R (15), as sampled boundaries
+#   figures/domain.json       the domain D of (24) at theta = 0.1129, its Ranges 1-6 (Table 1), the discarded regions
+#                             D1, D2, D4, D6, D8 and the region R (26), as sampled boundaries
 #   figures/total_loss.json   the total loss of each decomposition of Table 3 for 0.112 <= theta <= 0.118, and the
 #                             theta of Table 3 at which it equals 1
 

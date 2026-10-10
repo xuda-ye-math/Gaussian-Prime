@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-09 13:50:57",
+  "generated": "2026-10-10 17:00:11",
   "julia": "1.13.0",
   "threads": 32,
   "resolution": {
@@ -11,13 +11,13 @@
     "reps": 8
   },
   "runtimes": {
-    "buchstab": 0.03527116775512695,
-    "inequalities": 0.6941487789154053,
-    "hl_0119": 25.814361095428467,
-    "roots": 6.993195056915283,
-    "losses": 0.5196089744567871,
-    "convergence": 3.8902909755706787,
-    "total": 37.947444915771484
+    "buchstab": 0.032631874084472656,
+    "inequalities": 0.8272690773010254,
+    "hl_0119": 25.584406852722168,
+    "roots": 7.0098161697387695,
+    "losses": 0.521143913269043,
+    "convergence": 3.878607988357544,
+    "total": 37.85462784767151
   },
   "buchstab": {
     "max |omega - 1/u| on [1,2]": 5.88418203051333e-15,
@@ -60,10 +60,11 @@
       },
       {
         "quantity": "(1 - 8 theta)/3",
-        "inequality": "nu + rho < 1; Lemma 9",
+        "inequality": "nu + rho < 1, 2 rho < tau; Lemma 9, case (b) fails in Ranges 4 and 5",
         "value_0_1129": "121/3750",
         "value_0_1133": "39/1250",
         "multiples": [
+          "1",
           "1"
         ],
         "printed": "0.0322667",
@@ -72,11 +73,13 @@
       },
       {
         "quantity": "1/6 - theta",
-        "inequality": "2 theta < sigma; Lemmas 2 and 9",
+        "inequality": "2 theta < sigma, tau < 2 sigma, 1/3 < sigma; Lemmas 2 and 9 to 13, Range 1",
         "value_0_1129": "1613/30000",
         "value_0_1133": "1601/30000",
         "multiples": [
-          "3"
+          "3",
+          "3",
+          "1"
         ],
         "printed": "0.0537667",
         "agrees": true,
@@ -84,7 +87,7 @@
       },
       {
         "quantity": "2 theta - 1/6",
-        "inequality": "sigma - theta < 1/3; j = 0 in Range 2",
+        "inequality": "sigma - theta < 1/3; j(X^alpha) = 0 in Range 2",
         "value_0_1129": "887/15000",
         "value_0_1133": "899/15000",
         "multiples": [
@@ -108,10 +111,11 @@
       },
       {
         "quantity": "(3 - 22 theta)/12",
-        "inequality": "2 zeta - 1/3 < nu; PQ^2 <= X^nu in Range 2",
+        "inequality": "2 zeta - 1/3 < nu, rho < 1/3; PQ^2 <= X^nu in Range 2, beta <= alpha on E3",
         "value_0_1129": "2581/60000",
         "value_0_1133": "2537/60000",
         "multiples": [
+          "1",
           "1"
         ],
         "printed": "0.0430167",
@@ -144,7 +148,7 @@
       },
       {
         "quantity": "(14 theta - 1)/6",
-        "inequality": "sigma < zeta, zeta < 2 rho; P <= X^zeta on R, Q <= X^rho in Range 3",
+        "inequality": "sigma < zeta, zeta < 2 rho; P <= X^zeta on R, Q <= X^rho in Range 3, beta <= alpha on E3 and E5",
         "value_0_1129": "2903/30000",
         "value_0_1133": "977/10000",
         "multiples": [
@@ -181,6 +185,18 @@
         "ok": true
       },
       {
+        "quantity": "(7 - 22 theta)/24",
+        "inequality": "rho/2 < 1/3; beta < alpha on E_R",
+        "value_0_1129": "7527/40000",
+        "value_0_1133": "22537/120000",
+        "multiples": [
+          "1"
+        ],
+        "printed": "0.1881750",
+        "agrees": true,
+        "ok": true
+      },
+      {
         "quantity": "(1 - 7 theta)/3",
         "inequality": "tau/3 < sigma - theta; Lemma 13",
         "value_0_1129": "699/10000",
@@ -194,7 +210,7 @@
       },
       {
         "quantity": "(46 theta - 5)/12",
-        "inequality": "sigma - theta < rho; j = 0 in Range 3, Q <= X^rho in Range 5",
+        "inequality": "sigma - theta < rho; j(X^alpha) = 0 in Range 3, Q <= X^rho in Range 5",
         "value_0_1129": "967/60000",
         "value_0_1133": "353/20000",
         "multiples": [
@@ -217,6 +233,30 @@
         "ok": true
       },
       {
+        "quantity": "(10 theta - 1)/12",
+        "inequality": "rho < 8 theta/3; case (b) fails in Range 3",
+        "value_0_1129": "43/4000",
+        "value_0_1133": "133/12000",
+        "multiples": [
+          "1"
+        ],
+        "printed": "0.0107500",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(10 theta - 1)/6",
+        "inequality": "1/3 < 2 zeta - tau; beta_0(alpha) < zeta - alpha on D4",
+        "value_0_1129": "43/2000",
+        "value_0_1133": "133/6000",
+        "multiples": [
+          "1"
+        ],
+        "printed": "0.0215000",
+        "agrees": true,
+        "ok": true
+      },
+      {
         "quantity": "(1 - 2 theta)/24",
         "inequality": "chi < zeta; Lemma 9 in Range 1",
         "value_0_1129": "3871/120000",
@@ -230,13 +270,37 @@
       },
       {
         "quantity": "(11 - 82 theta)/36",
-        "inequality": "nu/3 < sigma - theta; D8 non-empty",
+        "inequality": "nu/3 < sigma - theta; D8 non-empty, beta <= alpha on E7",
         "value_0_1129": "8711/180000",
         "value_0_1133": "2849/60000",
         "multiples": [
           "1"
         ],
         "printed": "0.0483944",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(1 - 2 theta)/12",
+        "inequality": "tau < nu; beta_0(alpha) < (nu - alpha)/2 on D6 and D8",
+        "value_0_1129": "3871/60000",
+        "value_0_1133": "1289/20000",
+        "multiples": [
+          "1"
+        ],
+        "printed": "0.0645167",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "(14 theta - 1)/9",
+        "inequality": "sigma < 2 nu/3; alpha + beta > sigma on D8",
+        "value_0_1129": "2903/45000",
+        "value_0_1133": "977/15000",
+        "multiples": [
+          "1"
+        ],
+        "printed": "0.0645111",
         "agrees": true,
         "ok": true
       },
@@ -273,6 +337,18 @@
           "1"
         ],
         "printed": "0.0322500",
+        "agrees": true,
+        "ok": true
+      },
+      {
+        "quantity": "5 theta - 1/2",
+        "inequality": "sigma < 4 theta; alpha + beta < sigma for alpha < sigma - 2 theta",
+        "value_0_1129": "129/2000",
+        "value_0_1133": "133/2000",
+        "multiples": [
+          "1"
+        ],
+        "printed": "0.0645000",
         "agrees": true,
         "ok": true
       },
@@ -1223,7 +1299,7 @@
     {
       "location": "Section 10",
       "name": "1 - Phi(0.1129)",
-      "printed": "9.97e-4",
+      "printed": "9.967e-4",
       "computed": 0.0009967458668470597,
       "agrees": true
     },
