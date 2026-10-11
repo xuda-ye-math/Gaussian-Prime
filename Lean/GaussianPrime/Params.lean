@@ -3,8 +3,8 @@ import Mathlib
 /-!
 # Parameters (Section 2) and the inequalities of Appendix D
 
-`σ, τ, ρ, ζ, ν` are the parameters of display (5) of the paper, and `χ` is the exponent of
-Section 7. `appD_relations` proves the second column of Table 4 for `1/9 < θ < 1/8`;
+`σ, τ, ρ, ζ, ν` are the parameters of display (2.1) of the paper, and `χ = (ν + 2θ)/2` is the bound
+for `α` in Range 1 of Section 7 (the `χ` of Harman and Lewis, Appendix E). `appD_relations` proves the second column of Table 5 for `1/9 < θ < 1/8`;
 `appD_quantities` proves that each first-column quantity is a positive multiple of the
 corresponding difference; `appD_values` checks the third column at `θ = 0.1129`.
 -/
@@ -26,16 +26,16 @@ def χ (θ : ℝ) : ℝ := (ν θ + 2 * θ) / 2
 theorem χ_eq (θ : ℝ) : χ θ = (34 * θ + 7) / 24 := by
   simp only [χ, ν]; ring
 
-/-- The second column of Table 4, row by row (two relations in the first, third, seventh, tenth and
-eleventh rows, three in the fourth). -/
+/-- The second column of Table 5, row by row (two relations in the first, third, seventh, tenth,
+eleventh and eighteenth rows, three in the fourth). -/
 theorem appD_relations (θ : ℝ) (h1 : 1 / 9 < θ) (h2 : θ < 1 / 8) :
     3 * σ θ / 2 < τ θ ∧ σ θ - 3 * θ < θ ∧ τ θ / 5 < σ θ - 2 * θ ∧ ν θ + ρ θ < 1 ∧ 2 * ρ θ < τ θ ∧
     2 * θ < σ θ ∧ τ θ < 2 * σ θ ∧ 1 / 3 < σ θ ∧ σ θ - θ < 1 / 3 ∧ σ θ < (1 / 3 + τ θ) / 2 ∧
     2 * ζ θ - 1 / 3 < ν θ ∧ ρ θ < 1 / 3 ∧ ζ θ - 1 / 3 < ρ θ ∧ ζ θ < τ θ ∧ σ θ < ζ θ ∧ ζ θ < 2 * ρ θ ∧
     ζ θ - σ θ < ρ θ / 2 ∧ ρ θ < σ θ ∧ σ θ + ρ θ / 2 < τ θ ∧ ρ θ / 2 < 1 / 3 ∧ τ θ / 3 < σ θ - θ ∧
-    σ θ - θ < ρ θ ∧ σ θ < (ρ θ + τ θ) / 2 ∧ ρ θ < 8 * θ / 3 ∧ 1 / 3 < 2 * ζ θ - τ θ ∧ χ θ < ζ θ ∧
-    ν θ / 3 < σ θ - θ ∧ τ θ < ν θ ∧ σ θ < 2 * ν θ / 3 ∧ (ν θ + σ θ - θ) / 2 < ζ θ ∧
-    σ θ < 2 * τ θ / 3 ∧ σ θ - θ < τ θ / 2 ∧ σ θ < 4 * θ ∧ σ θ - 2 * θ < 2 * τ θ / 5 ∧
+    σ θ - θ < ρ θ ∧ σ θ < (ρ θ + τ θ) / 2 ∧ ρ θ < 8 * θ / 3 ∧ 1 / 3 < 2 * ζ θ - τ θ ∧
+    σ θ < 2 * τ θ / 3 ∧ χ θ < ζ θ ∧ ν θ / 3 < σ θ - θ ∧ τ θ < ν θ ∧ σ θ < 2 * ν θ / 3 ∧
+    (ν θ + σ θ - θ) / 2 < ζ θ ∧ σ θ - θ < τ θ / 2 ∧ σ θ < 4 * θ ∧ σ θ - 2 * θ < 2 * τ θ / 5 ∧
     σ θ - 3 * θ < τ θ / 5 := by
   simp only [σ, τ, ρ, ζ, ν, χ]
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_,
@@ -70,12 +70,12 @@ theorem appD_quantities (θ : ℝ) :
     (ρ θ + τ θ) / 2 - σ θ = (58 * θ - 5) / 24 ∧
     8 * θ / 3 - ρ θ = (10 * θ - 1) / 12 ∧
     (2 * ζ θ - τ θ) - 1 / 3 = (10 * θ - 1) / 6 ∧
+    2 * τ θ / 3 - σ θ = (10 * θ - 1) / 6 ∧
     ζ θ - χ θ = (1 - 2 * θ) / 24 ∧
     (σ θ - θ) - ν θ / 3 = (11 - 82 * θ) / 36 ∧
     ν θ - τ θ = (1 - 2 * θ) / 12 ∧
     2 * ν θ / 3 - σ θ = (14 * θ - 1) / 9 ∧
     ζ θ - (ν θ + σ θ - θ) / 2 = (46 * θ - 5) / 24 ∧
-    2 * τ θ / 3 - σ θ = 5 * θ / 3 - 1 / 6 ∧
     τ θ / 2 - (σ θ - θ) = 5 * θ / 2 - 1 / 4 ∧
     4 * θ - σ θ = 5 * θ - 1 / 2 ∧
     2 * τ θ / 5 - (σ θ - 2 * θ) = 17 * θ / 5 - 3 / 10 ∧
@@ -91,13 +91,13 @@ theorem appD_quantities_pos (θ : ℝ) (h1 : 1 / 9 < θ) (h2 : θ < 1 / 8) :
     0 < (14 * θ - 1) / 6 ∧ 0 < (5 - 34 * θ) / 24 ∧ 0 < (26 * θ - 1) / 24 ∧ 0 < (7 - 22 * θ) / 24 ∧
     0 < (1 - 7 * θ) / 3 ∧ 0 < (46 * θ - 5) / 12 ∧ 0 < (58 * θ - 5) / 24 ∧ 0 < (10 * θ - 1) / 12 ∧
     0 < (10 * θ - 1) / 6 ∧ 0 < (1 - 2 * θ) / 24 ∧ 0 < (11 - 82 * θ) / 36 ∧ 0 < (1 - 2 * θ) / 12 ∧
-    0 < (14 * θ - 1) / 9 ∧ 0 < (46 * θ - 5) / 24 ∧ 0 < 5 * θ / 3 - 1 / 6 ∧ 0 < 5 * θ / 2 - 1 / 4 ∧
+    0 < (14 * θ - 1) / 9 ∧ 0 < (46 * θ - 5) / 24 ∧ 0 < 5 * θ / 2 - 1 / 4 ∧
     0 < 5 * θ - 1 / 2 ∧ 0 < 17 * θ / 5 - 3 / 10 ∧ 0 < 21 * θ / 5 - 2 / 5 := by
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_,
-    ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
+    ?_, ?_, ?_, ?_, ?_⟩ <;>
     linarith
 
-/-- The third column of Table 4: each value is the quantity at `θ = 0.1129`,
+/-- The third column of Table 5: each value is the quantity at `θ = 0.1129`,
 rounded to `7` decimal places. -/
 theorem appD_values :
     |(θ₀ - 1 / 10) - 0.0129000| ≤ 5e-8 ∧ |(1 / 8 - θ₀) - 0.0121000| ≤ 5e-8 ∧
@@ -111,12 +111,12 @@ theorem appD_values :
     |(10 * θ₀ - 1) / 12 - 0.0107500| ≤ 5e-8 ∧ |(10 * θ₀ - 1) / 6 - 0.0215000| ≤ 5e-8 ∧
     |(1 - 2 * θ₀) / 24 - 0.0322583| ≤ 5e-8 ∧ |(11 - 82 * θ₀) / 36 - 0.0483944| ≤ 5e-8 ∧
     |(1 - 2 * θ₀) / 12 - 0.0645167| ≤ 5e-8 ∧ |(14 * θ₀ - 1) / 9 - 0.0645111| ≤ 5e-8 ∧
-    |(46 * θ₀ - 5) / 24 - 0.0080583| ≤ 5e-8 ∧ |(5 * θ₀ / 3 - 1 / 6) - 0.0215000| ≤ 5e-8 ∧
+    |(46 * θ₀ - 5) / 24 - 0.0080583| ≤ 5e-8 ∧
     |(5 * θ₀ / 2 - 1 / 4) - 0.0322500| ≤ 5e-8 ∧ |(5 * θ₀ - 1 / 2) - 0.0645000| ≤ 5e-8 ∧
     |(17 * θ₀ / 5 - 3 / 10) - 0.0838600| ≤ 5e-8 ∧ |(21 * θ₀ / 5 - 2 / 5) - 0.0741800| ≤ 5e-8 := by
   simp only [θ₀]
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_,
-    ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
+    ?_, ?_, ?_, ?_, ?_⟩ <;>
     rw [abs_le] <;> constructor <;> norm_num
 
 theorem θ₀_mem : 1 / 9 < θ₀ ∧ θ₀ < 1 / 8 := by

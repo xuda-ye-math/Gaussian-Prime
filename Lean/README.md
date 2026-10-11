@@ -13,11 +13,11 @@ definition says what the paper means: the definitions `sectorPrimes` and `Sector
 | Part of the paper | What Lean verifies | Status |
 |---|---|---|
 | Theorem 1 from Theorem 2 (Section 1) | the full deduction: a Gaussian prime in the sector at `ψ = 0` gives a prime `p = m² + n²` with `n < p^θ`, hence `{√p} < p^(2θ − 1/2)` | proved: `theorem1` |
-| Parameters (5) and Table 4 (Section 2, Appendix D) | every relation for `1/9 < θ < 1/8`, every quantity, every printed value at `θ = 0.1129` | proved |
+| Parameters (2.1) and Table 5 (Section 2, Appendix D) | every relation for `1/9 < θ < 1/8`, every quantity, every printed value at `θ = 0.1129` | proved |
 | Buchstab's function (Sections 3 and 10) | the definition by `uω(u) = 1 + ∫₁^{u-1} ω`, the closed forms on `[1, 3]`, the bounds used | verifiable; layer 2 |
-| Decomposition and loss regions (Sections 3 and 7, Table 1) | the regions as sets cut out by linear inequalities, and the facts the paper checks on them: the hypotheses of each range, `E₁₀` inside Range 5, `P ⊆ L`, `R ≠ ∅` | verifiable by linear arithmetic; layer 3 |
-| `Φ(0.1129) < 1` (Section 10, Table 2) | a rigorous upper bound by exact rational arithmetic checked by the kernel, in place of the floating-point computation of `../Code` | verifiable; layer 4 |
-| Sieve combinatorics (Buchstab's identity (11), the reduction to short intervals of Section 5, the fundamental lemma, Lemma 3, proved by Brun's pure sieve in Appendix B) | elementary but long proofs | verifiable in principle; not yet planned |
+| Decomposition and loss regions (Sections 3 and 7, Table 2) | the regions as sets cut out by linear inequalities, and the facts the paper checks on them: the hypotheses of each range, `E₁₀` inside Range 5, `P ⊆ L`, `R ≠ ∅` | verifiable by linear arithmetic; layer 3 |
+| `Φ(0.1129) < 1` (Section 10, Table 3) | a rigorous upper bound by exact rational arithmetic checked by the kernel, in place of the floating-point computation of `../Code` | verifiable; layer 4 |
+| Sieve combinatorics (Buchstab's identity (2.7), the reduction to short intervals of Section 5, the fundamental lemma, Lemma 3, proved by Brun's pure sieve in Appendix B) | elementary but long proofs | verifiable in principle; not yet planned |
 | Asymptotic formulas and the lower bound (Sections 4–9) | they rest on the arithmetic information below and on the prime number theorem in progressions modulo `4` | assumed: one axiom `lower_bound`, layer 5 |
 | Arithmetic information (Lemmas 20–23 of Appendix A: the sector inequality, the mean-value estimate and the prime number theorem for Hecke characters, the linear estimates of Harman and Lewis) | none: these results are not in Mathlib, and the paper quotes them without proof | not verifiable in this project |
 
@@ -33,7 +33,7 @@ the numerical claim and every elementary step checked by Lean.
 | `theorem1` | `SectorTheorem θ₀ → ` Theorem 1: infinitely many primes `p = m² + n²` with `0 < m`, `0 < n`, `n < p^0.1129`, and infinitely many primes with `{√p} < p^(-0.2742)` | `Deduction.lean` |
 | `infinite_small_n`, `infinite_fract_sqrt` | the same deduction for every `0 < θ < 1/2`, resp. `0 < θ < 1/4` | `Deduction.lean` |
 | `norm_natAbs_prime` | a Gaussian prime `m + in` with `m, n ≠ 0` has a rational prime norm `m² + n²` | `GaussianPrimeNorm.lean` |
-| `appD_relations`, `appD_quantities`, `appD_quantities_pos`, `appD_values` | Table 4 (Appendix D): every relation for `1/9 < θ < 1/8`, every first-column quantity, and every printed value at `θ = 0.1129` to `5 · 10⁻⁸` | `Params.lean` |
+| `appD_relations`, `appD_quantities`, `appD_quantities_pos`, `appD_values` | Table 5 (Appendix D): every relation for `1/9 < θ < 1/8`, every first-column quantity, and every printed value at `θ = 0.1129` to `5 · 10⁻⁸` | `Params.lean` |
 
 `#print axioms GaussianPrime.theorem1` gives `propext`, `Classical.choice`, `Quot.sound`.
 
@@ -65,7 +65,7 @@ Layers, each building on a product that already builds:
   four-dimensional regions.
 - **Layer 3 — the regions and the loss.** Define `D₁, D₂, D₄, D₆, D₈`, `R` (two-dimensional) and
   `E₃, E_R, E₅, E₇, E₉, E₁₀, E₁₁`, `G`, `I`, `L` (four-dimensional) exactly as in Sections 3
-  and 7, and `Φ θ` as display (31), with the integrals as lower Lebesgue integrals of non-negative
+  and 7, and `Φ θ` as display (3.15), with the integrals as lower Lebesgue integrals of non-negative
   integrands (no integrability side conditions).
 - **Layer 4 — the certified bound `Φ θ₀ < 1`.** The margin is `1 − 0.9990033 ≈ 9.97 · 10⁻⁴`.
   - Two-dimensional losses (`99.4 %` of `Φ`): the substitution `u = (1 − α − β)/β` gives

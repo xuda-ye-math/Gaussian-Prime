@@ -1,11 +1,11 @@
-# The losses (29) of the paper, by the two methods of Section 10, and the theta at which the total loss is 1.
+# The losses (3.13) of the paper, by the two methods of Section 10, and the theta at which the total loss is 1.
 #
-# Decompositions (the rows of Table 3; each is a list of regions from regions.jl and a rescued set):
+# Decompositions (the rows of Table 4; each is a list of regions from regions.jl and a rescued set):
 #     "HL"        the decomposition of Harman and Lewis, with the regions derived from the lemmas (Remark 27):
 #                 D1, D2+R, D4, D6, D8, E3, E5, E7, E9, E10, E11;
 #     "HL+R"      with R: D2 in place of D2+R, and the region ER;
 #     "HL+R+G", "HL+R+G+P", "HL+R+G+L"   with R, and with G, G union P or G union L removed from the regions E_k.
-# The total loss of "HL+R+G+L" is Phi(theta) of (31), and that of "HL+R+G+P" is Phi_P(theta).
+# The total loss of "HL+R+G+L" is Phi(theta) of (3.15), and that of "HL+R+G+P" is Phi_P(theta).
 #
 # First method (`losses_first`), deterministic:
 #   * D_k: the b-integral is exact, int_{b0}^{b1} omega((1-a-b)/b)/b^2 db = (Omega((1-a)/b0 - 1) - Omega((1-a)/b1 - 1))
@@ -19,7 +19,7 @@
 #     between the jump planes, so the points are found exactly.
 #   Resolution (k, panels): each axis is cut into `panels` equal panels, the panels are cut further at the points
 #   above, and each resulting piece gets k Gauss-Legendre nodes.  The D_k use k nodes per piece and 16 * panels
-#   panels on the a-axis.  The rule of Table 2 is k = 10, panels = 16: 256 panels on the a-axis for the D_k and
+#   panels on the a-axis.  The rule of Table 3 is k = 10, panels = 16: 256 panels on the a-axis for the D_k and
 #   16 panels per axis for the E_k.  The a-nodes are distributed over the threads; each a-node's contribution is
 #   stored and the contributions are summed in a fixed order, so the result does not depend on the threads.
 #
@@ -45,7 +45,7 @@ using Random
 const DECOMPOSITIONS = Dict(                # name => (with R, rescued set)
     "HL" => (false, "none"), "HL+R" => (true, "none"), "HL+R+G" => (true, "G"),
     "HL+R+G+P" => (true, "G+P"), "HL+R+G+L" => (true, "G+L"))
-const ORDER = ("D1", "D2+R", "D2", "D4", "D6", "D8", "E3", "ER", "E5", "E7", "E9", "E10", "E11")   # Table 2
+const ORDER = ("D1", "D2+R", "D2", "D4", "D6", "D8", "E3", "ER", "E5", "E7", "E9", "E10", "E11")   # Table 3
 
 mode_code(mode) = findfirst(==(mode), MODES)
 
@@ -176,7 +176,7 @@ function loss4_anode(reg, mode::Int, p, panels, glx, glw, a, wa)
     return total
 end
 
-"""Per-region losses (name => value, in the order of Table 2) with the first method."""
+"""Per-region losses (name => value, in the order of Table 3) with the first method."""
 function losses_first(theta, decomposition; k = 10, panels = 16)
     rstar, mode = DECOMPOSITIONS[decomposition]
     code = mode_code(mode)
@@ -327,7 +327,7 @@ function qmc_estimate(reg, mode::Int, p, m, seed)
     return acc / N
 end
 
-"""Per-region (value, error estimate) with the second method, in the order of Table 2."""
+"""Per-region (value, error estimate) with the second method, in the order of Table 3."""
 function losses_second(theta, decomposition; m = 20, reps = 8, seed = 1)
     rstar, mode = DECOMPOSITIONS[decomposition]
     code = mode_code(mode)

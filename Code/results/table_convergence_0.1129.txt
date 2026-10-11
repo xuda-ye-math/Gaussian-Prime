@@ -23,4 +23,4 @@ differences from the finest rule:
  12     16     +1.7e-21     -1.1e-15     +3.6e-13     -1.3e-10     +1.9e-10     -8.6e-10     +8.7e-10
  12     32     +0.0e+00     +0.0e+00     +0.0e+00     +0.0e+00     +0.0e+00     +0.0e+00     +0.0e+00
 
-rule of Table 2 (k = 10, panels = 16): Phi(0.1129) differs from the finest rule by -2.6e-10
+rule of Table 3 (k = 10, panels = 16): Phi(0.1129) differs from the finest rule by -2.6e-10

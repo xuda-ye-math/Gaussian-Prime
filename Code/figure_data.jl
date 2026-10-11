@@ -3,10 +3,10 @@
 #
 #     julia --project=. -t 32 figure_data.jl
 #
-#   figures/domain.json       the domain D of (24) at theta = 0.1129, its Ranges 1-6 (Table 1), the discarded regions
-#                             D1, D2, D4, D6, D8 and the region R (26), as sampled boundaries
-#   figures/total_loss.json   the total loss of each decomposition of Table 3 for 0.112 <= theta <= 0.118, and the
-#                             theta of Table 3 at which it equals 1
+#   figures/domain.json       the domain D of (3.8) at theta = 0.1129, its Ranges 1-6 (Table 2), the discarded regions
+#                             D1, D2, D4, D6, D8 and the region R (3.10), as sampled boundaries
+#   figures/total_loss.json   the total loss of each decomposition of Table 4 for 0.112 <= theta <= 0.118, and the
+#                             theta of Table 4 at which it equals 1
 
 using JSON
 
@@ -14,7 +14,7 @@ include("losses.jl")
 
 const N_SAMPLES = 600
 const ROWS = ["HL" => "Harman and Lewis", "HL+R" => "with R", "HL+R+G" => "with R and G",
-              "HL+R+G+P" => "with R, G and P", "HL+R+G+L" => "with R, G and L"]   # Table 3
+              "HL+R+G+P" => "with R, G and P", "HL+R+G+L" => "with R, G and L"]   # Table 4
 
 """beta_0(alpha) of Section 3: tau - alpha for alpha >= sigma, (tau - alpha)/(j + 2) below, j = floor((sigma - alpha)/theta)."""
 beta0(a, p) = a >= p.sigma ? p.tau - a : (p.tau - a) / (floor((p.sigma - a) / p.theta) + 2)

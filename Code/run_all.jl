@@ -1,13 +1,13 @@
-# Driver: every number of Section 10, Table 6 and Appendix D of the paper (Paper/main.tex), written to Code/results/.
+# Driver: every number of Section 10, Table 7 and Appendix D of the paper (Paper/main.tex), written to Code/results/.
 #
 #     julia --project=. -t 32,1 run_all.jl
 #
 # Steps and outputs (plain text, plus results/summary.json; progress in results/run_all.log):
 #   buchstab      buchstab.log                     accuracy of omega and Omega
-#   inequalities  table_inequalities.txt           Table 4 (Appendix D), exact
+#   inequalities  table_inequalities.txt           Table 5 (Appendix D), exact
 #   hl_0119       table_hl_0119.txt                the decomposition of Harman and Lewis at theta = 0.119
-#   roots         table_roots.txt, roots.log       Table 3: the theta at which the total loss is 1
-#   losses        table_losses_0.1129.txt          Table 2: the losses and Phi(0.1129), both methods
+#   roots         table_roots.txt, roots.log       Table 4: the theta at which the total loss is 1
+#   losses        table_losses_0.1129.txt          Table 3: the losses and Phi(0.1129), both methods
 #                 table_losses_P_0.1133.txt        the losses and Phi_P(0.1133), both methods
 #   convergence   table_convergence_0.1129.txt     the first method under refinement
 #   paper         paper_numbers.txt                every number of Section 10 against the number printed there
@@ -53,16 +53,16 @@ const TABLE6 = ["D1" => ("0.2747838", "0.2747838"), "D2+R" => ("0.3456458", "0.3
 const PAPER = vcat(
     [("Section 10", "omega and Omega against their closed forms on [1, 3]", "10^-14"),
      ("Section 10", "residual of the relation defining omega on [2, 40)", "1.5e-13")],
-    [("Table 2", "$n at 0.1129, $m method", v[i]) for (n, v) in TABLE2 for (i, m) in enumerate(("first", "second"))],
-    [("Table 2", "$n at 0.1129, error estimate of the second method", v) for (n, v) in TABLE2_ERR],
-    [("Table 2", "Phi(0.1129), first method", "0.9990033"), ("Table 2", "Phi(0.1129), second method", "0.9990044"),
-     ("Table 2", "error estimate of the second method over all regions at 0.1129", "1.0e-6"),
+    [("Table 3", "$n at 0.1129, $m method", v[i]) for (n, v) in TABLE2 for (i, m) in enumerate(("first", "second"))],
+    [("Table 3", "$n at 0.1129, error estimate of the second method", v) for (n, v) in TABLE2_ERR],
+    [("Table 3", "Phi(0.1129), first method", "0.9990033"), ("Table 3", "Phi(0.1129), second method", "0.9990044"),
+     ("Table 3", "error estimate of the second method over all regions at 0.1129", "1.0e-6"),
      ("Section 10", "total of HL at 0.119, first method", "0.9425585")],
-    [("Table 6", "$n of HL at 0.119, $m method", v[i]) for (n, v) in TABLE6 for (i, m) in enumerate(("first", "second"))],
-    [("Table 6", "total of HL at 0.119, second method", "0.9425585")],
-    [("Table 3", "$(ROWS_TABLE3[dec]): $c", v[i]) for (dec, v) in TABLE3 for (i, c) in enumerate(("theta", "1/2 - 2 theta"))],
-    [("Section 10", "change of Phi(0.1129) from the rule of Table 2 to the finest rule", "2.6e-10"),
-     ("Section 10", "largest change of a loss from the rule of Table 2 to the finest rule", "2.5e-9"),
+    [("Table 7", "$n of HL at 0.119, $m method", v[i]) for (n, v) in TABLE6 for (i, m) in enumerate(("first", "second"))],
+    [("Table 7", "total of HL at 0.119, second method", "0.9425585")],
+    [("Table 4", "$(ROWS_TABLE3[dec]): $c", v[i]) for (dec, v) in TABLE3 for (i, c) in enumerate(("theta", "1/2 - 2 theta"))],
+    [("Section 10", "change of Phi(0.1129) from the rule of Table 3 to the finest rule", "2.6e-10"),
+     ("Section 10", "largest change of a loss from the rule of Table 3 to the finest rule", "2.5e-9"),
      ("Section 10", "change of Phi(0.1129) from the coarsest rule to the finest rule", "8.7e-6"),
      ("Section 10", "change of Phi(0.1129) from the second finest rule to the finest rule", "6.8e-11"),
      ("Section 10", "error estimate of the second method over the E_k at 0.1129", "1.0e-6"),
@@ -173,13 +173,13 @@ function main()
     computed["residual of the relation defining omega on [2, 40)"] = only(v for (n, v) in b if occursin("on [2,40)", n))
     runtimes["buchstab"] = time() - t0
 
-    # 2. Table 4 (Appendix D).
+    # 2. Table 5 (Appendix D).
     t0 = time()
     logline("step inequalities")
     rows = inequalities_evaluate()
     text, failures = inequalities_table(rows)
     write_result("table_inequalities.txt",
-        "Table 4 (Appendix D): the inequalities between the parameters, written as quantities that must be positive.\n" *
+        "Table 5 (Appendix D): the inequalities between the parameters, written as quantities that must be positive.\n" *
         "For each row, in exact arithmetic: the margin of each inequality (right side minus left side) is the\n" *
         "quantity times 'multiple'; the quantity at theta = 0.1129 and 0.1133; and its value at 0.1129 against\n" *
         "the value printed in the table.\n\n" * text * "\n\n$(length(rows)) rows; failures: " *
@@ -216,7 +216,7 @@ function main()
     summary["hl_0119"] = obj(["first" => obj(fm), "second" => obj([n => collect(v) for (n, v) in sm])])
     runtimes["hl_0119"] = time() - t0
 
-    # 4. Table 3: the theta at which the total loss is 1.
+    # 4. Table 4: the theta at which the total loss is 1.
     t0 = time()
     logline("step roots")
     roots, root_checks, trace = JSON.Object{String, Any}(), JSON.Object{String, Any}(), String[]
@@ -228,10 +228,10 @@ function main()
         end
         tlog(@sprintf("  %s: total loss 1 at theta = %.7f  (%.0fs)", dec, roots[dec], time() - t1))
         root_checks[dec] = failing(roots[dec])
-        tlog("  quantities of Table 4 at this theta: " * (isempty(root_checks[dec]) ? "all positive" : string(root_checks[dec])))
+        tlog("  quantities of Table 5 at this theta: " * (isempty(root_checks[dec]) ? "all positive" : string(root_checks[dec])))
     end
     write_result("roots.log", join(trace, "\n"))
-    lines = ["Table 3: the theta at which the total loss is 1 (Brent's method, xtol 1e-10; first method, " *
+    lines = ["Table 4: the theta at which the total loss is 1 (Brent's method, xtol 1e-10; first method, " *
              "k = $(RES.k), panels = $(RES.panels)),", "and the exponent 1/2 - 2 theta.", "",
              @sprintf("%-24s %10s %14s", "decomposition", "theta", "1/2 - 2 theta")]
     for (dec, root) in roots
@@ -239,13 +239,13 @@ function main()
         computed["$(ROWS_TABLE3[dec]): theta"] = root
         computed["$(ROWS_TABLE3[dec]): 1/2 - 2 theta"] = 0.5 - 2root
     end
-    push!(lines, "\nThe quantities of Table 4 at each of these theta: " *
+    push!(lines, "\nThe quantities of Table 5 at each of these theta: " *
                  (all(isempty, values(root_checks)) ? "all positive." : string(root_checks)))
     write_result("table_roots.txt", join(lines, "\n"))
     summary["roots"] = obj(["values" => roots, "failing_quantities" => root_checks])
     runtimes["roots"] = time() - t0
 
-    # 5. Table 2, Phi(0.1129), and Phi_P(0.1133), by both methods.
+    # 5. Table 3, Phi(0.1129), and Phi_P(0.1133), by both methods.
     t0 = time()
     logline("step losses")
     losses = JSON.Object{String, Any}()
@@ -255,7 +255,7 @@ function main()
             losses_first(theta, dec; RES...), losses_second(theta, dec; QMC...)
         end
         removed = endswith(dec, "L") ? "G and L" : "G and P"
-        title = "The losses (29) at theta = $theta, with $removed removed from the regions E_k, and their sum $total.\n" *
+        title = "The losses (3.13) at theta = $theta, with $removed removed from the regions E_k, and their sum $total.\n" *
                 "First method: Gauss-Legendre, k = $(RES.k), panels = $(RES.panels).  Second method: nested adaptive " *
                 "quadrature (D_k) and scrambled Sobol QMC,\n$(QMC.reps) x 2^$(QMC.m) points (E_k), with its error estimate."
         write_result(fname, loss_table(title, fm, sm, total))
@@ -316,12 +316,12 @@ function main()
         push!(lines, @sprintf("%3d %6d ", k, panels) * join([@sprintf("%+12.1e", d[n] - finest[n]) for n in names], " "))
     end
     change = sum(last, last(ladder[findfirst(x -> first(x) == (RES.k, RES.panels), ladder)])) - ftot
-    push!(lines, @sprintf("\nrule of Table 2 (k = %d, panels = %d): Phi(0.1129) differs from the finest rule by %+.1e",
+    push!(lines, @sprintf("\nrule of Table 3 (k = %d, panels = %d): Phi(0.1129) differs from the finest rule by %+.1e",
                           RES.k, RES.panels, change))
     write_result("table_convergence_0.1129.txt", join(lines, "\n"))
-    computed["change of Phi(0.1129) from the rule of Table 2 to the finest rule"] = abs(change)
+    computed["change of Phi(0.1129) from the rule of Table 3 to the finest rule"] = abs(change)
     table2 = Dict(last(ladder[findfirst(x -> first(x) == (RES.k, RES.panels), ladder)]))
-    computed["largest change of a loss from the rule of Table 2 to the finest rule"] =
+    computed["largest change of a loss from the rule of Table 3 to the finest rule"] =
         maximum(abs(table2[n] - finest[n]) for n in keys(finest))
     computed["change of Phi(0.1129) from the coarsest rule to the finest rule"] = abs(sum(last, last(ladder[1])) - ftot)
     computed["change of Phi(0.1129) from the second finest rule to the finest rule"] =
@@ -330,7 +330,7 @@ function main()
     runtimes["convergence"] = time() - t0
 
     # 7. Every number of Section 10 against the number printed in the paper.
-    largest = max(computed["change of Phi(0.1129) from the rule of Table 2 to the finest rule"],
+    largest = max(computed["change of Phi(0.1129) from the rule of Table 3 to the finest rule"],
                   computed["error estimate of the second method over the E_k at 0.1129"],
                   computed["difference of the two methods in Phi(0.1129)"])
     computed["1 - Phi(0.1129) over the largest of the three quantities above"] = computed["1 - Phi(0.1129)"] / largest

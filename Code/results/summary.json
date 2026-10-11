@@ -99,7 +99,7 @@
       },
       {
         "quantity": "3 theta/2 - 1/12",
-        "inequality": "sigma < (1/3 + tau)/2; PQ >= W in Range 2 and on R",
+        "inequality": "sigma < (1/3 + tau)/2; PQ >= X^sigma in Range 2 and on R",
         "value_0_1129": "5161/60000",
         "value_0_1133": "5197/60000",
         "multiples": [
@@ -222,7 +222,7 @@
       },
       {
         "quantity": "(58 theta - 5)/24",
-        "inequality": "sigma < (rho + tau)/2; PQ >= W in Range 3",
+        "inequality": "sigma < (rho + tau)/2; PQ >= X^sigma in Range 3",
         "value_0_1129": "7741/120000",
         "value_0_1133": "2619/40000",
         "multiples": [
@@ -246,10 +246,11 @@
       },
       {
         "quantity": "(10 theta - 1)/6",
-        "inequality": "1/3 < 2 zeta - tau; beta_0(alpha) < zeta - alpha on D4",
+        "inequality": "1/3 < 2 zeta - tau, sigma < 2 tau/3; beta_0(alpha) < zeta - alpha on D4, PQ >= X^sigma on E9",
         "value_0_1129": "43/2000",
         "value_0_1133": "133/6000",
         "multiples": [
+          "1",
           "1"
         ],
         "printed": "0.0215000",
@@ -258,7 +259,7 @@
       },
       {
         "quantity": "(1 - 2 theta)/24",
-        "inequality": "chi < zeta; Lemma 9 in Range 1",
+        "inequality": "(nu + 2 theta)/2 < zeta; Lemma 9 in Range 1",
         "value_0_1129": "3871/120000",
         "value_0_1133": "1289/40000",
         "multiples": [
@@ -317,18 +318,6 @@
         "ok": true
       },
       {
-        "quantity": "5 theta/3 - 1/6",
-        "inequality": "sigma < 2 tau/3; PQ >= W on E9",
-        "value_0_1129": "43/2000",
-        "value_0_1133": "133/6000",
-        "multiples": [
-          "1"
-        ],
-        "printed": "0.0215000",
-        "agrees": true,
-        "ok": true
-      },
-      {
         "quantity": "5 theta/2 - 1/4",
         "inequality": "sigma - theta < tau/2; E10 lies in Range 5",
         "value_0_1129": "129/4000",
@@ -354,7 +343,7 @@
       },
       {
         "quantity": "17 theta/5 - 3/10",
-        "inequality": "sigma - 2 theta < 2 tau/5; |pq|^2 >= W X^(-2 theta) in Range 6",
+        "inequality": "sigma - 2 theta < 2 tau/5; |pq|^2 >= X^(sigma - 2 theta) in Range 6",
         "value_0_1129": "4193/50000",
         "value_0_1133": "4261/50000",
         "multiples": [
@@ -737,273 +726,273 @@
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D1 at 0.1129, first method",
       "printed": "0.3201605",
       "computed": 0.32016047039799256,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D1 at 0.1129, second method",
       "printed": "0.3201605",
       "computed": 0.3201604703979906,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D2 at 0.1129, first method",
       "printed": "0.3437028",
       "computed": 0.3437028250470892,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D2 at 0.1129, second method",
       "printed": "0.3437028",
       "computed": 0.34370282504709004,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D4 at 0.1129, first method",
       "printed": "0.2132922",
       "computed": 0.2132921726891702,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D4 at 0.1129, second method",
       "printed": "0.2132922",
       "computed": 0.21329217268917028,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D6 at 0.1129, first method",
       "printed": "0.0480512",
       "computed": 0.04805124113788654,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D6 at 0.1129, second method",
       "printed": "0.0480512",
       "computed": 0.04805124113788647,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D8 at 0.1129, first method",
       "printed": "0.0684437",
       "computed": 0.06844373761221809,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D8 at 0.1129, second method",
       "printed": "0.0684437",
       "computed": 0.06844373761221789,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E3 at 0.1129, first method",
       "printed": "0.0000098",
       "computed": 9.827405227548556e-6,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E3 at 0.1129, second method",
       "printed": "0.0000098",
       "computed": 9.827436924118772e-6,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "ER at 0.1129, first method",
       "printed": "0.0010206",
       "computed": 0.0010206367353205743,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "ER at 0.1129, second method",
       "printed": "0.0010207",
       "computed": 0.0010206887285001457,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E5 at 0.1129, first method",
       "printed": "0.0006199",
       "computed": 0.0006199391203727699,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E5 at 0.1129, second method",
       "printed": "0.0006199",
       "computed": 0.0006199203414688072,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E7 at 0.1129, first method",
       "printed": "0.0004451",
       "computed": 0.00044509736264584747,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E7 at 0.1129, second method",
       "printed": "0.0004451",
       "computed": 0.0004450893415420926,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E9 at 0.1129, first method",
       "printed": "0.0002727",
       "computed": 0.00027271234392817217,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E9 at 0.1129, second method",
       "printed": "0.0002726",
       "computed": 0.0002726030524303675,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E10 at 0.1129, first method",
       "printed": "0.0028858",
       "computed": 0.002885779620989029,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E10 at 0.1129, second method",
       "printed": "0.0028870",
       "computed": 0.0028870226598686098,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E11 at 0.1129, first method",
       "printed": "0.0000988",
       "computed": 9.881466031221664e-5,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E11 at 0.1129, second method",
       "printed": "0.0000988",
       "computed": 9.88219216685324e-5,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D1 at 0.1129, error estimate of the second method",
       "printed": "<1e-12",
       "computed": 2.9268081030783863e-13,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D2 at 0.1129, error estimate of the second method",
       "printed": "<1e-12",
       "computed": 4.85722573273506e-17,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D4 at 0.1129, error estimate of the second method",
       "printed": "<1e-12",
       "computed": 1.3877787807814457e-17,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D6 at 0.1129, error estimate of the second method",
       "printed": "<1e-12",
       "computed": 1.3877787807814457e-17,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "D8 at 0.1129, error estimate of the second method",
       "printed": "<1e-12",
       "computed": 2.0816681711721685e-17,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E3 at 0.1129, error estimate of the second method",
       "printed": "8.8e-10",
       "computed": 8.804681940019467e-10,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "ER at 0.1129, error estimate of the second method",
       "printed": "6.8e-8",
       "computed": 6.807594013919032e-8,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E5 at 0.1129, error estimate of the second method",
       "printed": "4.4e-8",
       "computed": 4.352308640642631e-8,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E7 at 0.1129, error estimate of the second method",
       "printed": "8.5e-9",
       "computed": 8.493267398693316e-9,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E9 at 0.1129, error estimate of the second method",
       "printed": "5.6e-8",
       "computed": 5.603870015505681e-8,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E10 at 0.1129, error estimate of the second method",
       "printed": "1.0e-6",
       "computed": 1.011557445085092e-6,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "E11 at 0.1129, error estimate of the second method",
       "printed": "1.1e-8",
       "computed": 1.0769633501457999e-8,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "Phi(0.1129), first method",
       "printed": "0.9990033",
       "computed": 0.9990032541331529,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "Phi(0.1129), second method",
       "printed": "0.9990044",
       "computed": 0.999004420366758,
       "agrees": true
     },
     {
-      "location": "Table 2",
+      "location": "Table 3",
       "name": "error estimate of the second method over all regions at 0.1129",
       "printed": "1.0e-6",
       "computed": 1.0164183632341118e-6,
@@ -1017,231 +1006,231 @@
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D1 of HL at 0.119, first method",
       "printed": "0.2747838",
       "computed": 0.274783805321575,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D1 of HL at 0.119, second method",
       "printed": "0.2747838",
       "computed": 0.274783805321391,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D2+R of HL at 0.119, first method",
       "printed": "0.3456458",
       "computed": 0.3456457768665668,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D2+R of HL at 0.119, second method",
       "printed": "0.3456458",
       "computed": 0.34564577686656717,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E3 of HL at 0.119, first method",
       "printed": "0.0000918",
       "computed": 9.183832531241042e-5,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E3 of HL at 0.119, second method",
       "printed": "0.0000918",
       "computed": 9.183831933658835e-5,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D4 of HL at 0.119, first method",
       "printed": "0.1554561",
       "computed": 0.15545607199993922,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D4 of HL at 0.119, second method",
       "printed": "0.1554561",
       "computed": 0.15545607199990935,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E5 of HL at 0.119, first method",
       "printed": "0.0011859",
       "computed": 0.0011858505530353476,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E5 of HL at 0.119, second method",
       "printed": "0.0011859",
       "computed": 0.0011858504965241057,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D6 of HL at 0.119, first method",
       "printed": "0.1116255",
       "computed": 0.11162548776700557,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D6 of HL at 0.119, second method",
       "printed": "0.1116255",
       "computed": 0.11162548776700532,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E7 of HL at 0.119, first method",
       "printed": "0.0008847",
       "computed": 0.0008846665049972055,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E7 of HL at 0.119, second method",
       "printed": "0.0008847",
       "computed": 0.0008846663223321084,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D8 of HL at 0.119, first method",
       "printed": "0.0356394",
       "computed": 0.035639376739889074,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "D8 of HL at 0.119, second method",
       "printed": "0.0356394",
       "computed": 0.035639376739845866,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E9 of HL at 0.119, first method",
       "printed": "0.0010752",
       "computed": 0.0010751945929886961,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E9 of HL at 0.119, second method",
       "printed": "0.0010752",
       "computed": 0.0010751945579750427,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E10 of HL at 0.119, first method",
       "printed": "0.0161420",
       "computed": 0.016141952585797287,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E10 of HL at 0.119, second method",
       "printed": "0.0161419",
       "computed": 0.016141923805691044,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E11 of HL at 0.119, first method",
       "printed": "0.0000285",
       "computed": 2.847120767881958e-5,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "E11 of HL at 0.119, second method",
       "printed": "0.0000285",
       "computed": 2.8471206046728608e-5,
       "agrees": true
     },
     {
-      "location": "Table 6",
+      "location": "Table 7",
       "name": "total of HL at 0.119, second method",
       "printed": "0.9425585",
       "computed": 0.9425584634026242,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "Harman and Lewis: theta",
       "printed": "0.1167825",
       "computed": 0.1167824612259678,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "Harman and Lewis: 1/2 - 2 theta",
       "printed": "0.2664351",
       "computed": 0.2664350775480644,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "with R: theta",
       "printed": "0.1141073",
       "computed": 0.1141072891918103,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "with R: 1/2 - 2 theta",
       "printed": "0.2717854",
       "computed": 0.2717854216163794,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "with R and G: theta",
       "printed": "0.1139312",
       "computed": 0.11393118136149397,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "with R and G: 1/2 - 2 theta",
       "printed": "0.2721376",
       "computed": 0.27213763727701207,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "with R, G and P: theta",
       "printed": "0.1132049",
       "computed": 0.11320488169259288,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "with R, G and P: 1/2 - 2 theta",
       "printed": "0.2735902",
       "computed": 0.27359023661481424,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "with R, G and L: theta",
       "printed": "0.1128554",
       "computed": 0.11285541388780537,
       "agrees": true
     },
     {
-      "location": "Table 3",
+      "location": "Table 4",
       "name": "with R, G and L: 1/2 - 2 theta",
       "printed": "0.2742892",
       "computed": 0.27428917222438925,
@@ -1249,14 +1238,14 @@
     },
     {
       "location": "Section 10",
-      "name": "change of Phi(0.1129) from the rule of Table 2 to the finest rule",
+      "name": "change of Phi(0.1129) from the rule of Table 3 to the finest rule",
       "printed": "2.6e-10",
       "computed": 2.6466373537203935e-10,
       "agrees": true
     },
     {
       "location": "Section 10",
-      "name": "largest change of a loss from the rule of Table 2 to the finest rule",
+      "name": "largest change of a loss from the rule of Table 3 to the finest rule",
       "printed": "2.5e-9",
       "computed": 2.472413743111494e-9,
       "agrees": true

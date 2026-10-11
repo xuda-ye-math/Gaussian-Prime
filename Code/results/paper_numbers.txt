@@ -4,81 +4,81 @@ location       printed   computed           number
 --------------------------------------------------
 Section 10      10^-14   5.88e-15  agrees   omega and Omega against their closed forms on [1, 3]
 Section 10     1.5e-13    1.5e-13  agrees   residual of the relation defining omega on [2, 40)
-Table 2      0.3201605  0.3201605  agrees   D1 at 0.1129, first method
-Table 2      0.3201605  0.3201605  agrees   D1 at 0.1129, second method
-Table 2      0.3437028  0.3437028  agrees   D2 at 0.1129, first method
-Table 2      0.3437028  0.3437028  agrees   D2 at 0.1129, second method
-Table 2      0.2132922  0.2132922  agrees   D4 at 0.1129, first method
-Table 2      0.2132922  0.2132922  agrees   D4 at 0.1129, second method
-Table 2      0.0480512  0.0480512  agrees   D6 at 0.1129, first method
-Table 2      0.0480512  0.0480512  agrees   D6 at 0.1129, second method
-Table 2      0.0684437  0.0684437  agrees   D8 at 0.1129, first method
-Table 2      0.0684437  0.0684437  agrees   D8 at 0.1129, second method
-Table 2      0.0000098  0.0000098  agrees   E3 at 0.1129, first method
-Table 2      0.0000098  0.0000098  agrees   E3 at 0.1129, second method
-Table 2      0.0010206  0.0010206  agrees   ER at 0.1129, first method
-Table 2      0.0010207  0.0010207  agrees   ER at 0.1129, second method
-Table 2      0.0006199  0.0006199  agrees   E5 at 0.1129, first method
-Table 2      0.0006199  0.0006199  agrees   E5 at 0.1129, second method
-Table 2      0.0004451  0.0004451  agrees   E7 at 0.1129, first method
-Table 2      0.0004451  0.0004451  agrees   E7 at 0.1129, second method
-Table 2      0.0002727  0.0002727  agrees   E9 at 0.1129, first method
-Table 2      0.0002726  0.0002726  agrees   E9 at 0.1129, second method
-Table 2      0.0028858  0.0028858  agrees   E10 at 0.1129, first method
-Table 2      0.0028870  0.0028870  agrees   E10 at 0.1129, second method
-Table 2      0.0000988  0.0000988  agrees   E11 at 0.1129, first method
-Table 2      0.0000988  0.0000988  agrees   E11 at 0.1129, second method
-Table 2         <1e-12   2.93e-13  agrees   D1 at 0.1129, error estimate of the second method
-Table 2         <1e-12   4.86e-17  agrees   D2 at 0.1129, error estimate of the second method
-Table 2         <1e-12   1.39e-17  agrees   D4 at 0.1129, error estimate of the second method
-Table 2         <1e-12   1.39e-17  agrees   D6 at 0.1129, error estimate of the second method
-Table 2         <1e-12   2.08e-17  agrees   D8 at 0.1129, error estimate of the second method
-Table 2        8.8e-10    8.8e-10  agrees   E3 at 0.1129, error estimate of the second method
-Table 2         6.8e-8     6.8e-8  agrees   ER at 0.1129, error estimate of the second method
-Table 2         4.4e-8     4.4e-8  agrees   E5 at 0.1129, error estimate of the second method
-Table 2         8.5e-9     8.5e-9  agrees   E7 at 0.1129, error estimate of the second method
-Table 2         5.6e-8     5.6e-8  agrees   E9 at 0.1129, error estimate of the second method
-Table 2         1.0e-6     1.0e-6  agrees   E10 at 0.1129, error estimate of the second method
-Table 2         1.1e-8     1.1e-8  agrees   E11 at 0.1129, error estimate of the second method
-Table 2      0.9990033  0.9990033  agrees   Phi(0.1129), first method
-Table 2      0.9990044  0.9990044  agrees   Phi(0.1129), second method
-Table 2         1.0e-6     1.0e-6  agrees   error estimate of the second method over all regions at 0.1129
+Table 3      0.3201605  0.3201605  agrees   D1 at 0.1129, first method
+Table 3      0.3201605  0.3201605  agrees   D1 at 0.1129, second method
+Table 3      0.3437028  0.3437028  agrees   D2 at 0.1129, first method
+Table 3      0.3437028  0.3437028  agrees   D2 at 0.1129, second method
+Table 3      0.2132922  0.2132922  agrees   D4 at 0.1129, first method
+Table 3      0.2132922  0.2132922  agrees   D4 at 0.1129, second method
+Table 3      0.0480512  0.0480512  agrees   D6 at 0.1129, first method
+Table 3      0.0480512  0.0480512  agrees   D6 at 0.1129, second method
+Table 3      0.0684437  0.0684437  agrees   D8 at 0.1129, first method
+Table 3      0.0684437  0.0684437  agrees   D8 at 0.1129, second method
+Table 3      0.0000098  0.0000098  agrees   E3 at 0.1129, first method
+Table 3      0.0000098  0.0000098  agrees   E3 at 0.1129, second method
+Table 3      0.0010206  0.0010206  agrees   ER at 0.1129, first method
+Table 3      0.0010207  0.0010207  agrees   ER at 0.1129, second method
+Table 3      0.0006199  0.0006199  agrees   E5 at 0.1129, first method
+Table 3      0.0006199  0.0006199  agrees   E5 at 0.1129, second method
+Table 3      0.0004451  0.0004451  agrees   E7 at 0.1129, first method
+Table 3      0.0004451  0.0004451  agrees   E7 at 0.1129, second method
+Table 3      0.0002727  0.0002727  agrees   E9 at 0.1129, first method
+Table 3      0.0002726  0.0002726  agrees   E9 at 0.1129, second method
+Table 3      0.0028858  0.0028858  agrees   E10 at 0.1129, first method
+Table 3      0.0028870  0.0028870  agrees   E10 at 0.1129, second method
+Table 3      0.0000988  0.0000988  agrees   E11 at 0.1129, first method
+Table 3      0.0000988  0.0000988  agrees   E11 at 0.1129, second method
+Table 3         <1e-12   2.93e-13  agrees   D1 at 0.1129, error estimate of the second method
+Table 3         <1e-12   4.86e-17  agrees   D2 at 0.1129, error estimate of the second method
+Table 3         <1e-12   1.39e-17  agrees   D4 at 0.1129, error estimate of the second method
+Table 3         <1e-12   1.39e-17  agrees   D6 at 0.1129, error estimate of the second method
+Table 3         <1e-12   2.08e-17  agrees   D8 at 0.1129, error estimate of the second method
+Table 3        8.8e-10    8.8e-10  agrees   E3 at 0.1129, error estimate of the second method
+Table 3         6.8e-8     6.8e-8  agrees   ER at 0.1129, error estimate of the second method
+Table 3         4.4e-8     4.4e-8  agrees   E5 at 0.1129, error estimate of the second method
+Table 3         8.5e-9     8.5e-9  agrees   E7 at 0.1129, error estimate of the second method
+Table 3         5.6e-8     5.6e-8  agrees   E9 at 0.1129, error estimate of the second method
+Table 3         1.0e-6     1.0e-6  agrees   E10 at 0.1129, error estimate of the second method
+Table 3         1.1e-8     1.1e-8  agrees   E11 at 0.1129, error estimate of the second method
+Table 3      0.9990033  0.9990033  agrees   Phi(0.1129), first method
+Table 3      0.9990044  0.9990044  agrees   Phi(0.1129), second method
+Table 3         1.0e-6     1.0e-6  agrees   error estimate of the second method over all regions at 0.1129
 Section 10   0.9425585  0.9425585  agrees   total of HL at 0.119, first method
-Table 6      0.2747838  0.2747838  agrees   D1 of HL at 0.119, first method
-Table 6      0.2747838  0.2747838  agrees   D1 of HL at 0.119, second method
-Table 6      0.3456458  0.3456458  agrees   D2+R of HL at 0.119, first method
-Table 6      0.3456458  0.3456458  agrees   D2+R of HL at 0.119, second method
-Table 6      0.0000918  0.0000918  agrees   E3 of HL at 0.119, first method
-Table 6      0.0000918  0.0000918  agrees   E3 of HL at 0.119, second method
-Table 6      0.1554561  0.1554561  agrees   D4 of HL at 0.119, first method
-Table 6      0.1554561  0.1554561  agrees   D4 of HL at 0.119, second method
-Table 6      0.0011859  0.0011859  agrees   E5 of HL at 0.119, first method
-Table 6      0.0011859  0.0011859  agrees   E5 of HL at 0.119, second method
-Table 6      0.1116255  0.1116255  agrees   D6 of HL at 0.119, first method
-Table 6      0.1116255  0.1116255  agrees   D6 of HL at 0.119, second method
-Table 6      0.0008847  0.0008847  agrees   E7 of HL at 0.119, first method
-Table 6      0.0008847  0.0008847  agrees   E7 of HL at 0.119, second method
-Table 6      0.0356394  0.0356394  agrees   D8 of HL at 0.119, first method
-Table 6      0.0356394  0.0356394  agrees   D8 of HL at 0.119, second method
-Table 6      0.0010752  0.0010752  agrees   E9 of HL at 0.119, first method
-Table 6      0.0010752  0.0010752  agrees   E9 of HL at 0.119, second method
-Table 6      0.0161420  0.0161420  agrees   E10 of HL at 0.119, first method
-Table 6      0.0161419  0.0161419  agrees   E10 of HL at 0.119, second method
-Table 6      0.0000285  0.0000285  agrees   E11 of HL at 0.119, first method
-Table 6      0.0000285  0.0000285  agrees   E11 of HL at 0.119, second method
-Table 6      0.9425585  0.9425585  agrees   total of HL at 0.119, second method
-Table 3      0.1167825  0.1167825  agrees   Harman and Lewis: theta
-Table 3      0.2664351  0.2664351  agrees   Harman and Lewis: 1/2 - 2 theta
-Table 3      0.1141073  0.1141073  agrees   with R: theta
-Table 3      0.2717854  0.2717854  agrees   with R: 1/2 - 2 theta
-Table 3      0.1139312  0.1139312  agrees   with R and G: theta
-Table 3      0.2721376  0.2721376  agrees   with R and G: 1/2 - 2 theta
-Table 3      0.1132049  0.1132049  agrees   with R, G and P: theta
-Table 3      0.2735902  0.2735902  agrees   with R, G and P: 1/2 - 2 theta
-Table 3      0.1128554  0.1128554  agrees   with R, G and L: theta
-Table 3      0.2742892  0.2742892  agrees   with R, G and L: 1/2 - 2 theta
-Section 10     2.6e-10    2.6e-10  agrees   change of Phi(0.1129) from the rule of Table 2 to the finest rule
-Section 10      2.5e-9     2.5e-9  agrees   largest change of a loss from the rule of Table 2 to the finest rule
+Table 7      0.2747838  0.2747838  agrees   D1 of HL at 0.119, first method
+Table 7      0.2747838  0.2747838  agrees   D1 of HL at 0.119, second method
+Table 7      0.3456458  0.3456458  agrees   D2+R of HL at 0.119, first method
+Table 7      0.3456458  0.3456458  agrees   D2+R of HL at 0.119, second method
+Table 7      0.0000918  0.0000918  agrees   E3 of HL at 0.119, first method
+Table 7      0.0000918  0.0000918  agrees   E3 of HL at 0.119, second method
+Table 7      0.1554561  0.1554561  agrees   D4 of HL at 0.119, first method
+Table 7      0.1554561  0.1554561  agrees   D4 of HL at 0.119, second method
+Table 7      0.0011859  0.0011859  agrees   E5 of HL at 0.119, first method
+Table 7      0.0011859  0.0011859  agrees   E5 of HL at 0.119, second method
+Table 7      0.1116255  0.1116255  agrees   D6 of HL at 0.119, first method
+Table 7      0.1116255  0.1116255  agrees   D6 of HL at 0.119, second method
+Table 7      0.0008847  0.0008847  agrees   E7 of HL at 0.119, first method
+Table 7      0.0008847  0.0008847  agrees   E7 of HL at 0.119, second method
+Table 7      0.0356394  0.0356394  agrees   D8 of HL at 0.119, first method
+Table 7      0.0356394  0.0356394  agrees   D8 of HL at 0.119, second method
+Table 7      0.0010752  0.0010752  agrees   E9 of HL at 0.119, first method
+Table 7      0.0010752  0.0010752  agrees   E9 of HL at 0.119, second method
+Table 7      0.0161420  0.0161420  agrees   E10 of HL at 0.119, first method
+Table 7      0.0161419  0.0161419  agrees   E10 of HL at 0.119, second method
+Table 7      0.0000285  0.0000285  agrees   E11 of HL at 0.119, first method
+Table 7      0.0000285  0.0000285  agrees   E11 of HL at 0.119, second method
+Table 7      0.9425585  0.9425585  agrees   total of HL at 0.119, second method
+Table 4      0.1167825  0.1167825  agrees   Harman and Lewis: theta
+Table 4      0.2664351  0.2664351  agrees   Harman and Lewis: 1/2 - 2 theta
+Table 4      0.1141073  0.1141073  agrees   with R: theta
+Table 4      0.2717854  0.2717854  agrees   with R: 1/2 - 2 theta
+Table 4      0.1139312  0.1139312  agrees   with R and G: theta
+Table 4      0.2721376  0.2721376  agrees   with R and G: 1/2 - 2 theta
+Table 4      0.1132049  0.1132049  agrees   with R, G and P: theta
+Table 4      0.2735902  0.2735902  agrees   with R, G and P: 1/2 - 2 theta
+Table 4      0.1128554  0.1128554  agrees   with R, G and L: theta
+Table 4      0.2742892  0.2742892  agrees   with R, G and L: 1/2 - 2 theta
+Section 10     2.6e-10    2.6e-10  agrees   change of Phi(0.1129) from the rule of Table 3 to the finest rule
+Section 10      2.5e-9     2.5e-9  agrees   largest change of a loss from the rule of Table 3 to the finest rule
 Section 10      8.7e-6     8.7e-6  agrees   change of Phi(0.1129) from the coarsest rule to the finest rule
 Section 10     6.8e-11    6.8e-11  agrees   change of Phi(0.1129) from the second finest rule to the finest rule
 Section 10      1.0e-6     1.0e-6  agrees   error estimate of the second method over the E_k at 0.1129

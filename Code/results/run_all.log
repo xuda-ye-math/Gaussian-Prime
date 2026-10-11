@@ -14,7 +14,7 @@
 [17:00:38]     HL         theta = 0.1167824612  total = 1.000000000  (0.0s)
 [17:00:38]     HL         theta = 0.1167824612  total = 1.000000000  (0.0s)
 [17:00:38]   HL: total loss 1 at theta = 0.1167825  (0s)
-[17:00:38]   quantities of Table 4 at this theta: all positive
+[17:00:38]   quantities of Table 5 at this theta: all positive
 [17:00:38]     HL+R       theta = 0.1115000000  total = 1.065645556  (0.1s)
 [17:00:38]     HL+R       theta = 0.1175000000  total = 0.920147050  (0.0s)
 [17:00:38]     HL+R       theta = 0.1142070610  total = 0.997566310  (0.1s)
@@ -22,7 +22,7 @@
 [17:00:38]     HL+R       theta = 0.1141072892  total = 1.000000001  (0.0s)
 [17:00:38]     HL+R       theta = 0.1141072892  total = 1.000000000  (0.1s)
 [17:00:38]   HL+R: total loss 1 at theta = 0.1141073  (0s)
-[17:00:38]   quantities of Table 4 at this theta: all positive
+[17:00:38]   quantities of Table 5 at this theta: all positive
 [17:00:38]     HL+R+G     theta = 0.1115000000  total = 1.060505945  (0.1s)
 [17:00:39]     HL+R+G     theta = 0.1175000000  total = 0.916767096  (0.1s)
 [17:00:39]     HL+R+G     theta = 0.1140256614  total = 0.997714425  (0.1s)
@@ -30,7 +30,7 @@
 [17:00:39]     HL+R+G     theta = 0.1139311813  total = 1.000000001  (0.1s)
 [17:00:39]     HL+R+G     theta = 0.1139311814  total = 1.000000000  (0.1s)
 [17:00:39]   HL+R+G: total loss 1 at theta = 0.1139312  (1s)
-[17:00:39]   quantities of Table 4 at this theta: all positive
+[17:00:39]   quantities of Table 5 at this theta: all positive
 [17:00:39]     HL+R+G+P   theta = 0.1115000000  total = 1.039622534  (0.1s)
 [17:00:39]     HL+R+G+P   theta = 0.1175000000  total = 0.905185758  (0.1s)
 [17:00:39]     HL+R+G+P   theta = 0.1132683792  total = 0.998547187  (0.1s)
@@ -38,7 +38,7 @@
 [17:00:40]     HL+R+G+P   theta = 0.1132048817  total = 1.000000000  (0.1s)
 [17:00:40]     HL+R+G+P   theta = 0.1132048817  total = 1.000000000  (0.1s)
 [17:00:40]   HL+R+G+P: total loss 1 at theta = 0.1132049  (1s)
-[17:00:40]   quantities of Table 4 at this theta: all positive
+[17:00:40]   quantities of Table 5 at this theta: all positive
 [17:00:40]     HL+R+G+L   theta = 0.1115000000  total = 1.030650087  (0.2s)
 [17:00:40]     HL+R+G+L   theta = 0.1175000000  total = 0.899838294  (0.3s)
 [17:00:40]     HL+R+G+L   theta = 0.1129058405  total = 0.998872739  (0.3s)
@@ -60,7 +60,7 @@
 [17:00:44]     HL+R+G+L   theta = 0.1128554140  total = 0.999999997  (0.2s)
 [17:00:45]     HL+R+G+L   theta = 0.1128554140  total = 0.999999998  (0.3s)
 [17:00:45]   HL+R+G+L: total loss 1 at theta = 0.1128554  (5s)
-[17:00:45]   quantities of Table 4 at this theta: all positive
+[17:00:45]   quantities of Table 5 at this theta: all positive
 [17:00:45]   wrote results/roots.log
 [17:00:45]   wrote results/table_roots.txt
 [17:00:45] step losses
