@@ -37,10 +37,10 @@
 \maketitle
 
 \begin{abstract}
-We prove that infinitely many primes $p = m^2 + n^2$ have $n < p^{0.1129}$, and that infinitely many primes satisfy $\{\sqrt{p}\} < p^{-0.2742}$. This sharpens the exponents $0.119$ and $-0.262$ of Harman and Lewis (2001). Following their approach, we derive both statements from a lower bound of the correct order of magnitude for the number of Gaussian primes of norm between $X/2$ and $X$ in every sector of angle $X^{-0.3871}$, and we prove this bound with Harman's sieve and their arithmetic information. The new ingredients are three groupings of terms that their sieve discards: a factorization of a two-dimensional sum for the linear estimate, and two applications of the bilinear estimate to four-dimensional sums, one of them after a further application of Buchstab's identity. These groupings give the grouped terms asymptotic formulas, so that fewer terms are discarded. In addition, we give every step of the sieve argument in full, filling in the details that Harman and Lewis present briefly and making several of their statements and discarded regions precise, and we evaluate the losses of the discarded sums by two numerical methods.
+We prove that infinitely many primes $p = m^2 + n^2$ have $n < p^{0.1129}$, and that infinitely many primes satisfy $\{\sqrt{p}\} < p^{-0.2742}$. This sharpens the exponents $0.119$ and $-0.262$ of Harman and Lewis (2001). Following their approach, we derive both statements from a lower bound of the correct order of magnitude for the number of Gaussian primes of norm between $X/2$ and $X$ in every sector of angle $X^{-0.3871}$, and we prove this bound with Harman's sieve and their arithmetic information. The new ingredients are three groupings of terms that their sieve discards: a factorization of a two-dimensional sum for the linear estimate, and two applications of the bilinear estimate to four-dimensional sums, one of them after a further application of Buchstab's identity. These groupings give the grouped terms asymptotic formulas, so that fewer terms are discarded. In addition, we give every step of the sieve argument in full, filling in the details that Harman and Lewis present briefly and making several of their statements and discarded regions precise, and we evaluate the losses of the discarded sums by two numerical methods. The same argument in $\mathbb{Z}[\sqrt{2}]$ gives infinitely many primes $p$ with $1 - \{\sqrt{p}\} < p^{-0.2742}$.
 \end{abstract}
 
-\textbf{Keywords:} Gaussian primes, narrow sectors, Harman's sieve, Hecke characters, fractional part of $\sqrt{p}$.
+\textbf{Keywords:} Gaussian primes, narrow sectors, Harman's sieve, Hecke characters, fractional part of $\sqrt{p}$, real quadratic fields.
 
 \textbf{2020 MSC:} 11N36, 11N32, 11R44, 11J71.
 
@@ -91,6 +91,13 @@ n = \sqrt{p}\, \sin(\arg \varpi) < \sqrt{p}\, X^{\theta - 1/2} < \sqrt{p}\, p^{\
 The ranges $[X/2, X)$ for different $k$ are disjoint. So the primes $p$ are distinct for different $k$, and there are infinitely many of them. The bound $\{\sqrt{p}\} < p^{-0.2742}$ follows from \eqref{eq: fractional bound}, because $1/2 - 2\theta = 0.2742$.
 \end{proof}
 
+The bound \eqref{eq: fractional bound} places $\sqrt{p}$ slightly above an integer. For every fixed $\varepsilon > 0$, \citet[Chapter~9]{harman1982diophantine} proves a lower bound for the number of primes in the intervals $[(n + h)^2, (n + h)^2 + n^{1/2 + \varepsilon}]$, $X^{1/2} \Le n \Le (2X)^{1/2}$, uniformly in $0 \Le h \Le 1$. With $h$ close to $1$, it gives infinitely many primes with $1 - \{\sqrt{p}\} < p^{-1/4 + \varepsilon}$, that is, primes slightly below a square. \citet[p.~120]{harman2001gaussian} note that their method, unlike those of Balog and Harman, gives no bound for $\{\sqrt{p} - \beta\}$ with $\beta \neq 0$. In $\mathbb{Z}[\sqrt{2}]$, the argument of this paper gives the following.
+
+\begin{theorem}
+\label{thm: below square}
+There are infinitely many primes $p = m^2 - 2n^2$ with $m, n$ positive integers and $n < p^{0.1129}$. Consequently, there are infinitely many primes $p$ with $1 - \{\sqrt{p}\} < p^{-0.2742}$.
+\end{theorem}
+
 \subsection{Outline of the method}
 \label{subsec: method}
 
@@ -124,7 +131,7 @@ We also give in full several steps that \citet{harman2001gaussian} present brief
 \subsection{Structure of the paper}
 \label{subsec: structure}
 
-Section~\ref{sec: notation} fixes the notation. Section~\ref{sec: outline} states the decomposition: identity \eqref{eq: identity 37}, the ranges of Table~\ref{tab: ranges}, the groupings $\mathsf{R}$, $\mathsf{G}$ and $\mathsf{L}$, and the total loss \eqref{eq: total loss}. Section~\ref{sec: estimates} states the linear and bilinear estimates, a fundamental lemma over $\mathbb{Z}[i]$, and asymptotic formulas for sifting functions with a variable level, and Section~\ref{sec: decoupling} removes the conditions that couple the variables of a sum. Section~\ref{sec: two primes} treats the sums over two primes. Section~\ref{sec: decomposition} proves identity \eqref{eq: identity 37}, checks the hypotheses of the lemmas on each range of Table~\ref{tab: ranges}, and defines the discarded regions. Section~\ref{sec: four} treats the four-dimensional sums on $\mathsf{G}$ and $\mathsf{L}$. Section~\ref{sec: integrals} turns the discarded sums into integrals and proves the lower bound, Lemma~\ref{lem: lower bound}. Section~\ref{sec: numerics} evaluates the integrals numerically and proves Theorem~\ref{thm: sector}, and Section~\ref{sec: conclusion} concludes. Appendix~\ref{app: arithmetic} collects standard facts and derives the linear and bilinear estimates from the arithmetic information. Appendix~\ref{app: sieve} proves Lemmas~\ref{lem: fundamental}, \ref{lem: level large}, \ref{lem: level small} and~\ref{lem: decoupling}, and Appendix~\ref{app: integrals} proves Lemma~\ref{lem: boxes to integrals}. Appendix~\ref{app: inequalities} lists the inequalities between the parameters, and Appendix~\ref{app: comparison} compares the argument with that of Harman and Lewis.
+Section~\ref{sec: notation} fixes the notation. Section~\ref{sec: outline} states the decomposition: identity \eqref{eq: identity 37}, the ranges of Table~\ref{tab: ranges}, the groupings $\mathsf{R}$, $\mathsf{G}$ and $\mathsf{L}$, and the total loss \eqref{eq: total loss}. Section~\ref{sec: estimates} states the linear and bilinear estimates, a fundamental lemma over $\mathbb{Z}[i]$, and asymptotic formulas for sifting functions with a variable level, and Section~\ref{sec: decoupling} removes the conditions that couple the variables of a sum. Section~\ref{sec: two primes} treats the sums over two primes. Section~\ref{sec: decomposition} proves identity \eqref{eq: identity 37}, checks the hypotheses of the lemmas on each range of Table~\ref{tab: ranges}, and defines the discarded regions. Section~\ref{sec: four} treats the four-dimensional sums on $\mathsf{G}$ and $\mathsf{L}$. Section~\ref{sec: integrals} turns the discarded sums into integrals and proves the lower bound, Lemma~\ref{lem: lower bound}. Section~\ref{sec: numerics} evaluates the integrals numerically and proves Theorem~\ref{thm: sector}, and Section~\ref{sec: conclusion} concludes. Appendix~\ref{app: arithmetic} collects standard facts and derives the linear and bilinear estimates from the arithmetic information. Appendix~\ref{app: sieve} proves Lemmas~\ref{lem: fundamental}, \ref{lem: level large}, \ref{lem: level small} and~\ref{lem: decoupling}, and Appendix~\ref{app: integrals} proves Lemma~\ref{lem: boxes to integrals}. Appendix~\ref{app: inequalities} lists the inequalities between the parameters, Appendix~\ref{app: comparison} compares the argument with that of Harman and Lewis, and Appendix~\ref{app: sqrt2} proves Theorem~\ref{thm: below square}.
 
 Theorem~\ref{thm: sector} follows from Lemma~\ref{lem: lower bound} and Table~\ref{tab: losses}. Lemma~\ref{lem: lower bound} rests on Lemmas~\ref{lem: lemma 11} to~\ref{lem: boxes to integrals}, and Lemmas~\ref{lem: lemma 11} to~\ref{lem: four dim} rest on the results of Sections~\ref{sec: estimates} and~\ref{sec: decoupling}.
 
@@ -2010,6 +2017,191 @@ total & & 0.9425585 & 0.9425585 & 0.943 \\
 \begin{equation*}
 \mathrm{Li}(y) - \mathrm{Li}(y/2) = \Bigl( 1 + \frac{1 - \log 2}{\log y} + \mathcal{O}\bigl((\log y)^{-2}\bigr) \Bigr) \frac{y}{2\log y}.
 \end{equation*} So this main term has a relative error of exact order $1/\log y$, and the proof gives the term $o(1)$, not a factor $1 + \mathcal{O}(\eta)$.
+
+\section{Primes slightly below a square}
+\label{app: sqrt2}
+
+This appendix deduces Theorem~\ref{thm: below square} from Theorem~\ref{thm: sqrt2 sector} below, a lower bound for the primes of $\mathbb{Z}[\sqrt{2}]$ in narrow sectors, and proves Theorem~\ref{thm: sqrt2 sector} by the argument of Sections~\ref{sec: notation} to~\ref{sec: numerics}, with the lemmas of this appendix in place of Lemmas~\ref{lem: sector inequality} to~\ref{lem: type I input}. \citet{baier2024note} carry the result of \citet{harman2004prime} on prime ideals in small regions over to real quadratic fields, with sectors of angle at least $x^{-0.235}$.
+
+For $n = x + y\sqrt{2}$ with $x, y \in \mathbb{Q}$, write $\bar n := x - y\sqrt{2}$ and $\mathrm{N}n := n\bar n$. The ring $\mathbb{Z}[\sqrt{2}]$ is the ring of integers of $\mathbb{Q}(\sqrt{2})$ and a principal ideal domain. Its units are $\pm(1 + \sqrt{2})^k$ with $k \in \mathbb{Z}$, and $\mathrm{N}(1 + \sqrt{2}) = -1$. An element $n$ is totally positive if $n > 0$ and $\bar n > 0$. The totally positive units are the powers of $(1 + \sqrt{2})^2 = 3 + 2\sqrt{2}$, and every non-zero element has a totally positive associate. For totally positive $n$, the \emph{angle} of $n$ is
+\begin{equation}
+\label{eq: sqrt2 angle}
+\operatorname{ang} n := \frac{\log(n/\bar n)}{2\log(3 + 2\sqrt{2})}.
+\end{equation}
+The angle is additive under multiplication, $\operatorname{ang}\bar n = -\operatorname{ang} n$, $\operatorname{ang}((3 + 2\sqrt{2})n) = \operatorname{ang} n + 1$, and $\operatorname{ang} n = 0$ exactly when $n$ is a positive rational. For totally positive $n = x + y\sqrt{2}$, \eqref{eq: sqrt2 angle} gives $\tanh(\operatorname{ang} n \cdot \log(3 + 2\sqrt{2})) = y\sqrt{2}/x$. Since $\tanh(\log(3 + 2\sqrt{2})) = 2\sqrt{2}/3$, the angle lies in $[0, 1)$ exactly when $0 \Le 3y < 2x$. So every non-zero element of $\mathbb{Z}[\sqrt{2}]$ has exactly one associate $x + y\sqrt{2}$ with
+\begin{equation}
+\label{eq: sqrt2 domain}
+x, y \in \mathbb{Z}, \qquad 0 \Le 3y < 2x.
+\end{equation}
+As for Gaussian integers in Section~\ref{sec: introduction}, a non-zero element of $\mathbb{Z}[\sqrt{2}]$, and in particular a product of elements, is identified with this associate, and angles are taken modulo $1$. For $n = x + y\sqrt{2}$ satisfying \eqref{eq: sqrt2 domain}, the formula for $\tanh$ and $x^2 - 2y^2 = \mathrm{N}n$ give
+\begin{equation}
+\label{eq: sqrt2 coordinates}
+x = (\mathrm{N}n)^{1/2} \cosh\bigl( \operatorname{ang} n \cdot \log(3 + 2\sqrt{2}) \bigr), \qquad y\sqrt{2} = (\mathrm{N}n)^{1/2} \sinh\bigl( \operatorname{ang} n \cdot \log(3 + 2\sqrt{2}) \bigr).
+\end{equation}
+
+A prime of $\mathbb{Z}[\sqrt{2}]$ is $2 + \sqrt{2}$, of norm $2$, one of the $2$ conjugate primes of norm $\ell$ for a rational prime $\ell \equiv \pm 1 \pmod 8$, or a rational prime $\ell \equiv \pm 3 \pmod 8$, of norm $\ell^2$. The primes $\ell \equiv \pm 3 \pmod 8$ have angle $0$, and $2 + \sqrt{2}$ has angle $1/2$. The angles of $2$ conjugate primes of norm $\ell \equiv \pm 1 \pmod 8$ add up to $1$ and differ from $0$ and from $1/2$: an element of angle $0$ is rational, and an element $x + y\sqrt{2}$ of angle $1/2$ equals $(3 + 2\sqrt{2})(x - y\sqrt{2})$, so that $x = 2y$ and its norm is $2y^2$. The number of elements of norm $k \Ge 1$ is $\sum_{d \mid k} \chi_8(d)$, where $\chi_8$ is the character modulo $8$ with $\chi_8(\pm 1) = 1$ and $\chi_8(\pm 3) = -1$.
+
+For an integer $m$ and a non-zero $n \in \mathbb{Z}[\sqrt{2}]$, put
+\begin{equation}
+\label{eq: sqrt2 character}
+\lambda^m(n) := e^{2\pi i m \operatorname{ang} n}, \qquad \kappa_m := \frac{\pi m}{\log(3 + 2\sqrt{2})}.
+\end{equation}
+The character $\lambda^m$ is completely multiplicative and detects the angle modulo $1$. For every generator $\alpha$ of the ideal $(n)$,
+\begin{equation*}
+\lambda^m(n) = \operatorname{sgn}(\mathrm{N}\alpha)^m \Bigl| \frac{\alpha}{\bar\alpha} \Bigr|^{i\kappa_m},
+\end{equation*}
+since multiplication by $1 + \sqrt{2}$ changes the sign of the norm and multiplies $|\alpha/\bar\alpha|^{i\kappa_m}$ by $(3 + 2\sqrt{2})^{i\kappa_m} = (-1)^m$. So $\lambda^m$ is a Gr\"ossencharacter of conductor $(1)$ in the sense of \citet{coleman1990zero} and \citet{soehne1997upper}, with the sign character $\operatorname{sgn}(\mathrm{N}\alpha)^m$ and the exponents $\pm\kappa_m$ at the real places.
+
+\begin{theorem}
+\label{thm: sqrt2 sector}
+Let $\theta = 0.1129$. There is a constant $c > 0$ such that, uniformly in $\psi \in \mathbb{R}$ and for every sufficiently large $X$,
+\begin{equation*}
+\#\bigl\{ \varpi \in \mathbb{Z}[\sqrt{2}] : \varpi \text{ prime},\ X/2 \Le \mathrm{N}\varpi < X,\ \psi \Le \operatorname{ang} \varpi < \psi + X^{\theta - 1/2}/2 \bigr\} \Ge \frac{c X^{1/2 + \theta}}{\log X}.
+\end{equation*}
+\end{theorem}
+
+\begin{proof}[Proof of Theorem~\ref{thm: below square} from Theorem~\ref{thm: sqrt2 sector}]
+Let $\theta = 0.1129$, and apply Theorem~\ref{thm: sqrt2 sector} with $\psi = 0$ and $X = 2^k$ for large $k$. The primes of angle $0$ are the rational primes $\ell \equiv \pm 3 \pmod 8$, and fewer than $X^{1/2}$ of them have norm $\ell^2 < X$. Since $c X^{1/2 + \theta}/\log X > X^{1/2}$ for large $X$, there is a prime $\varpi = m + n\sqrt{2}$ satisfying \eqref{eq: sqrt2 domain} with $0 < \operatorname{ang} \varpi < X^{\theta - 1/2}/2$ and $X/2 \Le \mathrm{N}\varpi < X$. It is neither rational nor $2 + \sqrt{2}$, so its norm $p = m^2 - 2n^2$ is a rational prime, and $m, n > 0$ by \eqref{eq: sqrt2 coordinates}. Since $\sinh u \Le 1.01u$ for $0 \Le u \Le 1/10$ and $1.01 \log(3 + 2\sqrt{2}) < 2\sqrt{2}$, \eqref{eq: sqrt2 coordinates} and $p < X$ give
+\begin{equation*}
+n < \frac{1.01 \log(3 + 2\sqrt{2})}{2\sqrt{2}}\, p^{1/2} X^{\theta - 1/2} < p^{1/2} p^{\theta - 1/2} = p^{\theta}.
+\end{equation*}
+The ranges $[X/2, X)$ for different $k$ are disjoint, so the primes $p$ are distinct. Since $m^2 - p = 2n^2 < 2p^{2\theta}$ and $2p^{2\theta} + 1 < 2p^{1/2}$ for large $p$, we have $(m - 1)^2 < p < m^2$. Hence
+\begin{equation*}
+1 - \{\sqrt{p}\} = m - \sqrt{p} = \frac{m^2 - p}{m + \sqrt{p}} < \frac{2p^{2\theta}}{2p^{1/2}} = p^{-0.2742},
+\end{equation*}
+because $1/2 - 2\theta = 0.2742$.
+\end{proof}
+
+Theorem~\ref{thm: sqrt2 sector} follows from the argument of Sections~\ref{sec: notation} to~\ref{sec: numerics} and Appendices~\ref{app: arithmetic} to~\ref{app: inequalities}, read with the following changes. Gaussian integers become non-zero elements of $\mathbb{Z}[\sqrt{2}]$, identified as above, and Gaussian primes become primes of $\mathbb{Z}[\sqrt{2}]$. The norm $|n|^2$ becomes $\mathrm{N}n$, the argument $\arg n$ becomes $\operatorname{ang} n$, and $\lambda^m$ is the character \eqref{eq: sqrt2 character}. In \eqref{eq: sets}, the condition on $\arg n$ becomes $\psi \Le \operatorname{ang} n < \psi + X^{-\sigma}/2$, and the factor $2/(\pi X^{\sigma})$, wherever it occurs, becomes $X^{-\sigma}/2$, the length of this interval of angles. In \eqref{eq: order}, primes of equal norm are ordered by angle. Distinct primes of equal norm are conjugate and have distinct angles, so this order is total, and the other prime of the same norm in Section~\ref{sec: decomposition} and Appendix~\ref{app: integrals} is the conjugate prime.
+
+In the proof of Lemma~\ref{lem: prime ideal theorem}, the number of primes of norm less than $y$ is $2\pi(y; 8, 1) + 2\pi(y; 8, 7) + \pi(y^{1/2}; 8, 3) + \pi(y^{1/2}; 8, 5) + \mathcal{O}(1)$, and \citet[Section~1.2]{thorner2024refinements} covers the modulus $8$. In the proof of Lemma~\ref{lem: counting}(a), the count is the sum of $\sum_{d \mid k} \chi_8(d)$ over $X/(2M) \Le k < X/M$, which is $L(1, \chi_8) X/(2M) + \mathcal{O}((X/M)^{1/2} + 1)$ by the hyperbola method, since every sum of $\chi_8$ over an interval of integers starting at $1$ lies in $[-1, 1]$. The facts that the proof of Lemma~\ref{lem: type II} uses about the divisors of rational integers and about elements of equal argument hold in $\mathbb{Z}[\sqrt{2}]$ as stated: an integer $N$ is the norm of at most $d(N)$ elements, a rational prime power $\ell^g$ has at most $(g + 1)^2$ divisors, and an element $u$ with $\operatorname{ang} u = \operatorname{ang} n$ for a primitive $n = x + y\sqrt{2}$, $\gcd(x, y) = 1$, is $u = kn$ with $k$ a positive rational integer. Lemma~\ref{lem: perron} is unchanged.
+
+The Weyl-type bound of Lemma~\ref{lem: sqrt2 L}(b) below carries the factor $(3 + |t| + |m|)^{\varepsilon_1}$, so Lemma~\ref{lem: sqrt2 type I input}(b) needs power margins. Accordingly, in Lemma~\ref{lem: type I}(b) the factor $\mu^{-1}$ becomes $X^{-\varepsilon'}$ for a fixed $\varepsilon' > 0$, and in Lemma~\ref{lem: fundamental}(b) the conditions become $U_1 \Le X^{\zeta - \varepsilon_0}\mu^{-1}$, $U_2 \Le X^{\rho - 2\varepsilon_0}\mu^{-1}$ and $U_1U_2 \Le X^{\nu - 2\varepsilon_0}\mu^{-1}$. With these conditions, the proof of Lemma~\ref{lem: fundamental} in Appendix~\ref{app: sieve} applies Lemma~\ref{lem: type I}(b) with $\varepsilon' = \varepsilon_0$. Lemma~\ref{lem: fundamental}(b) is applied only in (P2) of Lemma~\ref{lem: pieces}, and Lemma~\ref{lem: type I}(b) only in (P1) and in the proof of Lemma~\ref{lem: fundamental}(b). The margin $\varepsilon$ of the exponents in (P1) gives these conditions with $\varepsilon' = \varepsilon/2$ in (P1) and $\varepsilon_0 = \varepsilon/4$ in (P2).
+
+\begin{lemma}
+\label{lem: sqrt2 large sieve}
+\begin{enumerate}[(a)]
+\item Let $T, D \Ge 1$, and let $\phi_1, \dots, \phi_J$ be real numbers with $\|\phi_j - \phi_k\| \Ge 1/D$ for $j \neq k$, where $\|\cdot\|$ is the distance to the nearest integer. Then, for all complex $c_j$,
+\begin{equation*}
+\sum_{|m| \Le T} \Bigl| \sum_{j=1}^{J} c_j e^{2\pi i m \phi_j} \Bigr|^2 \Le \frac{\pi^2}{2} (T + D) \sum_{j=1}^{J} |c_j|^2.
+\end{equation*}
+\item For $U, N \Ge 1$ and all complex $b_k$,
+\begin{equation*}
+\int_{-U}^{U} \Bigl| \sum_{k \Le N} b_k k^{-it} \Bigr|^2 dt \Le \frac{\pi^2}{2} (U + 24N) \sum_{k \Le N} |b_k|^2.
+\end{equation*}
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The function $w(y) := (\sin(\pi y/2T)/(\pi y/2T))^2$ satisfies $w(y) \Ge 4/\pi^2$ for $|y| \Le T$, and its Fourier transform is $\hat w(\xi) = 2T \max(0, 1 - 2T|\xi|)$. By Poisson summation, $\sum_{m} w(m) e^{2\pi i m \phi} = \sum_{k \in \mathbb{Z}} \hat w(k - \phi)$, which is at most $2T$ if $\|\phi\| < 1/(2T)$ and vanishes otherwise. So the sum in (a) is at most
+\begin{equation*}
+\frac{\pi^2}{4} \sum_{j, k} |c_j c_k|\, 2T\, \mathbf{1}\bigl[ \|\phi_j - \phi_k\| < 1/(2T) \bigr] \Le \frac{\pi^2}{2}\, T \Bigl( 1 + \frac{D}{T} \Bigr) \sum_{j} |c_j|^2,
+\end{equation*}
+since $|c_j c_k| \Le (|c_j|^2 + |c_k|^2)/2$ and, for each $j$, at most $1 + D/T$ indices $k$ have $\|\phi_j - \phi_k\| < 1/(2T)$. For (b), the weight $(\sin(\pi t/2U)/(\pi t/2U))^2$ on $\mathbb{R}$ gives in the same way the factor $2U\, \mathbf{1}[|\log(k/k')| < \pi/U]$ for the pair $(k, k')$, and for each $k \Le N$ at most $1 + 2N\sinh(\pi/U) \Le 1 + 24N/U$ integers $k' \Le N$ have $|\log(k/k')| < \pi/U$.
+\end{proof}
+
+\begin{lemma}
+\label{lem: sqrt2 mean value}
+For $T, N \Ge 1$ and all coefficients $f(n)$,
+\begin{equation*}
+\sum_{m = 1}^{T} \Bigl| \sum_{\mathrm{N}n \Le N} f(n) \lambda^m(n) \Bigr|^2 \Le \frac{\pi^2}{2} (T + 4N) \sideset{}{'}\sum_{\mathrm{N}n \Le N} |f_1(n)|^2, \qquad f_1(n) := \sum_{\operatorname{ang} u = \operatorname{ang} n} f(u),
+\end{equation*}
+where $\sum'$ runs over the primitive elements $n = x + y\sqrt{2}$, $\gcd(x, y) = 1$.
+\end{lemma}
+
+\begin{proof}
+An element $u$ with $\operatorname{ang} u = \operatorname{ang} n$ for a primitive $n$ is a positive rational integer multiple of $n$, so $\mathrm{N}u \Le N$ implies $\mathrm{N}n \Le N$, and the inner sum is $\sum'_{\mathrm{N}n \Le N} f_1(n) \lambda^m(n)$. By Lemma~\ref{lem: sqrt2 large sieve}(a), it suffices to show that $\|\operatorname{ang} n_1 - \operatorname{ang} n_2\| \Ge 1/(4N)$ for distinct primitive $n_1$ and $n_2$ with $\mathrm{N}n_1, \mathrm{N}n_2 \Le N$. Let $k$ be an integer nearest to $\operatorname{ang} n_1 - \operatorname{ang} n_2$, and put $w := (3 + 2\sqrt{2})^{-k} n_1 \bar n_2$. Then $w$ is totally positive, $|\operatorname{ang} w| = \|\operatorname{ang} n_1 - \operatorname{ang} n_2\| \Le 1/2$ and $\mathrm{N}w \Le N^2$. By \eqref{eq: sqrt2 angle}, $w$ and $\bar w$ are at most $(\mathrm{N}w)^{1/2}(3 + 2\sqrt{2})^{1/2} \Le (1 + \sqrt{2})N$. The element $w$ is not rational: otherwise $\operatorname{ang} n_1 - \operatorname{ang} n_2 = k$, so $k = 0$, since both angles lie in $[0, 1)$, and $n_1$ is a positive rational multiple of $n_2$, which forces $n_1 = n_2$. So $w = x + y\sqrt{2}$ with $y \neq 0$, and $|w - \bar w| = 2\sqrt{2}|y| \Ge 2\sqrt{2}$. By the mean value theorem,
+\begin{equation*}
+2\log(3 + 2\sqrt{2})\, |\operatorname{ang} w| = |\log w - \log \bar w| \Ge \frac{|w - \bar w|}{\max(w, \bar w)} \Ge \frac{2\sqrt{2}}{(1 + \sqrt{2})N},
+\end{equation*}
+and $\sqrt{2} > (1 + \sqrt{2})\log(3 + 2\sqrt{2})/4$.
+\end{proof}
+
+\begin{lemma}
+\label{lem: sqrt2 sector}
+Suppose that $X^{\sigma} (\log X)^2 \Le T \Le X$. For all non-negative weights $a_n$,
+\begin{equation*}
+\sum_{n \in \mathcal{A}} a_n = \frac{X^{-\sigma}}{2} \sum_{n \in \mathcal{B}} a_n + \mathcal{O}\Bigl( \frac{\log X}{T} \sum_{n \in \mathcal{B}} a_n \Bigr) + \mathcal{O}\Bigl( X^{-\sigma} \sum_{m = 1}^{T} \Bigl| \sum_{n \in \mathcal{B}} a_n \lambda^m(n) \Bigr| \Bigr).
+\end{equation*}
+\end{lemma}
+
+\begin{proof}
+Let $L := X^{-\sigma}/2$, $r := \lceil 10 \log X \rceil$ and $\Delta := er/(\pi T)$, so that $\Delta \Le L$ once $X$ is large. The $r$-fold convolution power on $\mathbb{R}/\mathbb{Z}$ of the uniform probability density on $[-\Delta/(2r), \Delta/(2r)]$ is a probability density supported in $[-\Delta/2, \Delta/2]$, with Fourier coefficients $(\sin(\pi m\Delta/r)/(\pi m\Delta/r))^r$. Let $g^{+}$ and $g^{-}$ be its convolutions with the indicators of $[\psi - \Delta/2, \psi + L + \Delta/2]$ and of $[\psi + \Delta/2, \psi + L - \Delta/2]$ modulo $1$. Then $g^- \Le \mathbf{1}_{[\psi, \psi + L)} \Le g^+$ on $\mathbb{R}/\mathbb{Z}$, $\hat g^{\pm}(0) = L \pm \Delta$, and, for $m \neq 0$,
+\begin{equation*}
+|\hat g^{\pm}(m)| \Le \min\Bigl( L + \Delta, \frac{1}{\pi|m|} \Bigr) \min\Bigl( 1, \Bigl( \frac{r}{\pi |m| \Delta} \Bigr)^r \Bigr).
+\end{equation*}
+For $|m| > T$, $r/(\pi|m|\Delta) < 1/e$, so the coefficients with $|m| > T$ have absolute values summing to at most $e^{-r} \Le X^{-10}$. Expanding $g^{\pm}(\operatorname{ang} n)$ in Fourier series and using that the weights are real and non-negative, we obtain
+\begin{equation*}
+\Bigl| \sum_{n \in \mathcal{A}} a_n - L \sum_{n \in \mathcal{B}} a_n \Bigr| \Le (\Delta + X^{-10}) \sum_{n \in \mathcal{B}} a_n + 2(L + \Delta) \sum_{m = 1}^{T} \Bigl| \sum_{n \in \mathcal{B}} a_n \lambda^m(n) \Bigr|.
+\end{equation*}
+Since $\Delta \ll (\log X)/T$, $X^{-10} \Le (\log X)/T$ and $L + \Delta \Le X^{-\sigma}$, the lemma follows.
+\end{proof}
+
+For $m \neq 0$ and $\mathrm{Re}\, s > 1$, let $L(s, \lambda^m) := \sum_{n} \lambda^m(n) (\mathrm{N}n)^{-s}$, the sum over the non-zero elements identified as above, let $\delta_m \in \{0, 1\}$ with $\delta_m \equiv m \pmod 2$, and put
+\begin{equation}
+\label{eq: sqrt2 gamma}
+\gamma_m(s) := 8^{s/2}\, \pi^{-s - \delta_m} \Gamma\Bigl( \frac{s + \delta_m + i\kappa_m}{2} \Bigr) \Gamma\Bigl( \frac{s + \delta_m - i\kappa_m}{2} \Bigr).
+\end{equation}
+
+\begin{lemma}
+\label{lem: sqrt2 L}
+Let $m \neq 0$, $t \in \mathbb{R}$, $V := 3 + |t| + |m|$ and $\varepsilon_1 > 0$.
+\begin{enumerate}[(a)]
+\item The function $\Lambda(s, \lambda^m) := \gamma_m(s) L(s, \lambda^m)$, with $\gamma_m$ of \eqref{eq: sqrt2 gamma}, extends to an entire function with $\Lambda(s, \lambda^m) = W_m \Lambda(1 - s, \lambda^{-m})$ and $|W_m| = 1$. For $0 \Le \sigma \Le 1$, $|L(\sigma + it, \lambda^m)| \ll_{\varepsilon_1} V^{1 - \sigma + \varepsilon_1}$.
+\item $|L(1/2 + it, \lambda^m)| \ll_{\varepsilon_1} V^{1/3 + \varepsilon_1}$.
+\item For $T, U \Ge 2$,
+\begin{equation*}
+\sum_{1 \Le |m| \Le T} \int_{-U}^{U} |L(1/2 + it, \lambda^m)|^2\, dt \ll TU (\log TU)^{C}.
+\end{equation*}
+\item For $T \Ge 2$ and $2 \Le W \Le T^{5/3}$,
+\begin{equation*}
+\sum_{m = 1}^{T} \int_{-W}^{W} |L(1/2 + it, \lambda^m)|^4\, \frac{dt}{1 + |t|} \ll_{\varepsilon_1} T^{5/3 + \varepsilon_1}.
+\end{equation*}
+\item There is $c > 0$ such that $L(\sigma + it, \lambda^m) \neq 0$ for $\sigma \Ge 1 - c (\log V)^{-2/3} (\log\log V)^{-1/3}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Statement (a) is Hecke's functional equation with the convexity bound, in the form of \citet[(1.2.2), (1.2.3) and (1.2.8)]{duke1989some}, for the character $\lambda^m$ of conductor $(1)$, whose sign character gives the parameter $\delta_m$ at both real places. Statement (b) is the theorem of \citet[p.~227]{soehne1997upper}: for $\lambda^m$, the quantity $g$ of \citet[p.~226]{soehne1997upper} is $(2 + |\delta_m + i(t - \kappa_m)|)(2 + |\delta_m + i(t + \kappa_m)|) \Le (3 + |t| + |\kappa_m|)^2$, and $|\kappa_m| < 2|m|$. Statement (e) is \citet[Theorem~2]{coleman1990zero}, in which the size of $\lambda^m$ at height $t$ is $(2\kappa_m^2 + t^2)^{1/2} \Le 3V$. Since $\lambda^m \neq 1$, the exceptional real zero of that theorem does not occur, and the finitely many $m$ and bounded $t$ with $(2\kappa_m^2 + t^2)^{1/2}$ below the threshold of that theorem are covered, after $c$ is decreased, since $L(s, \lambda^m)$ has no zeros on $\mathrm{Re}\, s = 1$.
+
+For (c), let $s = 1/2 + it$ with $1 \Le |m| \Le T$ and $|t| \Le U$, and put $Q := 3(T + U)$. Moving the line of integration of $\frac{1}{2\pi i} \int_{(2)} \Lambda(s + u, \lambda^m) e^{u^2}\, du/u$ to $\mathrm{Re}\, u = -2$ and applying (a) give
+\begin{equation*}
+L(s, \lambda^m) = D_{m,t} + W_m \frac{\gamma_m(1 - s)}{\gamma_m(s)} D_{-m,-t}, \qquad D_{m,t} := \frac{1}{2\pi i} \int_{(2)} \frac{\gamma_m(s + u)}{\gamma_m(s)} \sum_{n} \frac{\lambda^m(n)}{(\mathrm{N}n)^{s + u}}\, e^{u^2} \frac{du}{u},
+\end{equation*}
+with $|\gamma_m(1 - s)/\gamma_m(s)| = 1$. The pairs $(m, t)$ form a set symmetric under $(m, t) \mapsto (-m, -t)$, so it suffices to bound the mean square of $D_{m,t}$. By Stirling's formula, $|\gamma_m(s + u)/\gamma_m(s)| \ll (Q + |v|)^{c} (1 + |v|) e^{\pi|v|/2}$ for $u = c + iv$ with $0 < c \Le 2$. Split the sum over $n$ into the ranges $2^j \Le \mathrm{N}n < 2^{j+1}$. The part of $D_{m,t}$ with a range $j$ is the integral of a function holomorphic in $\mathrm{Re}\, u > 0$, so its line of integration can be moved to $\mathrm{Re}\, u = c_j$, with $c_j := 1/\log Q$ if $2^j \Le Q$ and $c_j := 2$ if $2^j > Q$. Its integrand is then $2^{-ju}$ times the sum of $b_n \lambda^m(n) (\mathrm{N}n)^{-i(t + v)}$ over the range $j$, with $|b_n| \Le (\mathrm{N}n)^{-1/2}$, times $\gamma_m(s + u) e^{u^2}/(\gamma_m(s) u)$, whose absolute value integrates over $v$ to $\ll Q^{c_j} \log Q$. By Cauchy's inequality in $v$, and since the factor $e^{-v^2}$ makes the contribution of $|v| > \log Q$ negligible, the mean square over $1 \Le |m| \Le T$ and $|t| \Le U$ of this part is $\ll (Q/2^j)^{2c_j} (\log Q)^2$ times the largest value, over $|v| \Le \log Q$, of
+\begin{equation*}
+\sum_{1 \Le |m| \Le T} \int_{-U - |v|}^{U + |v|} \Bigl| \sum_{2^j \Le \mathrm{N}n < 2^{j+1}} b_n \lambda^m(n) (\mathrm{N}n)^{-i\tau} \Bigr|^2 d\tau.
+\end{equation*}
+Lemma~\ref{lem: sqrt2 mean value} at each $\tau$, with $\sum'|f_1(n)|^2 \ll (j + 1)^4$, bounds this by $\ll (U + \log Q)(T + 2^j)(j + 1)^4$. Lemma~\ref{lem: sqrt2 large sieve}(b) at each $m$, with the coefficients $\sum_{\mathrm{N}n = k} b_n \lambda^m(n)$ of $k^{-i\tau}$, bounds it by $\ll T(U + \log Q + 2^j)(j + 1)^4$. Both bounds use that the number of elements of norm $k$ is at most $d(k)$. The smaller bound is $\ll (TU + \min(T, U)\, 2^j)(j + 1)^4 \log Q$. For $2^j \Le Q$ it is $\ll TU (\log Q)^5$, since $\min(T, U)\, Q \Le 6TU$, and for $2^j > Q$ the factor $(Q/2^j)^4$ makes the sum over these $j$ of the smaller bounds $\ll TU (\log Q)^5$. Summing over the ranges $j$ by Cauchy's inequality gives (c).
+
+For (d), split $|t| \Le W$ into $|t| < 1$ and the dyadic ranges $Y \Le |t| < 2Y$. For $Y \Le T$, (b) and (c) bound the contribution of a range by $Y^{-1} T^{2/3 + 2\varepsilon_1} \cdot TY (\log T)^C$. For $T < Y \Le W$, the pairs $(m, t)$ of the range lie in the square $|m|, |t| \Le 2Y$, over which \citet[Theorem~2.2]{duke1989some} bounds the fourth moment by $Y^2 (\log Y)^4$, so the contribution is $\ll Y (\log Y)^4 \ll T^{5/3} (\log T)^4$. There are $\mathcal{O}(\log T)$ ranges.
+\end{proof}
+
+\begin{lemma}
+\label{lem: sqrt2 hecke pnt}
+Lemma~\ref{lem: hecke pnt} holds for the primes $\varpi$ of $\mathbb{Z}[\sqrt{2}]$, with $(\mathrm{N}\varpi)^{it}$ in place of $|\varpi|^{2it}$ and $\lambda^m$ of \eqref{eq: sqrt2 character}.
+\end{lemma}
+
+\begin{proof}
+\citet[p.~125]{harman2001gaussian} prove Lemma~\ref{lem: hecke pnt} by the truncated Perron formula, a shift of the line of integration into the zero-free region of \citet{coleman1990zero}, and a bound for $L'/L$ in that region. For $\mathbb{Z}[\sqrt{2}]$, Lemma~\ref{lem: sqrt2 L}(e) gives the zero-free region. In the half of it nearest to $\mathrm{Re}\, s = 1$, the bound $L'/L(\sigma + it, \lambda^m) \ll (\log V)^{5/3} (\log\log V)^{1/3}$, with $V$ of Lemma~\ref{lem: sqrt2 L}, follows as for Dirichlet $L$-functions from the Hadamard product of $\Lambda(s, \lambda^m)$ and the bound $\mathcal{O}(\log V)$ for the number of zeros $\rho$ with $|\mathrm{Im}\, \rho - t| \Le 1$. With these two inputs, their proof applies without change.
+\end{proof}
+
+\begin{lemma}
+\label{lem: sqrt2 type I input}
+Lemma~\ref{lem: type I input} holds for $\mathbb{Z}[\sqrt{2}]$, with the conditions of (b) replaced by $U \Le X^{\zeta - \varepsilon'}$, $V \Le X^{\rho - \varepsilon'}$ and $UV \Le X^{\nu - \varepsilon'}$ for a fixed $\varepsilon' > 0$, and with the implied constant depending on $\varepsilon'$.
+\end{lemma}
+
+\begin{proof}
+\citet[pp.~126--127]{harman2001gaussian} prove Lemma~\ref{lem: type I input} by the truncated Perron formula at height $X^{1/2}$, a shift of the line of integration to $\mathrm{Re}\, s = 1/2$, and Cauchy's and Hölder's inequalities. They use the mean value of Lemma~\ref{lem: mean value}, the convexity bound, and their Lemmas~2 and~3, the analogues for $\mathbb{Q}(i)$ of Lemma~\ref{lem: sqrt2 L}(c) and~(d). For $\mathbb{Z}[\sqrt{2}]$, these inputs are Lemma~\ref{lem: sqrt2 mean value} and Lemma~\ref{lem: sqrt2 L}(a), (c) and~(d). The convexity bound of Lemma~\ref{lem: sqrt2 L}(a) has the exponent $1 - \sigma$, where \citet[p.~126]{harman2001gaussian} print $(1 - \sigma)/2$. With the exponent $1 - \sigma$, the horizontal segments contribute at most $X^{1 - \theta/2 + o(1)}$ in (a) and $X^{0.98}$ in (b), after the sum over $m \Le T$. In (a), Cauchy's inequality, Lemma~\ref{lem: sqrt2 L}(c) and Lemma~\ref{lem: sqrt2 mean value} bound the main term by $X^{1/2}(T(T + U))^{1/2} (\log X)^C$, which is $\ll X (\log X)^{-A}$ under the condition $U \Le X^{\tau} \mu^{-1}$, since $\sigma + \tau = 1$. In (b), Hölder's inequality and Lemma~\ref{lem: sqrt2 L}(d) give the bound
+\begin{equation*}
+X^{1/2} T^{5/12 + \varepsilon_1} (T + U)^{1/2} (T + V^2)^{1/4} (\log X)^C,
+\end{equation*}
+which is $\ll X (\log X)^{-A}$ if $T^{5/6} UV$, $T^{4/3} U$, $T^{11/6} V$ and $T^{7/3}$ are at most $X^{1 - \varepsilon'/2}$. With $T = X^{\sigma + o(1)}$ and $\varepsilon_1$ small in terms of $\varepsilon'$, these conditions hold if $UV \Le X^{1 - 5\sigma/6 - \varepsilon'}$, $U \Le X^{1 - 4\sigma/3 - \varepsilon'}$, $V \Le X^{1 - 11\sigma/6 - \varepsilon'}$ and $7\sigma/3 < 1$. By \eqref{eq: parameters}, $1 - 5\sigma/6 = \nu$, $1 - 4\sigma/3 = \zeta$ and $1 - 11\sigma/6 = \rho$, and $7\sigma/3 < 1$ holds since $\theta > 1/14$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm: sqrt2 sector}]
+Lemmas~\ref{lem: prime ideal theorem}, \ref{lem: counting} and~\ref{lem: perron} hold for $\mathbb{Z}[\sqrt{2}]$ with the changes above. Lemma~\ref{lem: sqrt2 sector}, with $T = X^{\sigma}(\log X)^A$ and $A \Ge 2$, replaces Lemma~\ref{lem: sector inequality} in the proofs of Lemmas~\ref{lem: type I} and~\ref{lem: type II}, and its error term $\mathcal{O}(T^{-1} \log X \sum_{n \in \mathcal{B}} a_n)$ is bounded as the error term $\mathcal{O}(T^{-1} \sum_{n \in \mathcal{B}} a_n)$ of Lemma~\ref{lem: sector inequality} is bounded in the proof of Lemma~\ref{lem: type I}. With Lemmas~\ref{lem: sqrt2 mean value}, \ref{lem: sqrt2 hecke pnt} and~\ref{lem: sqrt2 type I input} in place of Lemmas~\ref{lem: mean value}, \ref{lem: hecke pnt} and~\ref{lem: type I input}, the proofs in Appendix~\ref{app: arithmetic} give Lemmas~\ref{lem: type I} and~\ref{lem: type II} for $\mathbb{Z}[\sqrt{2}]$, with Lemma~\ref{lem: type I}(b) in the form stated above. The other results of Sections~\ref{sec: estimates} to~\ref{sec: integrals} and of Appendices~\ref{app: sieve} and~\ref{app: integrals} use $\mathbb{Z}[i]$ only through these lemmas and the facts listed above, and their proofs apply. The losses \eqref{eq: loss} depend only on $\theta$, so $\Phi(0.1129) < 1$ by Table~\ref{tab: losses}. The number of primes of $\mathbb{Z}[\sqrt{2}]$ of norm in $[X/2, X)$ is $(1 + o(1))\, X/(2\log X)$ by Lemma~\ref{lem: prime ideal theorem}(d), as in \eqref{eq: primes in B}. Lemma~\ref{lem: lower bound} then gives Theorem~\ref{thm: sqrt2 sector} as in the proof of Theorem~\ref{thm: sector}.
+\end{proof}
 
 \bibliographystyle{plainnat}
 \bibliography{references}
